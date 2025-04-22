@@ -4,5 +4,5 @@ If you encounter any unexpected behaviour when you follow the instructions withi
 
 There are two mechanisms for communicating with us.
 
-1. [Issues](https://github.com/genetics-of-dna-methylation-consortium/goDMC_phase2/issues). This is the mechanism to report bugs or errors with the pipeline or documentation. Essentially anything which requires us to make edits to the content in the repository. There are more guidelines on how to submit an issue below.
-2. [Discussions](https://github.com/genetics-of-dna-methylation-consortium/goDMC_phase2/discussions). This is the place to ask questions about the pipeline and analyses.
+1. [Issues](https://github.com/MRCIEU/DEEP_mqtls/issues). This is the mechanism to report bugs or errors with the pipeline or documentation. Essentially anything which requires us to make edits to the content in the repository. There are more guidelines on how to submit an issue below.
+2. [Discussions](https://github.com/MRCIEU/DEEP_mqtls/discussions). This is the place to ask questions about the pipeline and analyses.
