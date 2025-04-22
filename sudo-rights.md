@@ -1,0 +1,3 @@
+To be able to run the pipeline you will need to install a range of R packages from CRAN, bioconductor and github. In addition you will need to have a few other packages installed on your server such as `R4.1 or higher`, `git`, `gpg`, `sshpass`, `pinentr`. If you have a `module load` system installed on your server you can check whether it has already been installed with `module avail`. If it is in the list of available software then you can load the package by for example: `module load tools/git/2.35.1`. 
+
+You can find more details here: [System requirements](System-requirements).
