@@ -1,0 +1,1 @@
+If you have a case-control design, we recommend to combine cases and controls for the mQTL analysis to have the largest sample size as possible. We do not recommend to analyse cases and controls separately.
