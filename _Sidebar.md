@@ -1,6 +1,6 @@
 
 - [Home](Home)
-- [FAQ](FAQ)
+- [Frequently Asked Questions](Frequently-Asked-Questions)
 - [Participation requirements](Participation-requirements)
 - [System requirements](System-requirements)
 
