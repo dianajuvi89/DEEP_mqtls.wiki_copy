@@ -1,0 +1,1 @@
+We use gpg encryption to upload the results. Only developers are able to decrypt your results.
