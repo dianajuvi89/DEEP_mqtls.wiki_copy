@@ -1,0 +1,1 @@
+Ideally you contribute results for all chromosomes. However we recognise that for some cohorts this is not always possible.
