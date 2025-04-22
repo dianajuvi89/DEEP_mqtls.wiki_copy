@@ -26,5 +26,5 @@
 <br> 
 4\.  [Run meQTL analysis](Run-meQTL-analysis)
 <br> 
-7\.  [Run variance meQTL analysis](Run-variance-meQTL-analysis)
+5\.  [Run variance meQTL analysis](Run-variance-meQTL-analysis)
 <br>
