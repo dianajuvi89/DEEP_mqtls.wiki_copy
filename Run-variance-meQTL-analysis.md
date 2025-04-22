@@ -1,6 +1,6 @@
 # MODULE STATUS
 
-**Developer:** Xiaopu Zhang
+**Developer:** 
 
 **Scripts status:** Ready
 
