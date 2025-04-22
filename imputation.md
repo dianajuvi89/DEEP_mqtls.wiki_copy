@@ -1,4 +1,4 @@
-We have a preference that you impute your genetic data with one the imputation server. However if you can't impute your dataset using an external dataset and you need help with imputation please contact [Prachand Issarapu](mailto:Prachand.Issarapu@lshtm.ac.uk). 
+We have a preference that you impute your genetic data with one the imputation server. However if you can't impute your dataset using an external server and you need help with imputation please contact [Prachand Issarapu](mailto:Prachand.Issarapu@lshtm.ac.uk). 
 
 Please note there are several imputation servers:
 - UK imputation service (hosted at Sanger, Hinxton, UK): [https://imputation.sanger.ac.uk/]. You can impute with the following panels [https://imputation.sanger.ac.uk/?about=1#referencepanels]: 1000Genomes Phase 3, African Genome Resources, Haplotype Reference Consortium  
