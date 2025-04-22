@@ -1,0 +1,3 @@
+If you have a cohort where methylation has been measured at multiple timepoints we would recommend that you split the study by timepoint.
+
+For example if you have a study with methylation measured at age 7 and age 15 we recommend you name your study as `$study_name_7` and `$study_name_15` and run the analyses for each timepoint separately. **Please note these should only include non-overlapping individuals.**
