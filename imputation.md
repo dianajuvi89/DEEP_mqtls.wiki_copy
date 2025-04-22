@@ -9,4 +9,7 @@ Please note there are several imputation servers:
 
 Other reference panels are also available:
 Southeast Asia: https://www.nature.com/articles/s41525-024-00435-7
+Brazil: https://pubmed.ncbi.nlm.nih.gov/29903722/
+Native American for Latin American imputation: https://pubmed.ncbi.nlm.nih.gov/35046991/
+
 
