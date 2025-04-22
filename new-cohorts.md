@@ -1,0 +1,1 @@
+You can still join DEEP if you have a cohort with more than 50 individuals with genetic and DNA methylation data. We released the pipeline in July 2025. Please contact [Josine Min](mailto:josine.min@bristol.ac.uk) for more details.
