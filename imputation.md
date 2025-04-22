@@ -6,3 +6,7 @@ Please note there are several imputation servers:
 - [Michigan imputation service](https://imputationserver.sph.umich.edu/#!) (hosted at Michigan, USA). You can impute with the following [panels](https://genepi.github.io/michigan-imputationserver/getting-started/#reference-panels): 1000 Genomes Phase 3, CAAPA - African American Panel, Genome Asia Pilot, Human Reference Consortium.
 - [Sanger imputation service](https://imputation.sanger.ac.uk/) (hosted at Sanger, Hinxton, UK): You can impute with the following [panels](https://imputation.sanger.ac.uk/?about=1#referencepanels): 1000Genomes Phase 3, African Genome Resources, Haplotype Reference Consortium.
 - [TOPMED Imputation Server](https://imputation.biodatacatalyst.nhlbi.nih.gov/#!) (hosted at Michigan, US): TopMED is a diverse reference [panel](https://imputation.biodatacatalyst.nhlbi.nih.gov/#!pages/about) including information from 133,597 deeply sequenced human genomes
+
+Other reference panels are also available:
+Southeast Asia: https://www.nature.com/articles/s41525-024-00435-7
+
