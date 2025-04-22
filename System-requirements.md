@@ -1,0 +1,183 @@
+#### You need to have at least 
+```
+R.4.1
+```
+
+In the location on your server where you have cloned this repository you need to run
+```
+wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
+```
+
+#### These are the Rpackages you need:
+```r
+install.packages("MASS")
+install.packages("lattice")
+install.packages("ggplot2") 
+install.packages("data.table")
+install.packages("MatrixEQTL")
+install.packages("parallel")
+install.packages("matrixStats")
+install.packages("remotes")
+install.packages("plyr")
+install.packages("Cairo")
+install.packages("plotrix")
+install.packages("EasyQC_9.2.tar.gz")
+install.packages("cluster")
+install.packages("RPMM")
+install.packages("tibble")
+install.packages("vioplot")
+install.packages("qqman")
+install.packages("ggtext")
+install.packages("diptest")
+install.packages("mixtools")
+install.packages("corrplot")
+install.packages("janitor")
+install.packages("tidyr")
+install.packages("dplyr")
+install.packages("readr")
+install.packages("ggpubr")
+install.packages("parallel")
+install.packages("ggrepel")
+install.packages("magrittr")
+install.packages("R.utils")
+```
+
+#### Please install EpiDISH and DunedinPACE from GitHub and not from bioconductor.
+```r
+install.packages("remotes")
+Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")
+remotes::install_github("sjczheng/EpiDISH")
+remotes::install_github("danbelsky/DunedinPACE")
+```
+
+#### You also need to install EWAFF
+```r
+install.packages("remotes")
+Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")
+remotes::install_github("perishky/ewaff")
+```
+#### You need to install scoreInvHap and impute from biocManager
+```r
+install.packages("BiocManager")
+BiocManager::install("scoreInvHap")
+BiocManager::install("impute")
+
+```
+
+#### You only need to install these packages if you have related samples
+```r
+install.packages("BiocManager")
+BiocManager::install("GWASTools")
+BiocManager::install("SNPRelate")
+BiocManager::install("GENESIS")
+```
+
+#### You need to install meffil. You need to have installed version 1.3.8 or higher. You can find out the version with the commands below. 
+```
+library(meffil)
+sessionInfo()
+```
+
+
+First install some of the dependencies:
+```r
+BiocManager::install("SmartSVA")
+BiocManager::install("illuminaio")
+BiocManager::install("limma")
+BiocManager::install("DNAcopy")
+BiocManager::install("preprocessCore")
+
+#Then install meffil in R:
+install.packages("remotes")
+Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")
+remotes::install_github("perishky/meffil")
+```
+
+#### You need to test whether the preprocessCore Rpackage multi-threading works
+```r
+threading.ok <- function() {
+	require(preprocessCore)
+	y <- matrix(10+rnorm(100),20,5)
+	ret <- tryCatch({normalize.quantiles(y); "correct"}, error=function(e) e$message)
+	!grepl("pthread_create", ret)
+}
+threading.ok()
+```
+If `threading.ok()` returns TRUE, then you shouldn't have a problem. If it return FALSE, then you'll need to reinstall `preprocessCore` with threading disabled as shown below:
+
+```r
+BiocManager::install("preprocessCore", configure.args="--disable-threading", force=TRUE)
+```
+If you still encounter the error about the `preprocessCore` and under the conda environment, please manually intsall it by following:
+```
+git clone https://github.com/bmbolstad/preprocessCore.git
+R CMD INSTALL --configure-args="--disable-threading" path/to/preprocessCore
+``` 
+
+
+#### You need to test whether R can find the path to your Rlibraries
+
+You can test this in R:
+
+```r
+library(ggplot2)
+```
+
+If this doesn't work then you may need to add the following line to your `.bashrc` file:
+
+Open your `.bashrc`
+```
+nano ~/.bashrc
+```
+Add the following line to your `.bashrc` 
+
+```
+export R_LIBS="/path/to/library/"
+```
+
+Restart the terminal, any R-script should automatically look for packages in your specified directory. You can test this by opening R and testing a library
+
+```r
+library(ggplot2)
+```
+
+#### You also need to make sure the scripts in the pipeline can find Rscript
+
+You can test this by typing
+
+`Rscript`
+
+If this doesn't work then you need to add the following line to your `bashrc` file
+
+```
+#You need to edit the line
+export PATH="$PATH:/path/to/directory/R-4.1.2/bin/"
+```
+#### You need to test whether you are able to generate plots in R
+Open R and type
+
+```
+ capabilities()
+```
+png should be TRUE
+
+#### You need to make sure you have git installed
+
+```
+which git
+```
+
+#### You need to make sure you have encryption software installed
+
+We are encrypting and uploading the results with aes encryption using `gpg` and `pinentry` and `sshpass`. You can test whether the gpg, pinentry and sshpass linux packages have been installed with the following command:
+
+```
+which sshpass
+which gpg
+which pinentry
+```
+If gpg hasn't been installed then you can install it from here: [https://gnupg.org/download/](https://gnupg.org/download/). You can install pinentry from here: [https://www.gnupg.org/download/index.html#pinentry](https://www.gnupg.org/download/index.html#pinentry). You can install sshpass from here: [https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/](https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/).
+
+ 
+
+
