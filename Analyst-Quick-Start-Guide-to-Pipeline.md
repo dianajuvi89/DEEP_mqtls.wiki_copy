@@ -10,4 +10,4 @@ Below is a list of modules that are ready to be run. We encourage you to run as 
 
 04 - mQTLs
 
-05 – variance QTLs
+05 – variance mQTLs
