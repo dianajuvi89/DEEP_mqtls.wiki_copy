@@ -28,3 +28,5 @@
 <br> 
 5\.  [Run variance meQTL analysis](Run-variance-meQTL-analysis)
 <br>
+
+[Instructions for developers](Instructions-for-developers)
