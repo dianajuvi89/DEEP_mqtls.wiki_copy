@@ -1,9 +1,8 @@
 ### Genetic data 
 
 ### Data pre-processing
-
 Prior to running the DEEP pipeline we require that genetic data must be
-- Imputed to 1000G phase3 or any other relevant reference panel. Several institutions offer a free imputation service which you can use [here](https://www.sanger.ac.uk/tool/sanger-imputation-service/) or [here](https://imputationserver.sph.umich.edu/index.html#!) or [here](https://impute.h3africa.org/). By far the easiest way to do imputation now is to use one of these services. 
+- Imputed to 1000G phase3 or any other relevant reference panel. Several institutions offer a free imputation service which you can use. By far the easiest way to do imputation now is to use one of these services. See [here](Imputation) for more information.
 - Variant positions in hg19/GRCh37 or hg38/GRCh38.
 - Filtered to have MAF > 0.01 and imputation quality score > 0.8
 - **IMPORTANT:** Converted to best guess binary plink format **without a probability threshold**
