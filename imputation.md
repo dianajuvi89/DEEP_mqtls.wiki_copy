@@ -1,4 +1,4 @@
-We have a preference that you impute your genetic data with one the imputation server. However if you can't impute your dataset using an external server and you need help with imputation please contact [Prachand Issarapu](mailto:Prachand.Issarapu@lshtm.ac.uk). 
+We have a preference that you impute your genetic data with one of the imputation servers. However if you can't impute your dataset using an external server and you need help with imputation please contact [Prachand Issarapu](mailto:Prachand.Issarapu@lshtm.ac.uk). 
 
 Please note there are several imputation servers:
 - [The H3Africa/H3ABioNet Imputation Service](https://impute.afrigen-d.org/#!) (hosted at University of Cape Town, South Africa): You can impute with H3Africav6 and 1000Genomes Phase3
