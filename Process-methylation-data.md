@@ -13,7 +13,7 @@
 
 Module 03 processes DNA methylation data for the following modules, including:
 
-- scripts to remove outliers and generate covariates (scripts 03a) 
+- scripts to remove outliers and generate covariates (script 03a) 
 - scripts to adjust for covariates (scripts 03b-03e)
 - scripts to check positive controls (scripts 03f-03g)
 
@@ -115,7 +115,7 @@ To generate residuals of the first-step adjustment (step 1-3) run:
 
 This will parallelise across `$nthreads` (which was set in your config file). Please note `$nthreads` needs to be smaller than the number of chrY probes. `$nthreads=16` works well in 1500 samples. The input `${meth_chunks}` represents which chunk of methylation probes are input to 03b script (which was set in your config file, see [here](Running-script-3b-and-3e-on-a-cluster) for instructions on how to parallelise this analysis across multiple nodes on a cluster. 
 
-For 1 of the 100 chunk jobs running on 16 cores, it took about 2 hours to run with 100 related samples but it took 1 hour to run with ~1800 unrelated samples. You can check your log files on `/results/03/logs_b`. Please follow the instructions [here](Running-script-3b-and-3e-on-a-cluster) to check the scripts output. 
+For 1 of the 100 chunk jobs running on 16 cores, it took about 2 hours to run with 100 related samples but it took 1 hour to run with ~1800 unrelated samples. You can check your log files on `/results/03/logs_b`. Please follow the instructions [here](Running-script-3b-and-3e-on-a-cluster) to check the scripts output. You can change the number of chucks in the config file; if it is very slow please increase the number. Large cohorts (a few thousand participants) may benefit from using around 1000 chunks.
 
 ### Estimate methylation PCs
 In order to perform step 4, run:
