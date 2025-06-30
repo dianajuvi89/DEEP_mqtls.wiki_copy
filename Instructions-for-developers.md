@@ -47,6 +47,7 @@ As well as the consistent data format and directory structure there are two key 
 11. We already have a script to generate a table with cohort descriptives. This is in script 01 here: https://github.com/MRCIEU/DEEP_mqtls/blob/main/resources/datacheck/collect_descriptives.R. Please add to this if needed.
 12. We advise that each script is tested by other developers. Please get in touch when you are ready for this. 
 13. We advise that all code is reviewed by other developers. Please get in touch when you are ready for this. 
+** 14. Please note that all files in the results are uploaded. Please check no individual level data is present in the results folder.** 
 
 ## Data preprocessing
 
