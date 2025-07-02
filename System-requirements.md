@@ -1,4 +1,4 @@
-Create and activate conda/mamba environment
+#### Create and activate conda/mamba environment
 Ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) installed and initialised before running these commands:
 ```
 conda env create --file deep_env.yml
