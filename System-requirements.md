@@ -1,9 +1,15 @@
+Create and activate conda/mamba environment
+Ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) installed and initialised before running these commands:
+```
+conda env create --file deep_env.yml
+conda activate deep_env
+```
 #### You need to have at least 
 ```
 R.4.1
 ```
 
-In the location on your server where you have cloned this repository you need to run
+In the location on your server where you have cloned this repository, you need to run
 ```
 wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
 ```
