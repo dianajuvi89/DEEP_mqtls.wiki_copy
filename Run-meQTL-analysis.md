@@ -21,12 +21,7 @@ Performing hundreds of thousands GWASs will result in a huge computational burde
 
 ### Setup
 We have developed a python 2.7 compatible version of HASE for this project which you can find in the `./resources/bin/hase` folder.
-
-```
-#Create the Conda Environment
-conda env create -f ./resources/bin/hase/environment.yml
-conda activate hase_py2
-```
+#conda env will be activated in 04a.
 
 ### Convert to HASE format
 We need to generate the correct format for the MeQTL analysis software (HASE). To convert PLINK to HASE format you need to run the following script from your home directory:
