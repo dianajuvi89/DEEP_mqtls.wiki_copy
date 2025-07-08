@@ -20,8 +20,7 @@ A comprehensive catalogue of SNP-methylation associations can be used to underst
 Performing hundreds of thousands GWASs will result in a huge computational burden if using standard tools, and will also require huge amounts of disk space to store all results. Although software packages such as matrixeQTL/tensorQTL solves the computational burden only [HASE](https://github.com/roshchupkin/hase/wiki) is able to solve the computational burden and storage issues. HASE will be used to perform a fast, comprehensive analysis of all _cis-_ and _trans_-associations on residualised probes. Partial derivatives (we will not exchange private data) will be sent to a central SFTP in Bristol.  Results from this step will be used for the final meta analyses and conditional analyses.
 
 ### Setup
-We have developed a python 2.7 compatible version of HASE for this project which you can find in the `./resources/bin/hase` folder.
-#conda env will be activated in 04a.
+We have developed a python 2.7 compatible version of HASE for this project which you can find in the `./resources/bin/hase` folder. Conda environment will be activated in 04a script. If you have not set up hase_py2 environment, please refer to [System-requirements](https://github.com/MRCIEU/DEEP_mqtls/wiki/System-requirements).
 
 ### Convert to HASE format
 We need to generate the correct format for the MeQTL analysis software (HASE). To convert PLINK to HASE format you need to run the following script from your home directory:
