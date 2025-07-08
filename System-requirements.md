@@ -6,7 +6,7 @@ mamba activate deep_env
 ```
 #### You need to have at least 
 ```
-R.4.1
+R version 4.1
 ```
 
 In the location on your server where you have cloned this repository, you need to run
@@ -14,7 +14,7 @@ In the location on your server where you have cloned this repository, you need t
 wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
 ```
 
-#### These are the Rpackages you need:
+#### These are the R packages you need:
 ```r
 install.packages("MASS")
 install.packages("lattice")
