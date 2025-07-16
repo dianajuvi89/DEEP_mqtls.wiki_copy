@@ -16,6 +16,7 @@ wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
 
 #### These are the R packages you need:
 ```r
+remotes::install_github("MRCIEU/GwasDataImport")
 install.packages("MASS")
 install.packages("lattice")
 install.packages("ggplot2") 
