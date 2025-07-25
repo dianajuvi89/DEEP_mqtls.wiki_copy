@@ -14,14 +14,16 @@ In the location on your server where you have cloned this repository, you need t
 wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
 ```
 
-
-
-
-#### These are the R packages you need:
+#### If you create your environment by using conda/mamba, these are the packages you need to install in R
+```r
+install.packages("parallel")
+install.packages("EasyQC_9.2.tar.gz")
+```
+#### If you use the pipeline without mamba, these are the R packages you need:
 ```r
 install.packages("MASS")
 install.packages("lattice")
-install.packages("ggplot2") 
+install.packages("ggplot2")
 install.packages("data.table")
 install.packages("MatrixEQTL")
 install.packages("parallel")
@@ -45,15 +47,15 @@ install.packages("tidyr")
 install.packages("dplyr")
 install.packages("readr")
 install.packages("ggpubr")
-install.packages("parallel")
 install.packages("ggrepel")
 install.packages("magrittr")
 install.packages("R.utils")
+install.packages("BiocManager")
 ```
 
-#### Please install EpiDISH and DunedinPACE from GitHub and not from bioconductor.
+#### Please install EpiDISH and DunedinPACE from GitHub and not from Bioconductor.
 ```r
-install.packages("remotes")
+library(remotes)
 Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")
 remotes::install_github("sjczheng/EpiDISH")
 remotes::install_github("danbelsky/DunedinPACE")
@@ -64,23 +66,22 @@ remotes::install_github("danbelsky/DunedinPACE")
 remotes::install_github("MRCIEU/GwasDataImport")
 ```
 
-#### You also need to install EWAFF
+#### Please install EWAFF
 ```r
-install.packages("remotes")
+library(remotes)
 Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")
 remotes::install_github("perishky/ewaff")
 ```
-#### You need to install scoreInvHap and impute from biocManager
+#### You need to install scoreInvHap and impute from BiocManager
 ```r
-install.packages("BiocManager")
+library(BiocManager)
 BiocManager::install("scoreInvHap")
 BiocManager::install("impute")
-
 ```
 
 #### You only need to install these packages if you have related samples
 ```r
-install.packages("BiocManager")
+library(BiocManager)
 BiocManager::install("GWASTools")
 BiocManager::install("SNPRelate")
 BiocManager::install("GENESIS")
@@ -102,7 +103,7 @@ BiocManager::install("DNAcopy")
 BiocManager::install("preprocessCore")
 
 #Then install meffil in R:
-install.packages("remotes")
+library(remotes)
 Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")
 remotes::install_github("perishky/meffil")
 ```
