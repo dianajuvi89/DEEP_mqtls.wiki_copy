@@ -14,12 +14,12 @@ In the location on your server where you have cloned this repository, you need t
 mamba activate deep_mqtl
 wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
 ```
+In R, run:
 ```r
-R
 install.packages("parallel")
 install.packages("EasyQC_9.2.tar.gz")
 ```
-#### If you use the pipeline without mamba, these are the R packages you need:
+#### If you do not use mamba or conda, please install these R packages in your R:
 ```r
 install.packages("MASS")
 install.packages("lattice")
