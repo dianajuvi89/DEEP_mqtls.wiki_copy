@@ -1,10 +1,10 @@
-#### Create and activate conda/mamba environment
+## Create and activate conda/mamba environment
 We recommend using mamba to control the environment when running this pipeline. Please ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) installed and initialised before running these commands:
 ```
 mamba env create --file deep_env.yml
 mamba env create --file ./resources/bin/hase/environment.yml
 ```
-#### You need to have at least 
+## You need to have at least 
 ```
 R version 4.1
 ```
@@ -52,7 +52,7 @@ install.packages("magrittr")
 install.packages("R.utils")
 install.packages("BiocManager")
 ```
-
+## Other R packages for both users with mamba and without mamba
 #### Please install EpiDISH and DunedinPACE from GitHub and not from Bioconductor.
 ```r
 library(remotes)
