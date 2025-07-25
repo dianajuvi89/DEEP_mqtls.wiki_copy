@@ -56,6 +56,11 @@ remotes::install_github("sjczheng/EpiDISH")
 remotes::install_github("danbelsky/DunedinPACE")
 ```
 
+#### Please install GwasDataImport to infer genome build
+```r
+remotes::install_github("MRCIEU/GwasDataImport")
+```
+
 #### You also need to install EWAFF
 ```r
 install.packages("remotes")
