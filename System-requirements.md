@@ -8,7 +8,7 @@ mamba env create --file ./resources/bin/hase/environment.yml
 ```
 R version 4.1
 ```
-#### After you create your environment by using conda/mamba, these are the packages absent from conda-forge, which you need to install in R.
+### After you create your environment by using conda/mamba, these are the packages absent from conda-forge, which you need to install in R.
 In the location on your server where you have cloned this repository, you need to run
 ```bash
 mamba activate deep_mqtl
@@ -19,7 +19,7 @@ In R, run:
 install.packages("parallel")
 install.packages("EasyQC_9.2.tar.gz")
 ```
-#### If you do not use mamba or conda, please install these R packages in your R:
+### If you do not use mamba or conda, please install these R packages in your R:
 ```r
 install.packages("MASS")
 install.packages("lattice")
@@ -53,7 +53,7 @@ install.packages("R.utils")
 install.packages("BiocManager")
 ```
 ## Other R packages for both users with mamba and without mamba
-#### Please install EpiDISH and DunedinPACE from GitHub and not from Bioconductor.
+### Please install EpiDISH and DunedinPACE from GitHub and not from Bioconductor.
 ```r
 library(remotes)
 Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")
@@ -61,25 +61,25 @@ remotes::install_github("sjczheng/EpiDISH")
 remotes::install_github("danbelsky/DunedinPACE")
 ```
 
-#### Please install GwasDataImport to infer genome build
+### Please install GwasDataImport to infer genome build
 ```r
 remotes::install_github("MRCIEU/GwasDataImport")
 ```
 
-#### Please install EWAFF
+### Please install EWAFF
 ```r
 library(remotes)
 Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")
 remotes::install_github("perishky/ewaff")
 ```
-#### You need to install scoreInvHap and impute from BiocManager
+### You need to install scoreInvHap and impute from BiocManager
 ```r
 library(BiocManager)
 BiocManager::install("scoreInvHap")
 BiocManager::install("impute")
 ```
 
-#### You only need to install these packages if you have related samples
+### You only need to install these packages if you have related samples
 ```r
 library(BiocManager)
 BiocManager::install("GWASTools")
@@ -87,14 +87,13 @@ BiocManager::install("SNPRelate")
 BiocManager::install("GENESIS")
 ```
 
-#### You need to install meffil. You need to have installed version 1.3.8 or higher. You can find out the version with the commands below. 
+### You need to install meffil. You need to have installed version 1.3.8 or higher. You can find out the version with the commands below. 
 ```
 library(meffil)
 sessionInfo()
 ```
 
-
-First install some of the dependencies:
+Firstly install some of the dependencies:
 ```r
 BiocManager::install("SmartSVA")
 BiocManager::install("illuminaio")
@@ -108,7 +107,7 @@ Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")
 remotes::install_github("perishky/meffil")
 ```
 
-#### You need to test whether the preprocessCore Rpackage multi-threading works
+### You need to test whether the preprocessCore Rpackage multi-threading works
 ```r
 threading.ok <- function() {
 	require(preprocessCore)
@@ -130,7 +129,7 @@ R CMD INSTALL --configure-args="--disable-threading" path/to/preprocessCore
 ``` 
 
 
-#### You need to test whether R can find the path to your Rlibraries
+### You need to test whether R can find the path to your Rlibraries
 
 You can test this in R:
 
@@ -138,7 +137,7 @@ You can test this in R:
 library(ggplot2)
 ```
 
-If this doesn't work then you may need to add the following line to your `.bashrc` file:
+If this doesn't work, then you may need to add the following line to your `.bashrc` file:
 
 Open your `.bashrc`
 ```
