@@ -8,14 +8,14 @@ mamba env create --file ./resources/bin/hase/environment.yml
 ```
 R version 4.1
 ```
-
+#### After you create your environment by using conda/mamba, these are the packages absent from conda-forge, which you need to install in R.
 In the location on your server where you have cloned this repository, you need to run
-```
+```bash
+mamba activate deep_mqtl
 wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
 ```
-
-#### If you create your environment by using conda/mamba, these are the packages you need to install in R
 ```r
+R
 install.packages("parallel")
 install.packages("EasyQC_9.2.tar.gz")
 ```
