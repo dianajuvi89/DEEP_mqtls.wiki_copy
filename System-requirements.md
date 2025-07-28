@@ -1,9 +1,10 @@
 ## Create and activate conda/mamba environment
-We recommend using mamba to control the environment when running this pipeline. Please ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) installed and initialised before running these commands:
+We recommend using mamba to manage the environment when running this pipeline. If you do not specify the Python and R paths of your local environment in your config file, please ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) installed and initialised before running these commands:
 ```
 mamba env create --file deep_env.yml
 mamba env create --file ./resources/bin/hase/environment.yml
 ```
+The deep_env environment will require ~4.1 GB of storage, and the hase_py2 will require 588MB.
 ## You need to have at least 
 ```
 R version 4.1
