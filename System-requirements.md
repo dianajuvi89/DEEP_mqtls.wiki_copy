@@ -66,7 +66,9 @@ remotes::install_github("danbelsky/DunedinPACE")
 
 ### Please install GwasDataImport to infer genome build
 ```r
+library(BiocManager)
 remotes::install_github("MRCIEU/GwasDataImport")
+BiocManager::install("rtracklayer")
 ```
 
 ### Please install EWAFF
