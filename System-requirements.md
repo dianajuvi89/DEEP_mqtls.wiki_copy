@@ -7,7 +7,7 @@ mamba env create --file deep_env.yml
 mamba env create --file ./resources/bin/hase/environment.yml
 ```
 The deep_env environment will require ~4.1 GB of storage, and the hase_py2 will require 588MB. If you use conda, please replace `mamba` with `conda` in all commands.
-### Option2: You need to specify the Python3, Python2 and R directories in your config file.
+### Option2: You do not use mamba/conda, then you need to specify the Python2, Python3 and R directories in your config file.
 
 ## You need to have at least 
 ```
