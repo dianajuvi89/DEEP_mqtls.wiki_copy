@@ -1,5 +1,5 @@
 ## Create and activate conda/mamba environment
-We recommend using mamba to manage the environment when running this pipeline. If you do not specify the Python and R paths of your local environment in your config file, please ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) installed and initialised before running these commands:
+Option1 (recommended): We use mamba/conda to manage the environment when running this pipeline. If you do not need to specify the Python and R paths of your local environment in your config file, please ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) installed and initialised before running these commands:
 ```
 # To create the main environment for DEEP pipeline
 mamba env create --file deep_env.yml
