@@ -24,7 +24,7 @@ In R, run:
 install.packages("parallel")
 install.packages("EasyQC_9.2.tar.gz")
 ```
-### If you do not use mamba or conda, please install these R packages in your R:
+### If you do not use mamba or conda, please install these R packages in your R manually:
 ```r
 install.packages("MASS")
 install.packages("lattice")
