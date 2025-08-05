@@ -7,12 +7,8 @@ mamba env create --file deep_env.yml
 mamba env create --file ./resources/bin/hase/environment.yml
 ```
 The deep_env environment will require ~4.1 GB of storage, and the hase_py2 will require 588MB. If you use conda, please replace `mamba` with `conda` in all commands.
-#### Option2: If you do not use mamba/conda, then please specify the Python2, Python3, and R directories in your config file.
+#### Option2: If you do not use mamba/conda, then please specify the Python2, Python3, and R directories in your config file. Please ensure you have at least `R version 4.1` and `Python3 version 3.9`.
 
-## You need to have at least 
-```
-R version 4.1
-```
 ### After you create your environment by using conda/mamba, these are the packages absent from conda-forge, which you need to install in R.
 In the location on your server where you have cloned this repository, you need to run
 ```bash
