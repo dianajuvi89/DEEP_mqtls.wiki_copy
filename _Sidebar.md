@@ -8,7 +8,8 @@
 ### Data preparation prior to pipeline
 - [Imputed genetic data](Imputed-genetic-data)
 - [Normalised methylation data](Normalised-methylation-data)
-- [Covariate data](Covariate-data)   
+- [Covariate data](Covariate-data)
+- [Phenotype data](Phenotype-data)
 
 ### Pipeline set up
 - [Install and set up](Install-and-set-up)
