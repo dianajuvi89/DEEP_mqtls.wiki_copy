@@ -3,8 +3,8 @@ You may have the following files:\
 `
 data_chr1.bgen, ... data_chr22.bgen;
 data_chr1.bgi,  ... data_chr22.bgi;
-data.sample\
-`
+data.sample
+`\
 They are stored in `$genodir=Path_To_Your_Genotype_Data`
 # Step 1: Create your filtered sample list
 ```bash
