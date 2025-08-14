@@ -16,7 +16,7 @@ write.table(d2,"filtered.sample",sep=" ",col.names=T,row.names=F,quote=F)
 ```
 
 #Then run the bash script below using QCtoolv2.
-
+```
 #!/bin/bash
 for i in {1..23}
 do
