@@ -15,7 +15,8 @@ cd $genodir
 # Both exclusion and inclusion filtering are possible. This example demonstrates inclusion filtering.
 qctool -g data_chr22.bgen -s data.sample -incl-samples inclusion.sample.txt -os filtered.sample
 ```
-# Step 2: 
+# Step 2: Generate bfiles and info files by chromosome.
+# change {1..22} if you don't have chr 23.
 ```
 #!/bin/bash
 for i in {1..23}
