@@ -5,7 +5,10 @@ data_chr1.bgen, ... data_chr22.bgen;
 data_chr1.bgi,  ... data_chr22.bgi;
 data.sample
 `\
-They are stored in `$genodir=Path_To_Your_Genotype_Data`
+They are all stored in `$genodir=Path_To_Your_Genotype_Data`.
+```bash
+cd $genodir
+```
 # Step 1: Create your filtered sample list
 ```bash
 # If you need to filter out samples, generate an inclusion/exclusion list.
@@ -17,27 +20,24 @@ qctool -g data_chr22.bgen -s data.sample -incl-samples inclusion.sample.txt -os 
 #!/bin/bash
 for i in {1..23}
 do
-
-# First filter out samples
+   echo "Processing chromosome $i ..."
+# Filter out samples
    qctool -g data_chr${i}.bgen -s data.sample -og filteredchr${i}.bgen -incl-samples inclusion.sample.txt
     
-# Now calculate summary stats on the filtered data. Please note you need to exclude the samples from the .sample file manually. 
-       
-   qctool -g filteredchr${i}.bgen -snp-stats -osnp $dir/data_chr${i}.snp-stats
+# Calculate summary stats on the filtered data. 
+   qctool -g filteredchr${i}.bgen -snp-stats -osnp data_chr${i}.snp-stats
 
-# Now extract snps (info>=0.8) and maf>=0.001 from the *snp-stats files. 
+# Extract snps (info>=0.8 and maf>=0.001) from the *snp-stats files. 
 # Assuming column 14 is MAF and 
 # Column 17 is info score
 awk '$14>=0.001 && $17>=0.8 {print $2,$14,$17}' <data_chr${i}.snp-stats > data_chr${i}.info
 awk '{print $1}' <data_chr${i}.info > high_quality_SNPs_chr${i}.txt
 
 # Generate the best guess data from the bgen files, variants will be recoded to chr:pos_allele1_allele2 (ascii-sorted).
+# plink2 now requires specifying ref-first, ref-last, or ref-unknown for --bgen.
+plink2 --bgen filteredchr${i}.bgen ref-first --sample filtered.sample --new-id-max-allele-len 70 --set-all-var-ids @:#:\$1:\$2 --make-bed --out data_chr${i}_filtered --hard-call-threshold 0.499999 --extract high_quality_SNPs_chr${i}.txt
 
-plink2 --bgen filteredchr${i}.bgen --sample filtered.sample --set-all-var-ids @:#_\$1_\$2 --make-bed --out data_chr${i}_filtered --hard-call-threshold 0.499999 --extract high_quality_SNPs_chr${i}.txt
-
-# We keep indels as much as possible
 # Remove any duplicates
-
 cp data_chr${i}_filtered.bim data_chr${i}_filtered.bim.orig
 awk '{
    if (++dup[$2] > 1) { 
@@ -47,7 +47,7 @@ awk '{
 }' data_chr${i}_filtered.bim.orig > data_chr${i}_filtered.bim
 grep "duplicate" data_chr${i}_filtered.bim | awk '{ print $2 }' > duplicates.chr${i}.txt
 
-plink2 --bfile data_chr${i}_filtered --exclude duplicates.chr${i}.txt --make-bed --out data_chr${i}_filtered
+plink2 --bfile data_chr${i}_filtered --exclude duplicates.chr${i}.txt --new-id-max-allele-len 70 --set-all-var-ids @:#_\$1_\$2 --make-bed --out data_chr${i}_filtered_nodup
 
 # Relabel the SNP IDs and extract relevant columns in the snp-stats file
 # Assumes column 4 is the position
@@ -55,22 +55,16 @@ plink2 --bfile data_chr${i}_filtered --exclude duplicates.chr${i}.txt --make-bed
 # Assumes column 15 is the MAF
 # Assumes column 19 is the info score
 
-awk -v chr=$i '{
-        if (($5 == "A" || $5 == "T" || $5 == "C" || $5=="G") &&  ($6 == "A" || $6 == "T" || $6 == "C" || $6=="G")) 
-            print "chr"chr":"$4":SNP", $15, $19;
-        else 
-            print "chr"chr":"$4":INDEL", $15, $19;
-    }' data_chr${i}.snp-stats > data_chr${i}.info
-
 # Remove duplicates from snp-stats
-cp data_chr${i}.info data_chr${i}.info.orig
 awk '{
         if (++dup[$1] > 1) {
             print $1".duplicate."dup[$1], $2, $3
         } else {
-            print $0 }
-}' data_chr${i}.info.orig > data_chr${i}.info
-    fgrep -v -w -f duplicates.chr${i}.txt <data_chr${i}.info >chr${i}_filtered.info
+            print $0
+        }
+    }' data_chr${i}.snp-stats > data_chr${i}.info.tmp
+grep -F -v -w -f duplicates.chr${i}.txt data_chr${i}.info.tmp > chr${i}_filtered.info
+rm data_chr${i}.info.tmp
 done
 ```
 # Step 3: Merge them into one dataset
