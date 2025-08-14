@@ -25,9 +25,6 @@ d2 <- d[which(d[, 1] %in% e[, 1] == FALSE), ]
 write.table(d2, "filtered.sample", sep = " ", col.names = TRUE, 
             row.names = FALSE, quote = FALSE)
 ```
-```
-qctool -g data_chr22.bgen -s data.sample -og filteredchr22.bgen -incl-samples $sas_mother -os filtered.sample
-```
 #Then run the bash script below using QCtoolv2.
 ```
 #!/bin/bash
