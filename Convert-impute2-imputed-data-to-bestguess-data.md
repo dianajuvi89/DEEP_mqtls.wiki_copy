@@ -18,7 +18,7 @@ qctool -g data_chr22.bgen -s data.sample -incl-samples inclusion.sample.txt -os 
 # Step 2: Generate bfiles and info files by chromosome.
 ```
 #!/bin/bash
-# change {1..22} if you don't have chr 23.
+# Please change {1..22} if you don't have chr 23.
 for i in {1..23}
 do
    echo "Processing chromosome $i ..."
@@ -43,6 +43,7 @@ done
 ```
 # Step 3: Merge them into one dataset
 ```
+# Please change {1..22} if you don't have chr 23.
 for i in {2..23}
 do 
     echo "data_chr${i}_filtered"
