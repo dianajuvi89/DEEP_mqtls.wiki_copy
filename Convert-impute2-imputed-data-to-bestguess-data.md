@@ -5,24 +5,10 @@ data_chr1.bgen, ... data_chr22.bgen;
 data_chr1.bgi,  ... data_chr22.bgi;
 data.sample  
 `
-
 ```bash
-# If you need to filter out samples, generate a new sample file.
-# Start by copying the original sample file.
-cp data.sample filtered.sample
-```
-
-
-
-In R:
-```
-# Both exclusion and inclusion filtering are possible.
-# This example demonstrates inclusion filtering.
-d <- read.table("data.sample", header = TRUE, stringsAsFactors = FALSE)
-i <- read.table("inclusion.samples.txt", stringsAsFactors = FALSE)
-length(which(d[, 1] %in% i[, 1] == FALSE))   # Number of individuals that will be excluded.
-d2 <- d[which(d[, 1] %in% i[, 1] == TRUE), ]   # Keep only individuals in the inclusion list.
-write.table(d2, "filtered.sample", sep = " ", col.names = TRUE, row.names = FALSE, quote = FALSE)
+# If you need to filter out samples, generate an inclusion/exclusion list.
+# Both exclusion and inclusion filtering are possible. This example demonstrates inclusion filtering.
+qctool -g data_chr22.bgen -s data.sample -incl-samples $PATH_TO_INCL_LIST -os filtered.sample
 ```
 #Then run the bash script below using QCtoolv2.
 ```
