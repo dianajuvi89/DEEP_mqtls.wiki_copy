@@ -75,7 +75,7 @@ awk -v chr=$i '{
             print "chr"chr":"$4":INDEL", $15, $19;
     }' data_chr${i}.snp-stats > data_chr${i}.info
 
-    # Remove duplicates from snp-stats
+# Remove duplicates from snp-stats
 cp data_chr${i}.info data_chr${i}.info.orig
 awk '{
         if (++dup[$1] > 1) {
