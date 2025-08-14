@@ -9,16 +9,16 @@ data.sample
 ```bash
 # If you need to filter out samples, generate an inclusion/exclusion list.
 # Both exclusion and inclusion filtering are possible. This example demonstrates inclusion filtering.
-qctool -g data_chr22.bgen -s data.sample -incl-samples $PATH_TO_INCL_LIST -os filtered.sample
+qctool -g data_chr22.bgen -s data.sample -incl-samples inclusion.sample.txt -os filtered.sample
 ```
-# Step 2 [Option 1] Using for loop:
+# Step 2: 
 ```
 #!/bin/bash
 for i in {1..23}
 do
 
 # First filter out samples
-    qctool -g data_chr${i}.bgen -s data.sample -og filteredchr${i}.bgen -excl-samples exclusion.samples.txt
+    qctool -g data_chr${i}.bgen -s data.sample -og filteredchr${i}.bgen -incl-samples inclusion.sample.txt
     
 # Now calculate summary stats on the filtered data. Please note you need to exclude the samples from the .sample file manually. 
        
@@ -72,7 +72,7 @@ awk '{
     fgrep -v -w -f duplicates.chr${i}.txt <data_chr${i}.info >chr${i}_filtered.info
 done
 
-# Merge them into one dataset
+# Step 3: Merge them into one dataset
 
 for i in {2..23}
 do 
