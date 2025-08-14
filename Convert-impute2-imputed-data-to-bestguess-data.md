@@ -71,9 +71,9 @@ awk '{
 }' data_chr${i}.info.orig > data_chr${i}.info
     fgrep -v -w -f duplicates.chr${i}.txt <data_chr${i}.info >chr${i}_filtered.info
 done
-
+```
 # Step 3: Merge them into one dataset
-
+```
 for i in {2..23}
 do 
     echo "data_chr${i}_filtered"
