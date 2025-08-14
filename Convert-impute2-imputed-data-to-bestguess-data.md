@@ -17,8 +17,8 @@ In R:
 # This example demonstrates inclusion filtering.
 d <- read.table("data.sample", header = TRUE, stringsAsFactors = FALSE)
 i <- read.table("inclusion.samples.txt", stringsAsFactors = FALSE)
-length(which(d[, 1] %in% i[, 1] == TRUE))   # Number of individuals that will be included.
-d2 <- d[which(d[, 1] %in% i[, 1] == FALSE), ]   # Keep only individuals not in the exclusion list
+length(which(d[, 1] %in% i[, 1] == FALSE))   # Number of individuals that will be excluded.
+d2 <- d[which(d[, 1] %in% i[, 1] == TRUE), ]   # Keep only individuals in the inclusion list.
 write.table(d2, "filtered.sample", sep = " ", col.names = TRUE, row.names = FALSE, quote = FALSE)
 ```
 #Then run the bash script below using QCtoolv2.
