@@ -3,14 +3,17 @@ Assuming you have used [impute2](https://mathgen.stats.ox.ac.uk/impute/impute_v2
 ```bash
 # First, copy your sample file to a new file
 cp data.sample filtered.sample
-# If you need to filter out samples you need to generate a new sample file.
+# If you need to filter out samples, you need to generate a new sample file.
 
+```
 In R:
- d<-read.table("data.sample",header=T,stringsAsFactors=F)
- e<-read.table("exclusion.samples.txt",stringsAsFactors=F)
- length(which(d[,1]%in%e[,1]==T)) #Number of individuals that will be removed
- d2<-d[(which(d[,1]%in%e[,1]==F)),]
- write.table(d2,"filtered.sample",sep=" ",col.names=T,row.names=F,quote=F)
+```
+d<-read.table("data.sample",header=T,stringsAsFactors=F)
+e<-read.table("exclusion.samples.txt",stringsAsFactors=F)
+length(which(d[,1]%in%e[,1]==T)) #Number of individuals that will be removed
+d2<-d[(which(d[,1]%in%e[,1]==F)),]
+write.table(d2,"filtered.sample",sep=" ",col.names=T,row.names=F,quote=F)
+```
 
 #Then run the bash script below using QCtoolv2.
 
