@@ -16,9 +16,9 @@ cd $genodir
 qctool -g data_chr22.bgen -s data.sample -incl-samples inclusion.sample.txt -os filtered.sample
 ```
 # Step 2: Generate bfiles and info files by chromosome.
-# change {1..22} if you don't have chr 23.
 ```
 #!/bin/bash
+# change {1..22} if you don't have chr 23.
 for i in {1..23}
 do
    echo "Processing chromosome $i ..."
