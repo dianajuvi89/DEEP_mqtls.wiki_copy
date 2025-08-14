@@ -11,7 +11,7 @@ data.sample
 # Both exclusion and inclusion filtering are possible. This example demonstrates inclusion filtering.
 qctool -g data_chr22.bgen -s data.sample -incl-samples $PATH_TO_INCL_LIST -os filtered.sample
 ```
-# Step 2 [Option 1]
+# Step 2 [Option 1] Using for loop:
 ```
 #!/bin/bash
 for i in {1..23}
