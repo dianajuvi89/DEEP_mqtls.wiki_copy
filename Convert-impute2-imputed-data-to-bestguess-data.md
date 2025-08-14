@@ -5,12 +5,13 @@ data_chr1.bgen, ... data_chr22.bgen;
 data_chr1.bgi,  ... data_chr22.bgi;
 data.sample  
 `
+# Step 1: Create your filtered sample list
 ```bash
 # If you need to filter out samples, generate an inclusion/exclusion list.
 # Both exclusion and inclusion filtering are possible. This example demonstrates inclusion filtering.
 qctool -g data_chr22.bgen -s data.sample -incl-samples $PATH_TO_INCL_LIST -os filtered.sample
 ```
-#Then run the bash script below using QCtoolv2.
+# Step 2 [Option 1]
 ```
 #!/bin/bash
 for i in {1..23}
