@@ -1,20 +1,29 @@
-Assuming you have used [impute2](https://mathgen.stats.ox.ac.uk/impute/impute_v2.html) to perform the imputation and generated `bgen` dosage files, you can use [qctool](http://www.well.ox.ac.uk/~gav/qctool/#overview) to filter on MAF and info and prepare a SNP quality file for the pipeline following the bash script below.
+Assuming you have used [impute2](https://mathgen.stats.ox.ac.uk/impute/impute_v2.html) to perform the imputation and generated `bgen` dosage files, you can use [qctool](http://www.well.ox.ac.uk/~gav/qctool/#overview) to filter on MAF and info and prepare a SNP quality file for the pipeline following the bash script below. Both plink1.90 and plink2 have been implemented in the pipeline.
+You may have the following files:
+`
+data_chr1.bgen ... data_chr22.bgen;
+data_chr1.bgi  ... data_chr22.bgi;
+data.sample  
+`
 
 ```bash
-# First, copy your sample file to a new file
-cp data.sample filtered.sample
 # If you need to filter out samples, you need to generate a new sample file.
+# Copy your sample file to a new file
+cp data.sample filtered.sample
 
 ```
 In R:
 ```
+# Both exclusion and inclusion are fine; here we show an example of an exclusion sample.
 d<-read.table("data.sample",header=T,stringsAsFactors=F)
 e<-read.table("exclusion.samples.txt",stringsAsFactors=F)
 length(which(d[,1]%in%e[,1]==T)) #Number of individuals that will be removed
 d2<-d[(which(d[,1]%in%e[,1]==F)),]
 write.table(d2,"filtered.sample",sep=" ",col.names=T,row.names=F,quote=F)
 ```
-
+```
+qctool -g data_chr22.bgen -s data.sample -og filteredchr22.bgen -incl-samples $sas_mother -os filtered.sample
+```
 #Then run the bash script below using QCtoolv2.
 ```
 #!/bin/bash
@@ -28,45 +37,35 @@ do
        
     qctool -g filteredchr${i}.bgen -snp-stats -osnp $dir/data_chr${i}.snp-stats
 
-# Now extract snps (info>0.8) and maf>0.01 from the *snp-stats files. 
+# Now extract snps (info>=0.8) and maf>=0.001 from the *snp-stats files. 
 # We assume column 14 is MAF and 
 # We assume column 17 is info score
-awk '$14>0.01 && $17>0.8 {print $2,$14,$17}' <data_chr${i}.snp-stats > data_chr${i}.info
+awk '$14>=0.001 && $17>=0.8 {print $2,$14,$17}' <data_chr${i}.snp-stats > data_chr${i}.info
 awk '{print $1}' <data_chr${i}.info > high_quality_SNPs_chr${i}.txt
 
-# Generate the best guess data from the bgen files, variants with will be recoded to chr:pos_allele1_allele2 (ascii-sorted).
+# Generate the best guess data from the bgen files, variants will be recoded to chr:pos_allele1_allele2 (ascii-sorted).
 
 plink2 --bgen filteredchr${i}.bgen --sample filtered.sample --set-all-var-ids @:#_\$1_\$2 --make-bed --out data_chr${i}_filtered --hard-call-threshold 0.499999 --extract high_quality_SNPs_chr${i}.txt
-         
-    # Rename the SNP IDs if necessary to avoid possible duplicates
-    
-    cp data_chr${i}_filtered.bim data_chr${i}_filtered.bim.orig
-    awk '{
-        if (($5 == "A" || $5 == "T" || $5 == "C" || $5=="G") &&  ($6 == "A" || $6 == "T" || $6 == "C" || $6=="G")) 
-            print $1, "chr"$1":"$4":SNP", $3, $4, $5, $6;
-    else 
-        print $1, "chr"$1":"$4":INDEL", $3, $4, $5, $6;
-   }' data_chr${i}_filtered.bim.orig > data_chr${i}_filtered.bim
-    
-    # For simplicity remove any duplicates
 
-    cp data_chr${i}_filtered.bim data_chr${i}_filtered.bim.orig2
-    awk '{
-        if (++dup[$2] > 1) { 
-            print $1, $2".duplicate."dup[$2], $3, $4, $5, $6 
-        } else { 
-            print $0 }
-    }' data_chr${i}_filtered.bim.orig2 > data_chr${i}_filtered.bim
-    grep "duplicate" data_chr${i}_filtered.bim | awk '{ print $2 }' > duplicates.chr${i}.txt
-    
-    plink1.90 --bfile data_chr${i}_filtered --exclude duplicates.chr${i}.txt --make-bed --out data_chr${i}_filtered
+# We keep indels as much as possible
+# Remove any duplicates
 
+cp data_chr${i}_filtered.bim data_chr${i}_filtered.bim.orig
+awk '{
+   if (++dup[$2] > 1) { 
+      print $1, $2".duplicate."dup[$2], $3, $4, $5, $6 
+   } else { 
+      print $0 }
+}' data_chr${i}_filtered.bim.orig > data_chr${i}_filtered.bim
+grep "duplicate" data_chr${i}_filtered.bim | awk '{ print $2 }' > duplicates.chr${i}.txt
+    
+plink2 --bfile data_chr${i}_filtered --exclude duplicates.chr${i}.txt --make-bed --out data_chr${i}_filtered
 
 # Relabel the SNP IDs and extract relevant columns in the snp-stats file
-    # Assumes column 4 is the position
-    # Assumes columns 5 and 6 are the allele names
-    # Assumes column 15 is the MAF
-    # Assumes columns 19 is the info score
+# Assumes column 4 is the position
+# Assumes columns 5 and 6 are the allele names
+# Assumes column 15 is the MAF
+# Assumes column 19 is the info score
 
 awk -v chr=$i '{
         if (($5 == "A" || $5 == "T" || $5 == "C" || $5=="G") &&  ($6 == "A" || $6 == "T" || $6 == "C" || $6=="G")) 
