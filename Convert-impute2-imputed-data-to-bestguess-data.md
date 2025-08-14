@@ -17,10 +17,8 @@ In R:
 # This example demonstrates exclusion filtering.
 d <- read.table("data.sample", header = TRUE, stringsAsFactors = FALSE)
 e <- read.table("exclusion.samples.txt", stringsAsFactors = FALSE)
-# Number of individuals that will be removed
-length(which(d[, 1] %in% e[, 1] == TRUE))
-# Keep only individuals not in the exclusion list
-d2 <- d[which(d[, 1] %in% e[, 1] == FALSE), ]
+length(which(d[, 1] %in% e[, 1] == TRUE))   # Number of individuals that will be removed
+d2 <- d[which(d[, 1] %in% e[, 1] == FALSE), ]   # Keep only individuals not in the exclusion list
 # Save the filtered sample file
 write.table(d2, "filtered.sample", sep = " ", col.names = TRUE, 
             row.names = FALSE, quote = FALSE)
