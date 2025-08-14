@@ -20,8 +20,7 @@ e <- read.table("exclusion.samples.txt", stringsAsFactors = FALSE)
 length(which(d[, 1] %in% e[, 1] == TRUE))   # Number of individuals that will be removed
 d2 <- d[which(d[, 1] %in% e[, 1] == FALSE), ]   # Keep only individuals not in the exclusion list
 # Save the filtered sample file
-write.table(d2, "filtered.sample", sep = " ", col.names = TRUE, 
-            row.names = FALSE, quote = FALSE)
+write.table(d2, "filtered.sample", sep = " ", col.names = TRUE, row.names = FALSE, quote = FALSE)
 ```
 #Then run the bash script below using QCtoolv2.
 ```
