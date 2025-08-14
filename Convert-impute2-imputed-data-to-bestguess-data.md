@@ -1,8 +1,8 @@
 Assuming you have used [impute2](https://mathgen.stats.ox.ac.uk/impute/impute_v2.html) to perform the imputation and generated `bgen` dosage files, you can use [qctool](http://www.well.ox.ac.uk/~gav/qctool/#overview) to filter on MAF and info and prepare a SNP quality file for the pipeline following the bash script below. Both plink1.90 and plink2 have been implemented in the pipeline.
 You may have the following files:
 `
-data_chr1.bgen ... data_chr22.bgen;
-data_chr1.bgi  ... data_chr22.bgi;
+data_chr1.bgen, ... data_chr22.bgen;
+data_chr1.bgi,  ... data_chr22.bgi;
 data.sample  
 `
 
