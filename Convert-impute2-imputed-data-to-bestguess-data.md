@@ -107,7 +107,7 @@ done
 ```
 
 
-The result should be three plink files: `data_filtered.bed`, `data_filtered.bim`, `data_filtered.fam`, and the info file: `data_filtered.info`. Copy them to `godmc/input_data` and set the following variable in your `config` file:
+The result should be three plink files: `data_filtered.bed`, `data_filtered.bim`, `data_filtered.fam`, and the info file: `data_filtered.info`. Copy them to `DEEP_mqtls/input_data` and set the following variable in your `config` file:
 
     bfile_raw="${home_directory}/input_data/data_filtered"
 
