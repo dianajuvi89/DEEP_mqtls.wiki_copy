@@ -36,36 +36,9 @@ awk '{print $1}' <data_chr${i}.info > high_quality_SNPs_chr${i}.txt
 
 # Generate the best guess data from the bgen files, variants will be recoded to chr:pos_allele1_allele2 (ascii-sorted).
 # plink2 now requires specifying ref-first, ref-last, or ref-unknown for --bgen.
-plink2 --bgen filteredchr${i}.bgen ref-first --sample filtered.sample --new-id-max-allele-len 70 --set-all-var-ids @:#:\$1:\$2 --make-bed --out data_chr${i}_filtered --hard-call-threshold 0.499999 --extract high_quality_SNPs_chr${i}.txt
+plink2 --bgen filteredchr${i}.bgen ref-first --sample filtered.sample --new-id-max-allele-len 70 --make-bed --out data_chr${i}_filtered --hard-call-threshold 0.499999 --extract high_quality_SNPs_chr${i}.txt
 
-# Remove any duplicates
-cp data_chr${i}_filtered.bim data_chr${i}_filtered.bim.orig
-awk '{
-   if (++dup[$2] > 1) { 
-      print $1, $2".duplicate."dup[$2], $3, $4, $5, $6 
-   } else { 
-      print $0 }
-}' data_chr${i}_filtered.bim.orig > data_chr${i}_filtered.bim
-grep "duplicate" data_chr${i}_filtered.bim | awk '{ print $2 }' > duplicates.chr${i}.txt
-
-plink2 --bfile data_chr${i}_filtered --exclude duplicates.chr${i}.txt --new-id-max-allele-len 70 --set-all-var-ids @:#_\$1_\$2 --make-bed --out data_chr${i}_filtered_nodup
-
-# Relabel the SNP IDs and extract relevant columns in the snp-stats file
-# Assumes column 4 is the position
-# Assumes columns 5 and 6 are the allele names
-# Assumes column 15 is the MAF
-# Assumes column 19 is the info score
-
-# Remove duplicates from snp-stats
-awk '{
-        if (++dup[$1] > 1) {
-            print $1".duplicate."dup[$1], $2, $3
-        } else {
-            print $0
-        }
-    }' data_chr${i}.snp-stats > data_chr${i}.info.tmp
-grep -F -v -w -f duplicates.chr${i}.txt data_chr${i}.info.tmp > chr${i}_filtered.info
-rm data_chr${i}.info.tmp
+# SNP ID will be re-formatted, and duplicates will be removed in pipeline 01b.
 done
 ```
 # Step 3: Merge them into one dataset
@@ -75,7 +48,7 @@ do
     echo "data_chr${i}_filtered"
 done > mergefile.txt
 
-plink1.90 --bfile data_chr1_filtered --new-id-max-allele-len --merge-list mergefile.txt --make-bed --out data_filtered
+plink1.90 --bfile data_chr1_filtered --new-id-max-allele-len 70 --merge-list mergefile.txt --make-bed --out data_filtered
 
 # Combine info files into a single file
 
