@@ -74,7 +74,7 @@ do
     echo "data_chr${i}_filtered"
 done > mergefile.txt
 
-plink1.90 --bfile data_chr1_filtered --merge-list mergefile.txt --make-bed --out data_filtered
+plink1.90 --bfile data_chr1_filtered --new-id-max-allele-len --merge-list mergefile.txt --make-bed --out data_filtered
 
 # Combine info files into a single file
 
