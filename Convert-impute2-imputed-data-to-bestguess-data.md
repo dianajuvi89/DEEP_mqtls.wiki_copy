@@ -7,19 +7,23 @@ data.sample
 `
 
 ```bash
-# If you need to filter out samples, you need to generate a new sample file.
-# Copy your sample file to a new file
+# If you need to filter out samples, generate a new sample file.
+# Start by copying the original sample file.
 cp data.sample filtered.sample
-
 ```
 In R:
 ```
-# Both exclusion and inclusion are fine; here we show an example of an exclusion sample.
-d<-read.table("data.sample",header=T,stringsAsFactors=F)
-e<-read.table("exclusion.samples.txt",stringsAsFactors=F)
-length(which(d[,1]%in%e[,1]==T)) #Number of individuals that will be removed
-d2<-d[(which(d[,1]%in%e[,1]==F)),]
-write.table(d2,"filtered.sample",sep=" ",col.names=T,row.names=F,quote=F)
+# Both exclusion and inclusion filtering are possible.
+# This example demonstrates exclusion filtering.
+d <- read.table("data.sample", header = TRUE, stringsAsFactors = FALSE)
+e <- read.table("exclusion.samples.txt", stringsAsFactors = FALSE)
+# Number of individuals that will be removed
+length(which(d[, 1] %in% e[, 1] == TRUE))
+# Keep only individuals not in the exclusion list
+d2 <- d[which(d[, 1] %in% e[, 1] == FALSE), ]
+# Save the filtered sample file
+write.table(d2, "filtered.sample", sep = " ", col.names = TRUE, 
+            row.names = FALSE, quote = FALSE)
 ```
 ```
 qctool -g data_chr22.bgen -s data.sample -og filteredchr22.bgen -incl-samples $sas_mother -os filtered.sample
