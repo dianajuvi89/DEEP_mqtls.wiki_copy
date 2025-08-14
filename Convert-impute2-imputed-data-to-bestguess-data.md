@@ -56,7 +56,7 @@ awk '{
       print $0 }
 }' data_chr${i}_filtered.bim.orig > data_chr${i}_filtered.bim
 grep "duplicate" data_chr${i}_filtered.bim | awk '{ print $2 }' > duplicates.chr${i}.txt
-    
+
 plink2 --bfile data_chr${i}_filtered --exclude duplicates.chr${i}.txt --make-bed --out data_chr${i}_filtered
 
 # Relabel the SNP IDs and extract relevant columns in the snp-stats file
