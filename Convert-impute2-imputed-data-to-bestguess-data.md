@@ -3,8 +3,9 @@ You may have the following files:
 `
 data_chr1.bgen, ... data_chr22.bgen;
 data_chr1.bgi,  ... data_chr22.bgi;
-data.sample  
+data.sample
 `
+They are stored in `$genodir=Path_To_Your_Genotype_Data`
 # Step 1: Create your filtered sample list
 ```bash
 # If you need to filter out samples, generate an inclusion/exclusion list.
@@ -18,15 +19,15 @@ for i in {1..23}
 do
 
 # First filter out samples
-    qctool -g data_chr${i}.bgen -s data.sample -og filteredchr${i}.bgen -incl-samples inclusion.sample.txt
+   qctool -g data_chr${i}.bgen -s data.sample -og filteredchr${i}.bgen -incl-samples inclusion.sample.txt
     
 # Now calculate summary stats on the filtered data. Please note you need to exclude the samples from the .sample file manually. 
        
-    qctool -g filteredchr${i}.bgen -snp-stats -osnp $dir/data_chr${i}.snp-stats
+   qctool -g filteredchr${i}.bgen -snp-stats -osnp $dir/data_chr${i}.snp-stats
 
 # Now extract snps (info>=0.8) and maf>=0.001 from the *snp-stats files. 
-# We assume column 14 is MAF and 
-# We assume column 17 is info score
+# Assuming column 14 is MAF and 
+# Column 17 is info score
 awk '$14>=0.001 && $17>=0.8 {print $2,$14,$17}' <data_chr${i}.snp-stats > data_chr${i}.info
 awk '{print $1}' <data_chr${i}.info > high_quality_SNPs_chr${i}.txt
 
