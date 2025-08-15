@@ -43,7 +43,7 @@ done
 ```
 # Step 3: Merge them into one dataset
 ```
-# Please change {1..22} if you don't have chr 23.
+# Please adjust {1..22} if you do not have chromosome 23.
 for i in {2..23}
 do 
     echo "data_chr${i}_filtered"
