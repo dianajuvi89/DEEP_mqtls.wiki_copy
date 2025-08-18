@@ -57,7 +57,9 @@ install.packages("BiocManager")
 ### Please install EpiDISH and DunedinPACE from GitHub and not from Bioconductor.
 ```r
 library(remotes)
+library(BiocManager)
 Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")
+BiocManager::install("genefilter")
 remotes::install_github("sjczheng/EpiDISH")
 remotes::install_github("danbelsky/DunedinPACE")
 ```
