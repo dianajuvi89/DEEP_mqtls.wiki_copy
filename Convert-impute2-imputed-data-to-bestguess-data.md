@@ -53,11 +53,11 @@ plink1.90 --bfile data_chr1_filtered --new-id-max-allele-len 70 --merge-list mer
 
 # Combine info files into a single file
 
-head -n1 chr01_filtered.info > data_filtered.info
+head -n1 data_chr1.info > data_filtered.info
 
 for i in {1..23}
 do
-    awk ' NR>1 {print $0}' < chr${i}_filtered.info |cat >> data_filtered.info
+    awk ' NR>1 {print $0}' < data_chr${i}.info |cat >> data_filtered.info
 done
 
 ```
