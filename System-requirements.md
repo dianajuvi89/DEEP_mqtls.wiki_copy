@@ -68,6 +68,7 @@ remotes::install_github("danbelsky/DunedinPACE")
 ```r
 library(BiocManager)
 BiocManager::install("rtracklayer")
+BiocManager::install("biomaRt")
 remotes::install_github("MRCIEU/GwasDataImport")
 ```
 
