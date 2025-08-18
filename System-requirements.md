@@ -53,7 +53,7 @@ install.packages("magrittr")
 install.packages("R.utils")
 install.packages("BiocManager")
 ```
-## Other R packages for both users with mamba and without mamba
+## Other R packages are required for both mamba users and non-mamba users.
 ### Please install EpiDISH and DunedinPACE from GitHub and not from Bioconductor.
 ```r
 library(remotes)
@@ -65,8 +65,8 @@ remotes::install_github("danbelsky/DunedinPACE")
 ### Please install GwasDataImport to infer genome build
 ```r
 library(BiocManager)
-remotes::install_github("MRCIEU/GwasDataImport")
 BiocManager::install("rtracklayer")
+remotes::install_github("MRCIEU/GwasDataImport")
 ```
 
 ### Please install EWAFF
@@ -75,14 +75,14 @@ library(remotes)
 Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")
 remotes::install_github("perishky/ewaff")
 ```
-### You need to install scoreInvHap and impute from BiocManager
+### Please install scoreInvHap and impute from BiocManager
 ```r
 library(BiocManager)
 BiocManager::install("scoreInvHap")
 BiocManager::install("impute")
 ```
 
-### You only need to install these packages if you have related samples
+### Please install these packages if you have related samples
 ```r
 library(BiocManager)
 BiocManager::install("GWASTools")
@@ -90,7 +90,7 @@ BiocManager::install("SNPRelate")
 BiocManager::install("GENESIS")
 ```
 
-### You need to install meffil. You need to have installed version 1.3.8 or higher. You can find out the version with the commands below. 
+### You need to install meffil. You need to have version 1.3.8 or higher. You can find out the version with the commands below. 
 ```
 library(meffil)
 sessionInfo()
@@ -110,7 +110,7 @@ Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")
 remotes::install_github("perishky/meffil")
 ```
 
-### You need to test whether the preprocessCore Rpackage multi-threading works
+### You need to test whether the preprocessCore R package multi-threading works
 ```r
 threading.ok <- function() {
 	require(preprocessCore)
@@ -120,19 +120,19 @@ threading.ok <- function() {
 }
 threading.ok()
 ```
-If `threading.ok()` returns TRUE, then you shouldn't have a problem. If it return FALSE, then you'll need to reinstall `preprocessCore` with threading disabled as shown below:
+If `threading.ok()` returns TRUE, then you shouldn't have a problem. If it returns FALSE, then you'll need to reinstall `preprocessCore` with threading disabled as shown below:
 
 ```r
 BiocManager::install("preprocessCore", configure.args="--disable-threading", force=TRUE)
 ```
-If you still encounter the error about the `preprocessCore` and under the conda environment, please manually intsall it by following:
+If you still encounter the error about the `preprocessCore` and under the conda environment, please manually install it by following:
 ```
 git clone https://github.com/bmbolstad/preprocessCore.git
 R CMD INSTALL --configure-args="--disable-threading" path/to/preprocessCore
 ``` 
 
 
-### You need to test whether R can find the path to your Rlibraries
+### You need to test whether R can find the path to your R libraries
 
 You can test this in R:
 
@@ -152,7 +152,7 @@ Add the following line to your `.bashrc`
 export R_LIBS="/path/to/library/"
 ```
 
-Restart the terminal, any R-script should automatically look for packages in your specified directory. You can test this by opening R and testing a library
+Restart the terminal, and any R-script should automatically look for packages in your specified directory. You can test this by opening R and testing a library
 
 ```r
 library(ggplot2)
@@ -164,7 +164,7 @@ You can test this by typing
 
 `Rscript`
 
-If this doesn't work then you need to add the following line to your `bashrc` file
+If this doesn't work, then you need to add the following line to your `bashrc` file
 
 ```
 #You need to edit the line
@@ -186,14 +186,14 @@ which git
 
 #### You need to make sure you have encryption software installed
 
-We are encrypting and uploading the results with aes encryption using `gpg` and `pinentry` and `sshpass`. You can test whether the gpg, pinentry and sshpass linux packages have been installed with the following command:
+We are encrypting and uploading the results with aes encryption using `gpg` and `pinentry`, and `sshpass`. You can test whether the gpg, pinentry, and sshpass Linux packages have been installed with the following command:
 
 ```
 which sshpass
 which gpg
 which pinentry
 ```
-If gpg hasn't been installed then you can install it from here: [https://gnupg.org/download/](https://gnupg.org/download/). You can install pinentry from here: [https://www.gnupg.org/download/index.html#pinentry](https://www.gnupg.org/download/index.html#pinentry). You can install sshpass from here: [https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/](https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/).
+If gpg hasn't been installed, then you can install it from here: [https://gnupg.org/download/](https://gnupg.org/download/). You can install pinentry from here: [https://www.gnupg.org/download/index.html#pinentry](https://www.gnupg.org/download/index.html#pinentry). You can install sshpass from here: [https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/](https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/).
 
  
 
