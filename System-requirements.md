@@ -52,6 +52,7 @@ install.packages("ggrepel")
 install.packages("magrittr")
 install.packages("R.utils")
 install.packages("BiocManager")
+install.packages("DescTools")
 ```
 ## Other R packages are required for both mamba users and non-mamba users.
 ### Please install EpiDISH and DunedinPACE from GitHub and not from Bioconductor.
