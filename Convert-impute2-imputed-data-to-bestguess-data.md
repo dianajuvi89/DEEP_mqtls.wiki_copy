@@ -42,7 +42,7 @@ for i in {1..22}; do
 
     plink2 --bgen filteredchr${i}.bgen ref-first --sample filtered.sample --set-all-var-ids @:#_\$1_\$2 --new-id-max-allele-len 70 --make-bed --out data_chr${i}_filtered --hard-call-threshold 0.499999 --extract high_quality_SNPs_chr${i}.txt
 
-    # For simplicity remove any duplicates
+    # For simplicity remove any duplicates in bim
     cp data_chr${i}_filtered.bim data_chr${i}_filtered.bim.orig
     awk '{
             if (++dup[$2] > 1) {
@@ -51,14 +51,24 @@ for i in {1..22}; do
                 print $0 }
         }' data_chr${i}_filtered.bim.orig > data_chr${i}_filtered.bim
     grep "duplicate" data_chr${i}_filtered.bim | awk '{ print $2 }' > duplicates.chr${i}.txt
+    # update bfiles
+    plink2 --bfile data_chr${i}_filtered --exclude duplicates.chr${i}.txt --new-id-max-allele-len 70 --make-bed --out data_chr${i}_filtered_nodup
 
-    plink2 --bfile data_chr${i}_filtered --exclude duplicates.chr${i}.txt --new-id-max-allele-len 70 --set-all-var-ids @:#_\$1_\$2 --make-bed --out data_chr${i}_filtered_nodup
+    # remove duplicates in info file
+    cp data_chr${i}.info data_chr${i}.info.orig
+    awk '{
+            if (++dup[$1] > 1) {
+                print $1".duplicate."dup[$1], $2, $3
+            } else {
+                print $0 }
+    }' data_chr${i}.info.orig > data_chr${i}.info
+    fgrep -v -w -f duplicates.chr${i}.txt data_chr${i}.info > chr${i}_filtered.info
 done
 ```
 # Step 3: Merge them into one dataset
 ```
-# Please adjust {1..22} if you do not have chromosome 23.
-for i in {2..23}
+# Please adjust {2..23} if you have chromosome 23.
+for i in {2..22}
 do 
     echo "data_chr${i}_filtered_nodup"
 done > mergefile.txt
@@ -67,11 +77,11 @@ plink1.90 --bfile data_chr1_filtered_nodup --new-id-max-allele-len 70 --merge-li
 
 # Combine info files into a single file
 
-head -n1 data_chr1.info > data_filtered.info
+head -n1 chr01_filtered.info > data_filtered.info
 
-for i in {1..23}
+for i in {1..22}
 do
-    awk ' NR>1 {print $0}' < data_chr${i}.info |cat >> data_filtered.info
+    awk ' NR>1 {print $0}' < chr${i}_filtered.info |cat >> data_filtered.info
 done
 
 ```
