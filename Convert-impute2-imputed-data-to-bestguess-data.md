@@ -18,27 +18,41 @@ qctool -g data_chr22.bgen -s data.sample -incl-samples inclusion.sample.txt -os 
 # Step 2: Generate bfiles and info files by each chromosome.
 ```
 #!/bin/bash
-# Please change {1..22} if you don't have chr 23.
-for i in {1..23}
-do
-   echo "Processing chromosome $i ..."
-# Filter out samples
-   qctool -g data_chr${i}.bgen -s data.sample -og filteredchr${i}.bgen -incl-samples inclusion.sample.txt
-    
-# Calculate summary stats on the filtered data. 
-   qctool -g filteredchr${i}.bgen -snp-stats -osnp data_chr${i}.snp-stats
+# Please change {1..23} if you have chr 23.
+for i in {1..22}; do
+    echo "Processing chromosome ${i} ..."
 
-# Extract snps (info>=0.8 and maf>=0.001) from the *snp-stats files. 
-# Assuming column 14 is MAF and 
-# Column 17 is info score
-awk '$14>=0.001 && $17>=0.8 {print $2,$14,$17}' <data_chr${i}.snp-stats > data_chr${i}.info
-awk '{print $1}' <data_chr${i}.info > high_quality_SNPs_chr${i}.txt
+    qctool -g filtered_R203_chr${i}.bgen -s filtered_R203.sample -og filteredchr${i}.bgen -incl-samples $sas_mother
+    qctool -g filteredchr${i}.bgen -snp-stats -osnp data_chr${i}.snp-stats
 
-# Generate the best guess data from the bgen files, variants will be recoded to chr:pos_allele1_allele2 (ascii-sorted).
-# plink2 now requires specifying ref-first, ref-last, or ref-unknown for --bgen.
-plink2 --bgen filteredchr${i}.bgen ref-first --sample filtered.sample --new-id-max-allele-len 70 --make-bed --out data_chr${i}_filtered --hard-call-threshold 0.499999 --extract high_quality_SNPs_chr${i}.txt
+    # Assume that column 14 is MAF and column 17 is info
+    awk '$14>=0.001 && $17>=0.8 {print $2,$14,$17}' <data_chr${i}.snp-stats > data_chr${i}.info
 
-# SNP ID will be re-formatted, and duplicates will be removed in pipeline 01b.
+    # Change format from chr:pos:A1:A2 to chr:pos_A1_A2
+    awk 'NR==1 {print; next}
+         $0 !~ /^#/ && NF {
+           split($1,f,":");
+           chr=f[1]; pos=f[2]; a1=f[3]; a2=f[4];
+           if (a1 > a2) { t=a1; a1=a2; a2=t }
+           id = chr ":" pos "_" a1 "_" a2;
+           print id, $2, $3
+         }' data_chr${i}.info > data_chr${i}.info.tmp && mv data_chr${i}.info.tmp data_chr${i}.info
+
+    awk '{print $1}' <data_chr${i}.info > high_quality_SNPs_chr${i}.txt
+
+    plink2 --bgen filteredchr${i}.bgen ref-first --sample filtered.sample --set-all-var-ids @:#_\$1_\$2 --new-id-max-allele-len 70 --make-bed --out data_chr${i}_filtered --hard-call-threshold 0.499999 --extract high_quality_SNPs_chr${i}.txt
+
+    # For simplicity remove any duplicates
+    cp data_chr${i}_filtered.bim data_chr${i}_filtered.bim.orig
+    awk '{
+            if (++dup[$2] > 1) {
+                print $1, $2".duplicate."dup[$2], $3, $4, $5, $6
+            } else {
+                print $0 }
+        }' data_chr${i}_filtered.bim.orig > data_chr${i}_filtered.bim
+    grep "duplicate" data_chr${i}_filtered.bim | awk '{ print $2 }' > duplicates.chr${i}.txt
+
+    plink2 --bfile data_chr${i}_filtered --exclude duplicates.chr${i}.txt --new-id-max-allele-len 70 --set-all-var-ids @:#_\$1_\$2 --make-bed --out data_chr${i}_filtered_nodup
 done
 ```
 # Step 3: Merge them into one dataset
