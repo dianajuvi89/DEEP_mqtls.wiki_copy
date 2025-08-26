@@ -60,10 +60,10 @@ done
 # Please adjust {1..22} if you do not have chromosome 23.
 for i in {2..23}
 do 
-    echo "data_chr${i}_filtered"
+    echo "data_chr${i}_filtered_nodup"
 done > mergefile.txt
 
-plink1.90 --bfile data_chr1_filtered --new-id-max-allele-len 70 --merge-list mergefile.txt --make-bed --out data_filtered
+plink1.90 --bfile data_chr1_filtered_nodup --new-id-max-allele-len 70 --merge-list mergefile.txt --make-bed --out data_filtered
 
 # Combine info files into a single file
 
