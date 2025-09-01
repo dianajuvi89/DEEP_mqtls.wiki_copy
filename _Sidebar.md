@@ -22,7 +22,7 @@
 <br>
 1c\.  [Check methylation and phenotypes](Check-methylation-phenotypes)
 <br>
-1d\.  [Check data](Check-data)
+1d\.  [mQTL positive control](mQTL-positive-control)
 <br>
 1e\.  [Check data](Check-data)
 <br>
