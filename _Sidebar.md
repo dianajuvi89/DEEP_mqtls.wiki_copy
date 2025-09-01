@@ -15,7 +15,16 @@
 <br>
 0\.  [Set up folders](Set-up-folders)
 <br>
-
+1a\.  [Check data](Check-data)
+<br>
+1b\.  [Check data](Check-data)
+<br>
+1c\.  [Check data](Check-data)
+<br>
+1d\.  [Check data](Check-data)
+<br>
+1e\.  [Check data](Check-data)
+<br>
 ### The pipeline modules (in development)
 [Pipeline Overview](Analyst-Quick-Start-Guide-to-Pipeline)
 <br>
