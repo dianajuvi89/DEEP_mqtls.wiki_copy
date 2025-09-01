@@ -11,7 +11,7 @@
 - [Covariate data](Covariate-data)
 - [Phenotype data](Phenotype-data)
 
-### Pipeline set up
+### QC stage 01
 - [Install and set up](Install-and-set-up)
 
 ### The pipeline modules (ready)
