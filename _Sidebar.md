@@ -24,7 +24,9 @@
 <br>
 1d\.  [mQTL positive control](mQTL-positive-control)
 <br>
-1e\.  [Check data](Check-data)
+1e\.  [GWAS of genetic PCs](GWAS-genetic PCs)
+<br>
+1f\.  [GWAS of genetic PCs](GWAS-genetic PCs)
 <br>
 
 ### The pipeline modules (in development)
