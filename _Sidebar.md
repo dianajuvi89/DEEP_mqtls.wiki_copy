@@ -32,10 +32,6 @@
 ### The pipeline modules (in development)
 [Pipeline Overview](Analyst-Quick-Start-Guide-to-Pipeline)
 <br>
-0\.  [Set up folders](Set-up-folders)
-<br>
-1\.  [Check data](Check-data)
-<br> 
 2\.  [Process SNP data](Process-SNP-data)
 <br> 
 3\.  [Process methylation data](Process-methylation-data)
