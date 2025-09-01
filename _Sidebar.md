@@ -18,7 +18,7 @@
 <br>
 1a\.  [Check data](Check-data)
 <br>
-1b\.  [Check data](Check-data)
+1b\.  [Principal Component analysis](Principal-component-analysis)
 <br>
 1c\.  [Check data](Check-data)
 <br>
