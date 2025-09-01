@@ -24,7 +24,7 @@
 <br>
 1d\.  [mQTL positive control](mQTL-positive-control)
 <br>
-1e\.  [GWAS of genetic PCs](GWAS-genetic PCs)
+1e\.  [GWAS of genetic PCs](GWAS-genetic-PCs)
 <br>
 1f\.  [normalisation of methylation data](normalisation-of-methylation-data)
 <br>
