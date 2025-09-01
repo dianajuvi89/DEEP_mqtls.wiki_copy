@@ -20,7 +20,7 @@
 <br>
 1b\.  [Principal Component analysis](Principal-component-analysis)
 <br>
-1c\.  [Check data](Check-data)
+1c\.  [Check methylation and phenotypes](Check-methylation-phenotypes)
 <br>
 1d\.  [Check data](Check-data)
 <br>
