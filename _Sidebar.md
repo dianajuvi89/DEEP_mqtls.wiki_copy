@@ -12,6 +12,7 @@
 - [Phenotype data](Phenotype-data)
 
 ### QC stage 01 (ready)
+
 <br>
 0\.  [Set up folders](Set-up-folders)
 <br>
