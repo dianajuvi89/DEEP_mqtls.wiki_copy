@@ -26,7 +26,7 @@
 <br>
 1e\.  [GWAS of genetic PCs](GWAS-genetic-PCs)
 <br>
-1f\.  [normalisation of methylation data](normalisation-of-methylation-data)
+1f\.  [Normalisation of methylation data](Normalisation-of-methylation-data)
 <br>
 
 ### The pipeline modules (in development)
