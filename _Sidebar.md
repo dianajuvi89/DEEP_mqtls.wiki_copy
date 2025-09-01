@@ -11,7 +11,8 @@
 - [Covariate data](Covariate-data)
 - [Phenotype data](Phenotype-data)
 
-### QC stage 01
+### QC stage 01 (ready)
+
 <br>
 0\.  [Set up folders](Set-up-folders)
 <br>
