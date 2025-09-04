@@ -107,7 +107,7 @@ quality_scores="${home_directory}/input_data/data.info"
 
 You do not need to provide cell counts proportions estimated from the DNA methylation data, as they will be predicted by the pipeline.
 
-We use the following predictions:
+We use the following predictions and these will be chosen based on the `tissue` and `age` variables in the config file. 
 
 * Blood (12 cell types in adults):  [Salas reference dataset](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE167998) using the [EpiDISH](https://github.com/sjczheng/EpiDISH) package. 
 * Blood (19 cell types adults/children): [Unilife reference dataset](https://rdcu.be/eD9FD) using the [EpiDISH] (https://github.com/sjczheng/EpiDISH) package.
