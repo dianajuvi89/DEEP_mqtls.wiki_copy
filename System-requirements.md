@@ -14,9 +14,9 @@ The deep_env environment will require ~4.1 GB of storage, and the hase_py2 will 
 
 #### Option 2: If you do not use mamba/conda, then please specify the Python2, Python3, and R directories in your config file. Please ensure you have AT LEAST:
 
-`R version 4.1`
-`Python3 version 3.9`
-any distribution of `Java 11`
+* `R version 4.1`
+* `Python3 version 3.9`
+* any distribution of `Java 11`
 
 ### After you create your environment by using conda/mamba, these are the packages absent from conda-forge, which you need to install in R.
 In the location on your server where you have cloned this repository, you need to run:
