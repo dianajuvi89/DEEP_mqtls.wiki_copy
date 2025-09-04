@@ -1,29 +1,3 @@
-## Download the pipeline scripts
-
-To download the scripts you will need to run the following git command:
-
-    git clone https://github.com/MRCIEU/DEEP_mqtls.git
-
-This will create a new directory called `DEEP_mqtls` in your current folder and contains the files needed to run the analysis, [i.e. those listed here](https://github.com/MRCIEU/DEEP_mqtls). The location of this repository will be your `scripts_directory` variable that needs to be included in the config file below. 
-
-Ideally you should clone the scripts to a location on your server that you can interact with and which is visible to your compute nodes. Please contact us if you have any questions about this.
-
-Because this is a `git` repository it means that it is very easy for you to update these files if we need to make any changes to the code, for example to fix bugs. In order to update the scripts you simply run 
-
-```
-git pull
-```
-
-from within your cloned repository.
-
-We recommend that you do this frequently to ensure you are up to date. If you are up to date you will see the message: 
-
-```
-Already up to date.
-```
-
-Please note, do not make any changes to the files cloned from GitHub into this folder. If you do, you won't be able to `git pull` very easily.
-
 ### Content of the repository:
 
 **You do not need to manually change any of these files**.
