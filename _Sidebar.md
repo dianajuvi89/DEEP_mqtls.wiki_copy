@@ -21,11 +21,11 @@
 <br>
 1a\.  [Check data](Check-data)
 <br>
-1b\.  [Format genetic data](Principal-component-analysis)
+1b\.  [Format genetic data](Format-genetic-data)
 <br>
 1c\.  [Check methylation and phenotypes](Check-methylation-phenotypes)
 <br>
-1d\.  [mQTL positive control](mQTL-positive-control)
+1d\.  [mQTL control GWAS](mQTL-positive-control)
 <br>
 1e\.  [GWAS of genetic PCs](GWAS-genetic-PCs)
 <br>
