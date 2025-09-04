@@ -34,11 +34,15 @@ install.packages("EasyQC_9.2.tar.gz")
 
 #### Option 2: Manual installation of dependencies and Rpackages (if you do not use mamba/conda)
 
-If you do not use mamba/conda, then please specify the Python2, Python3, and R directories in your config file. Please ensure you have AT LEAST:
+Please ensure you have AT LEAST:
 
 * `R version 4.1`
 * `Python3 version 3.9`
 * any distribution of `Java 11`
+
+Please specify the Python2, Python3, and R directories in your config file.
+
+
 
 ### Please install these R packages in your R manually:
 ```r
