@@ -1,5 +1,4 @@
-Welcome to the Diverse Epigenetic Epidemiology Partnership analysis pipeline. This wiki will guide you through the stages of the analysis. We recommend you read this page before you start running the pipeline to familarise yourself with how it was designed and what it includes, how to use this wiki and what to do if it goes wrong.
-
+Welcome to the [Diverse Epigenetic Epidemiology Partnership analysis](https://www.deep-epigenetics.org/) pipeline. This wiki will guide you through the different stages of the analysis. We recommend you read this page before you start running the pipeline to familarise yourself with how it was designed and what it includes, how to use this wiki and what to do if it goes wrong.
 
 A reminder of our participation requirements can be found on this [**page**](Participation-requirements).
 
@@ -25,7 +24,7 @@ Perform a full GWAS on every methylation probe available in the sample. Variatio
 
 ### EWAS of cardiometabolic traits
 
-We will be conducting PRS EWASs on a range of complex traits:
+We will be conducting EWASs on a range of complex traits:
 - Prevalent Type2 Diabetes
 - Body Mass Index
 - Blood Pressure
