@@ -1,3 +1,8 @@
+The pipeline requires `R version 4.1` or higher, `python 3 version 3.9`, `python 2.7`, and any distribution of `Java 11`. There are two options to install the necessary dependencies and Rpackages:
+
+* Using conda/mamba environments (recommended) 
+* Manual installation of dependencies and R-packages (if you do not use mamba/conda)
+
 ## After you finish the step in [Install and set up](https://github.com/MRCIEU/DEEP_mqtls/wiki/Install-and-set-up). In the location on your server where you have cloned this repository, you need to run:
 
 ```bash
