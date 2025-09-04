@@ -54,8 +54,6 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `age`: Age at methylation measurement. Please specify one of the following: "<18", ">18", "all".
 
-- `relatedness`: Specify whether there is relatedness in your samples ("yes" or "no").
-
 - `reference`: Please specify reference panel ("1000g", "1000g+h3a", "1000g+hrc", "topmed", "1000g+caapa", "hrc"). This is case-sensitive.
 
 - `ancestry`: Specify the most likely genetic ancestry of your samples with one of the following: "EUR", "AFR", "AMR", "EAS", "SAS", or "None" if you are not sure, or ancestry is not matching with any of these populations. This step is required by EasyQC, to compare the allele frequencies of your samples against reference panel of 1000G populations.
