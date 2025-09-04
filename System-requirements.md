@@ -10,7 +10,7 @@ To download the scripts you will need to run the following git command:
 
     git clone https://github.com/MRCIEU/DEEP_mqtls.git
 
-This will create a new directory called `DEEP_mqtls` in your current folder and contains the files needed to run the analysis, [i.e. those listed here](https://github.com/MRCIEU/DEEP_mqtls). The location of this repository will be your `scripts_directory` variable that needs to be included in the config file below. 
+This will create a new directory called `DEEP_mqtls` in your current folder and contains the files needed to run the analysis, [i.e. those listed here](https://github.com/MRCIEU/DEEP_mqtls).
 
 Ideally you should clone the scripts to a location on your server that you can interact with and which is visible to your compute nodes. Please contact us if you have any questions about this.
 
