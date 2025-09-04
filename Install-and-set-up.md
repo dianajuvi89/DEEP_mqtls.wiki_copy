@@ -91,20 +91,6 @@ mamba env create --file ./resources/bin/hase/environment.yml
 ```
  If you use conda, please replace `mamba` with `conda` in all commands. Please note that if you have used this option you do not need to specify the Python and R directories of your local environment in your config file.
 
-After you create your environment by using conda/mamba, these are the packages absent from conda-forge, which you need to install in R.
-In the location on your server where you have cloned this repository, you need to run:
-
-```bash
-mamba activate deep_mqtl
-wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
-```
-
-In R, run:
-```r
-install.packages("parallel")
-install.packages("EasyQC_9.2.tar.gz")
-```
-
 #### Option 2: Manual installation of dependencies and Rpackages (if you do not use mamba/conda)
 
 Please ensure you have AT LEAST:
