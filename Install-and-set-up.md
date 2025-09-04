@@ -105,7 +105,17 @@ quality_scores="${home_directory}/input_data/data.info"
 
 ### Cell count data
 
-You do not need to provide cell counts proportions estimated from the DNA methylation data, as they will be predicted by the pipeline using the [Salas reference dataset](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE167998) using the [EpiDISH](https://github.com/sjczheng/EpiDISH) package. If your DNA methylation data were generated from a heterogeneous set of cell types (e.g. whole blood), then please set the following variables in the `config` file:
+You do not need to provide cell counts proportions estimated from the DNA methylation data, as they will be predicted by the pipeline.
+
+We use the following predictions:
+
+Blood (12 cell types in adults):  [Salas reference dataset](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE167998) using the [EpiDISH](https://github.com/sjczheng/EpiDISH) package. 
+Blood (19 cell types adults/children): [Unilife reference dataset](https://rdcu.be/eD9FD) using the [EpiDISH] (https://github.com/sjczheng/EpiDISH) package.
+Saliva (immune and epithelial cell type fractions in children): [Middleton reference dataset](https://pubmed.ncbi.nlm.nih.gov/33588693/) using [meffil](https://github.com/perishky/meffil/wiki). 
+Saliva (epithelial, fibroblast and immune cell type fractions in adults): [Zheng reference dataset](https://pubmed.ncbi.nlm.nih.gov/29693419/) using the [HepiDISH] (https://github.com/sjczheng/EpiDISH) package.
+Buccal (epithelial, fibroblast and immune cell type fractions in adults): [Zheng reference dataset](https://pubmed.ncbi.nlm.nih.gov/29693419/)using the [HepiDISH] (https://github.com/sjczheng/EpiDISH) package.
+
+If your DNA methylation data were generated from a heterogeneous set of cell types (e.g. whole blood), then please set the following variables in the `config` file:
 
 ```
 sorted_methylation="no"
