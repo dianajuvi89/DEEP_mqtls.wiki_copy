@@ -53,7 +53,7 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `analyst_email`: Analyst's email address
 
-- `sftp_username`: This should be provided to you from the GoDMC developers (along with a password) after registration (see "Upload of results for meta-analysis section" below).
+- `sftp_username`: This should be provided to you from the DEEP PIs (along with a password) after registration (see "Upload of results for meta-analysis section" below).
 
 - `key`: see "Upload of results for meta-analysis section" below on how to set up your key.
  
@@ -63,15 +63,27 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `R_directory`: Full path to the R directory if you don't use conda/mamba. Otherwise, leave blank. 
 
-- `Python2_directory`: Full path to the Python2 directory if you don't use conda/mamba. Otherwise, leave blank.
+- `Python_directory`: Full path to the Python3 directory if you don't use conda/mamba. Otherwise, leave blank. You need Python 3.9 or later for Hail package.
 
-- `Python3_directory`: Full path to the Python3 directory if you don't use conda/mamba. Otherwise, leave blank.
+- `Python2_directory`: Full path to the Python2 directory if you don't use conda/mamba. Otherwise, leave blank. You need Python 2.7 for hase.
 
 - `methylation_array`: One of the following: 450k, epic, epic2 or epic:epic2. Please note that names are case-sensitive.
 
-- `sorted_methylation`: please specify whether methylation has been obtained for sorted cell types or bulk tissue (yes if you have e.g DNA methylation from sorted cell types. no if you don't).
+- `tissue`: One of the following: blood, PBMC, PBL, cord, saliva, or buccal
 
-- `reference`: please specify 1000G or hrc.  This is case-sensitive.
+-`study_specific_vars`: Names of study specific variables for EWAS. These need to be the column names for these variables and so will need _factor or _numeric at the end. Please leave a space between each variable "slide_factor plate_factor"
+
+-`genome_build`: Please specify the genome build of the genetic data ("37" or "38").
+
+- `sorted_methylation`: Please specify whether methylation has been obtained for sorted cell types or bulk tissue (yes if you have e.g DNA methylation from sorted cell types. no if you don't).
+
+- `age`: Age at methylation measurement. Please specify one of the following: "<18", ">18", "all".
+
+- `relatedness`: Specify whether there is relatedness in your samples ("yes" or "no").
+
+- `reference`: Please specify reference panel ("1000g", "1000g+h3a", "1000g+hrc", "topmed", "1000g+caapa", "hrc"). This is case-sensitive.
+
+-`ancestry`: Specify the most likely genetic ancestry of your samples with one of the following: "EUR", "AFR", "AMR", "EAS", "SAS", or "None" if you are not sure, or ancestry is not matching with any of these populations. This step is required by EasyQC, to compare the allele frequencies of your samples against reference panel of 1000G populations.
 
 ## Set up of main environment for DEEP pipeline
 
