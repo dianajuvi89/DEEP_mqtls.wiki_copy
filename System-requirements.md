@@ -1,4 +1,4 @@
-## After you finish the step in Install and set up[https://github.com/MRCIEU/DEEP_mqtls/wiki/Install-and-set-up]. In the location on your server where you have cloned this repository, you need to run:
+## After you finish the step in [Install and set up](https://github.com/MRCIEU/DEEP_mqtls/wiki/Install-and-set-up). In the location on your server where you have cloned this repository, you need to run:
 
 ```bash
 mamba activate deep_mqtl
