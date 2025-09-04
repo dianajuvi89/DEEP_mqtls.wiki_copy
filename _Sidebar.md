@@ -2,7 +2,7 @@
 - [Home](Home)
 - [Frequently Asked Questions](Frequently-Asked-Questions)
 - [Participation requirements](Participation-requirements)
-- [System requirements](System-requirements)
+- [System requirements and pipeline installation](System-requirements)
 
 
 ### Data preparation prior to pipeline
