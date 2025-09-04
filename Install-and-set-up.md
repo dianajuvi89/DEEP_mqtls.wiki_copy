@@ -1,5 +1,7 @@
 ### Content of the repository:
 
+Using the instructions in System requirements you have downloaded the scripts. The location of this repository will be your `scripts_directory` variable that needs to be included in the config file below. In this directory you will find the following:
+ 
 **You do not need to manually change any of these files**.
 - `config.example` file: Your first task in setting up the pipeline is to create a `config` file. The `config.example` is a template for the config file that the pipeline relies on to specify your data and parameters. You will need to customise this file to point to your input data files. Details for how to create this file are found below.
 - `*.sh` files: These are the scripts that you need to run in sequence to perform the analysis. They will be explained step-by-step on the [wiki](https://github.com/MRCIEU/DEEP_mqtls/wiki). 
@@ -7,7 +9,6 @@
 - `README.md`: Overview of contents of repository.
 - `resources` directory: This contains a number of internal scripts, executables, and support files that will be used by the various `.sh` scripts to run the analyses. 
 **You do not need to manually change any of these files**.
-
 
 ## Setup your config file
 
