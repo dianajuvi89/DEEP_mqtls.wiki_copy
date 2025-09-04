@@ -21,7 +21,7 @@
 <br>
 1a\.  [Check data](Check-data)
 <br>
-1b\.  [Principal Component analysis](Principal-component-analysis)
+1b\.  [Format genetic data](Principal-component-analysis)
 <br>
 1c\.  [Check methylation and phenotypes](Check-methylation-phenotypes)
 <br>
