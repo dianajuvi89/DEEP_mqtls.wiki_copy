@@ -152,7 +152,7 @@ library(remotes)
 install_github("perishky/meffonym")
 
 ```
-### You need to install meffil. You need to have version 1.3.8 or higher. You can find out the version with the commands below. 
+### You need to install meffil. You need to have version 1.5.0 or higher. You can find out the version with the commands below. 
 ```
 library(meffil)
 sessionInfo()
