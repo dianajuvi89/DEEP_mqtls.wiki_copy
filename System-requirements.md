@@ -1,6 +1,6 @@
 ## Set up of main environment for DEEP pipeline
 
-The pipeline requires R version 4.1 or higher, python 3 and python 2.7 and several other tools. There are two options to install the necessary dependencies and Rpackages:
+The pipeline requires `R version 4.1` or higher, `python 3` and `python 2.7` and several other tools. There are two options to install the necessary dependencies and Rpackages:
 
 #### Option 1: Create and activate conda/mamba environments (recommended) 
 [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) environments allow you to manage the environment while running this pipeline eg they ensure that the correct dependency versions are used for the DEEP pipeline scripts. 
