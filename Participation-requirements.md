@@ -8,7 +8,7 @@ The DEEP mQTLs will build on the **DNA methylation quantitative trait loci (mQTL
 3. We will use a new methodology, [HASE](https://github.com/roshchupkin/hase), which means we can save and ultimately meta-analyses the full surface of mQTLs.
 
 - Please note we will include cohorts with DNAm generated with Illumina EPIC/450k arrays with matched imputed GWA or sequence data available for at least 100 individuals. 
-- We will include participants of mainly non-European origin (non-migrant). Please email [Josine Min](mailto:josine.min@bristol.ac.uk) if you have datasets from non-European ancestry and you want to contribute to a [multi-ancestry mQTL analysis](https://www.deep-epigenetics.org/). 
+- We will include participants of mainly non-European origin (non-migrant in first phase and migrants at a later stage). Please email [Josine Min](mailto:josine.min@bristol.ac.uk) if you have datasets from non-European ancestry and you want to contribute to a [multi-ancestry mQTL analysis](https://www.deep-epigenetics.org/). 
 - In our analyses, we will include samples with DNAm profiled from whole blood, cord blood, PBMC (peripheral blood mononuclear cells), PBL (peripheral blood leukocytes), buccal or saliva tissue. We also include sorted blood cell types to compare to cell-type interacting mQTLs. LCLs will not be included. Please email [Josine Min](mailto:josine.min@bristol.ac.uk) if you have methylation data on sorted cell type data or on other tissues. 
 
 ##### Case-control studies
