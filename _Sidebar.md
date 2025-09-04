@@ -12,7 +12,7 @@
 - [Phenotype data](Phenotype-data)
 
 ### Pipeline set up
-- [Install and set up](Install-and-set-up)
+- [Pipeline set up](Install-and-set-up)
 
 ### QC stage 01 (ready)
 [Pipeline Overview](Analyst-Quick-Start-Guide-to-Pipeline)
