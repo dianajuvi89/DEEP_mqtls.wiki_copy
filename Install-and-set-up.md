@@ -71,9 +71,9 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `tissue`: One of the following: blood, PBMC, PBL, cord, saliva, or buccal
 
--`study_specific_vars`: Names of study specific variables for EWAS. These need to be the column names for these variables and so will need _factor or _numeric at the end. Please leave a space between each variable "slide_factor plate_factor"
+- `study_specific_vars`: Names of study specific variables for EWAS. These need to be the column names for these variables and so will need _factor or _numeric at the end. Please leave a space between each variable "slide_factor plate_factor"
 
--`genome_build`: Please specify the genome build of the genetic data ("37" or "38").
+- `genome_build`: Please specify the genome build of the genetic data ("37" or "38").
 
 - `sorted_methylation`: Please specify whether methylation has been obtained for sorted cell types or bulk tissue (yes if you have e.g DNA methylation from sorted cell types. no if you don't).
 
@@ -83,7 +83,7 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `reference`: Please specify reference panel ("1000g", "1000g+h3a", "1000g+hrc", "topmed", "1000g+caapa", "hrc"). This is case-sensitive.
 
--`ancestry`: Specify the most likely genetic ancestry of your samples with one of the following: "EUR", "AFR", "AMR", "EAS", "SAS", or "None" if you are not sure, or ancestry is not matching with any of these populations. This step is required by EasyQC, to compare the allele frequencies of your samples against reference panel of 1000G populations.
+- `ancestry`: Specify the most likely genetic ancestry of your samples with one of the following: "EUR", "AFR", "AMR", "EAS", "SAS", or "None" if you are not sure, or ancestry is not matching with any of these populations. This step is required by EasyQC, to compare the allele frequencies of your samples against reference panel of 1000G populations.
 
 ## Set up of main environment for DEEP pipeline
 
