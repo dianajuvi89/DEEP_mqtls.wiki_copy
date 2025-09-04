@@ -1,5 +1,11 @@
 ## Download the pipeline scripts
 
+To download the pipeline scripts you need to make sure you have git installed
+
+```
+which git
+```
+
 To download the scripts you will need to run the following git command:
 
     git clone https://github.com/MRCIEU/DEEP_mqtls.git
@@ -56,6 +62,8 @@ Then in R, run:
 install.packages("parallel")
 install.packages("EasyQC_9.2.tar.gz")
 ``` 
+
+Then you need to install several other R packages (EpiDish, meffonym, meffil etc). See below in "Other R packages are required for both mamba users and non-mamba users are required for both mamba users and non-mamba users".
 
 #### Option 2: Manual installation of dependencies and R-packages (if you do not use mamba/conda)
 
@@ -233,12 +241,6 @@ Open R and type
  capabilities()
 ```
 png should be TRUE
-
-#### You need to make sure you have git installed
-
-```
-which git
-```
 
 #### You need to make sure you have encryption software installed
 
