@@ -29,6 +29,6 @@ If you have different batches of arrays for your dataset, we recommend to analys
 
 ### Code of conduct
 
-To participate in DEEP, please review the expectations in the collaboration agreement/code of conduct and complete any required administration to confirm your intention to participate.
+To participate in DEEP, please review the expectations in the collaboration agreement and complete any required administration to confirm your intention to participate. Please note that in DEEP we promote the principles articulated by the [ASHG](https://www.cell.com/ajhg/fulltext/S0002-9297(20)30279-2).
 
 
