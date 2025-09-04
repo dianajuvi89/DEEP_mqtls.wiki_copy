@@ -7,7 +7,7 @@ The DEEP mQTLs will build on the **DNA methylation quantitative trait loci (mQTL
 2. We include samples with genetic data. We will use variants imputed by the 1000G ph3 reference or any other appropriate reference panel (GRCh37/hg19 or GRCh38/hg38). 
 3. We will use a new methodology, [HASE](https://github.com/roshchupkin/hase), which means we can save and ultimately meta-analyses the full surface of mQTLs.
 
-- Please note we will include cohorts with DNAm generated with Illumina EPIC/450k arrays with matched imputed GWA or sequence data available for at least 50 individuals. 
+- Please note we will include cohorts with DNAm generated with Illumina EPIC/450k arrays with matched imputed GWA or sequence data available for at least 100 individuals. 
 - We will include participants of mainly non-European origin (non-migrant). Please email [Josine Min](mailto:josine.min@bristol.ac.uk) if you have datasets from non-European ancestry and you want to contribute to a [multi-ancestry mQTL analysis](https://www.deep-epigenetics.org/). 
 - In our analyses, we will include samples with DNAm profiled from whole blood, cord blood, PBMC (peripheral blood mononuclear cells), PBL (peripheral blood leukocytes), buccal or saliva tissue. We also include sorted blood cell types to compare to cell-type interacting mQTLs. LCLs will not be included. Please email [Josine Min](mailto:josine.min@bristol.ac.uk) if you have methylation data on sorted cell type data or on other tissues. 
 
@@ -15,7 +15,7 @@ The DEEP mQTLs will build on the **DNA methylation quantitative trait loci (mQTL
 
 We have curated the following inclusion criteria for EWAS analyses:
 
-1. Cohorts with DNAm generated with Illumina EPIC/450k arrays for at least 50 individuals.
+1. Cohorts with DNAm generated with Illumina EPIC/450k arrays for at least 100 individuals.
 2. Participants of non-European origin (non-migrant). Please email [Hannah Elliott](mailto:Hannah.Elliott@bristol.ac.uk) if you have datasets from non-European ancestry with phenotype data, if you want to contribute in the future.
 3. We will include samples with DNAm profiled from blood, cord blood, or saliva only. LCLs will not be included.
 
