@@ -1,4 +1,4 @@
-Welcome to the [Diverse Epigenetic Epidemiology Partnership analysis](https://www.deep-epigenetics.org/) pipeline. This wiki will guide you through the different stages of the analysis. We recommend you read this page before you start running the pipeline to familarise yourself with how it was designed and what it includes, how to use this wiki and what to do if it goes wrong.
+Welcome to the [Diverse Epigenetic Epidemiology Partnership](https://www.deep-epigenetics.org/) analysis pipeline. This wiki will guide you through the different stages of the analysis. We recommend you read this page before you start running the pipeline to familarise yourself with how it was designed and what it includes, how to use this wiki and what to do if it goes wrong.
 
 A reminder of our participation requirements can be found on this [**page**](Participation-requirements).
 
