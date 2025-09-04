@@ -21,7 +21,7 @@ We have curated the following inclusion criteria for EWAS analyses:
 
 1. Cohorts with DNAm generated with Illumina EPIC/450k arrays for at least 100 individuals.
 2. Participants of non-European origin (non-migrant). Please email [Hannah Elliott](mailto:Hannah.Elliott@bristol.ac.uk) if you have datasets from non-European ancestry with phenotype data, if you want to contribute in the future.
-3. We will include samples with DNAm profiled from blood, cord blood, or saliva only. LCLs will not be included.
+3. We will include samples with DNAm profiled from blood, cord blood, saliva or buccal samples only. LCLs will not be included.
 
 ### Studies with both 450k and EPIC data
 
