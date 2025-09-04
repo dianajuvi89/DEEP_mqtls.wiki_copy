@@ -24,13 +24,27 @@ Already up to date.
 
 Please note, do not make any changes to the files cloned from GitHub into this folder. If you do, you won't be able to `git pull` very easily.
 
+## Set up of main environment for DEEP pipeline
 
 The pipeline scripts require `R version 4.1` or higher, `python 3 version 3.9`, `python 2.7`, and any distribution of `Java 11`. There are two options to install the necessary dependencies and Rpackages:
 
-* Using conda/mamba environments (recommended) 
-* Manual installation of dependencies and R-packages (if you do not use mamba/conda)
+#### Option 1: Create and activate conda/mamba environments (recommended) 
+[conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) environments allow you to manage the environment while running this pipeline eg they ensure that the correct dependency versions are used for the DEEP pipeline scripts. 
 
-## After you finish the step in [Install and set up](https://github.com/MRCIEU/DEEP_mqtls/wiki/Install-and-set-up). In the location on your server where you have cloned this repository, you need to run:
+For DEEP, we generated two different environments: `deep_env` for most of the QC and analyses and `hase_py2` for the mQTL analyses.
+The `deep_env` environment will require ~4.1 GB of storage, and the `hase_py2` will require 588 MB.
+
+Please ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) **installed** and **initialised** before running these commands:
+```
+# Please ensure that no duplicate environment names are used before creating our environment.
+# To create the main environment for DEEP pipeline
+mamba env create --file deep_env.yml
+# To create the python2 environment to run meQTL analysis
+mamba env create --file ./resources/bin/hase/environment.yml
+```
+If you use conda, please replace `mamba` with `conda` in all commands. 
+
+In the location on your server where you have cloned this repository, you need to run:
 
 ```bash
 mamba activate deep_mqtl
@@ -41,7 +55,17 @@ Then in R, run:
 ```r
 install.packages("parallel")
 install.packages("EasyQC_9.2.tar.gz")
-```
+``` 
+
+#### Option 2: Manual installation of dependencies and R-packages (if you do not use mamba/conda)
+
+Please ensure you have AT LEAST:
+
+* `R version 4.1`
+* `Python3 version 3.9`
+* any distribution of `Java 11`
+
+## After you finish the step in [Install and set up](https://github.com/MRCIEU/DEEP_mqtls/wiki/Install-and-set-up). 
 
 ### If you don't use conda or mamba, please install these R packages in your R manually:
 ```r
