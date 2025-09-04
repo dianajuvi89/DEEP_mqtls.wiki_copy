@@ -1,3 +1,17 @@
+## After you create your environment by using conda/mamba, these are the packages absent from conda-forge, which you need to install in R.
+In the location on your server where you have cloned this repository, you need to run:
+
+```bash
+mamba activate deep_mqtl
+wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
+```
+
+In R, run:
+```r
+install.packages("parallel")
+install.packages("EasyQC_9.2.tar.gz")
+```
+
 ### If you don't use conda or mamba, please install these R packages in your R manually:
 ```r
 install.packages("MASS")
