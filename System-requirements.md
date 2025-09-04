@@ -1,6 +1,8 @@
 ## Set up of main environment for DEEP pipeline
 
-#### Option 1 (recommended) Create and activate conda/mamba environment: Use mamba/conda to manage the environment while running this pipeline. You do not need to specify the Python and R directories of your local environment in your config file. Please ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) **installed** and **initialised** before running these commands:
+#### Option 1: Create and activate conda/mamba environment (recommended) 
+
+Use mamba/conda to manage the environment while running this pipeline. You do not need to specify the Python and R directories of your local environment in your config file. Please ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) **installed** and **initialised** before running these commands:
 ```
 # Please ensure that no duplicate environment names are used before creating our environment.
 # To create the main environment for DEEP pipeline
