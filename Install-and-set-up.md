@@ -75,7 +75,7 @@ Open the file in a text editor, and change the entries for the following variabl
 
 ## Set up of main environment for DEEP pipeline
 
-The pipeline requires `R version 4.1` or higher, `python 3` and `python 2.7` and several other tools. There are two options to install the necessary dependencies and Rpackages:
+The pipeline requires `R version 4.1` or higher, `python 3` and `python 2.7`, and several other tools. There are two options to install the necessary dependencies and Rpackages:
 
 #### Option 1: Create and activate conda/mamba environments (recommended) 
 [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) environments allow you to manage the environment while running this pipeline eg they ensure that the correct dependency versions are used for the DEEP pipeline scripts. 
@@ -91,7 +91,7 @@ mamba env create --file deep_env.yml
 # To create the python2 environment to run meQTL analysis
 mamba env create --file ./resources/bin/hase/environment.yml
 ```
- If you use conda, please replace `mamba` with `conda` in all commands. Please note that if you have used this option you do not need to specify the Python and R directories of your local environment in your config file.
+ If you use conda, please replace `mamba` with `conda` in all commands. Please note that if you have used this option, you do not need to specify the Python and R directories of your local environment in your config file. For R packages absent from conda-forge, please see details in [System requirements](https://github.com/MRCIEU/DEEP_mqtls/wiki/System-requirements).
 
 #### Option 2: Manual installation of dependencies and R-packages (if you do not use mamba/conda)
 
@@ -101,7 +101,7 @@ Please ensure you have AT LEAST:
 * `Python3 version 3.9`
 * any distribution of `Java 11`
 
-Please specify the Python2, Python3, and R directories in your config file. For R packages, please see details in [System requirements](https://github.com/MRCIEU/DEEP_mqtls/wiki/System-requirements).
+Please specify the Python2, Python3, and R directories in your config file. For R packages required by the pipeline, please install them manually. See details in [System requirements](https://github.com/MRCIEU/DEEP_mqtls/wiki/System-requirements).
 
 
 ## Preparing data for the pipeline
