@@ -1,5 +1,6 @@
-## Create and activate conda/mamba environment
-#### Option 1 (recommended): Use mamba/conda to manage the environment while running this pipeline. You do not need to specify the Python and R directories of your local environment in your config file. Please ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) **installed** and **initialised** before running these commands:
+## Set up of main environment for DEEP pipeline
+
+#### Option 1 (recommended) Create and activate conda/mamba environment: Use mamba/conda to manage the environment while running this pipeline. You do not need to specify the Python and R directories of your local environment in your config file. Please ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) **installed** and **initialised** before running these commands:
 ```
 # Please ensure that no duplicate environment names are used before creating our environment.
 # To create the main environment for DEEP pipeline
@@ -9,7 +10,11 @@ mamba env create --file ./resources/bin/hase/environment.yml
 ```
 The deep_env environment will require ~4.1 GB of storage, and the hase_py2 will require 588 MB. If you use conda, please replace `mamba` with `conda` in all commands.
 
-#### Option 2: If you do not use mamba/conda, then please specify the Python2, Python3, and R directories in your config file. Please ensure you have AT LEAST `R version 4.1` and `Python3 version 3.9`, and any distribution of`Java 11`.
+#### Option 2: If you do not use mamba/conda, then please specify the Python2, Python3, and R directories in your config file. Please ensure you have AT LEAST:
+
+`R version 4.1`
+`Python3 version 3.9`
+any distribution of `Java 11`
 
 ### After you create your environment by using conda/mamba, these are the packages absent from conda-forge, which you need to install in R.
 In the location on your server where you have cloned this repository, you need to run:
