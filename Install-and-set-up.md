@@ -61,9 +61,11 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `scripts_directory`: If you are in the `DEEP_mqtls` folder then type `pwd` and set this variable to the path: eg `scripts_directory="path/to/DEEP_mqtls"`.
 
-- `R_directory`: Full path to the R directory if you can't use the "module load" command to open R. Otherwise leave blank. 
+- `R_directory`: Full path to the R directory if you don't use conda/mamba. Otherwise, leave blank. 
 
-- `Python_directory`: Full path to the python directory if you can't use the "module load" command to open python. Otherwise leave blank. 
+- `Python2_directory`: Full path to the Python2 directory if you don't use conda/mamba. Otherwise, leave blank.
+
+- `Python3_directory`: Full path to the Python3 directory if you don't use conda/mamba. Otherwise, leave blank.
 
 - `methylation_array`: One of the following: 450k, epic, epic2 or epic:epic2. Please note that names are case-sensitive.
 
@@ -91,7 +93,7 @@ mamba env create --file ./resources/bin/hase/environment.yml
 ```
  If you use conda, please replace `mamba` with `conda` in all commands. Please note that if you have used this option you do not need to specify the Python and R directories of your local environment in your config file.
 
-#### Option 2: Manual installation of dependencies and Rpackages (if you do not use mamba/conda)
+#### Option 2: Manual installation of dependencies and R-packages (if you do not use mamba/conda)
 
 Please ensure you have AT LEAST:
 
@@ -99,7 +101,7 @@ Please ensure you have AT LEAST:
 * `Python3 version 3.9`
 * any distribution of `Java 11`
 
-Please specify the Python2, Python3, and R directories in your config file.
+Please specify the Python2, Python3, and R directories in your config file. For R packages, please see details in [System requirements](https://github.com/MRCIEU/DEEP_mqtls/wiki/System-requirements).
 
 
 ## Preparing data for the pipeline
