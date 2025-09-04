@@ -34,7 +34,7 @@ Please note, do not make any changes to the files cloned from GitHub into this f
 
 The pipeline scripts require `R version 4.1` or higher, `python 3 version 3.9`, `python 2.7`, and any distribution of `Java 11`. There are two options to install the necessary dependencies and Rpackages:
 
-#### Option 1: Create and activate conda/mamba environments (recommended) 
+### Option 1: Create and activate conda/mamba environments (recommended) 
 [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) environments allow you to manage the environment while running this pipeline eg they ensure that the correct dependency versions are used for the DEEP pipeline scripts. 
 
 For DEEP, we generated two different environments: `deep_env` for most of the QC and analyses and `hase_py2` for the mQTL analyses.
@@ -65,7 +65,7 @@ install.packages("EasyQC_9.2.tar.gz")
 
 Then you need to install several other R packages (EpiDish, meffonym, meffil etc). See below in "Other R packages are required for both mamba users and non-mamba users are required for both mamba users and non-mamba users".
 
-#### Option 2: Manual installation of dependencies and R-packages (if you do not use mamba/conda)
+### Option 2: Manual installation of dependencies and R-packages (if you do not use mamba/conda)
 
 Please ensure you have AT LEAST:
 
@@ -73,7 +73,7 @@ Please ensure you have AT LEAST:
 * `Python3 version 3.9`
 * any distribution of `Java 11`
 
-### If you don't use conda or mamba, please install these R packages in your R manually:
+#### If you don't use conda or mamba, please install these R packages in your R manually:
 ```r
 install.packages("MASS")
 install.packages("lattice")
