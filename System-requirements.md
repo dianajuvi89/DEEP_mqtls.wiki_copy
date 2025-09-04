@@ -1,7 +1,10 @@
 ## Set up of main environment for DEEP pipeline
 
-#### Option 1: Create and activate conda/mamba environment (recommended) 
+The pipeline requires R version 4.1 or higher, python 3 and python 2.7 and several other tools. There are two options to install the necessary dependencies:
 
+#### Option 1: Create and activate conda/mamba environments (recommended) 
+
+The deep_env environment will require ~4.1 GB of storage, and the hase_py2 will require 588 MB.
 Use [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) to manage the environment while running this pipeline. You do not need to specify the Python and R directories of your local environment in your config file. Please ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) **installed** and **initialised** before running these commands:
 ```
 # Please ensure that no duplicate environment names are used before creating our environment.
@@ -10,7 +13,7 @@ mamba env create --file deep_env.yml
 # To create the python2 environment to run meQTL analysis
 mamba env create --file ./resources/bin/hase/environment.yml
 ```
-The deep_env environment will require ~4.1 GB of storage, and the hase_py2 will require 588 MB. If you use conda, please replace `mamba` with `conda` in all commands.
+ If you use conda, please replace `mamba` with `conda` in all commands.
 
 ### After you create your environment by using conda/mamba, these are the packages absent from conda-forge, which you need to install in R.
 In the location on your server where you have cloned this repository, you need to run:
