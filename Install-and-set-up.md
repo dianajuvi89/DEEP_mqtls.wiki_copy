@@ -181,16 +181,16 @@ The default is to split the methylation normalisation routines into batches of 1
 
 ### Other variables/parameters
 
-There are other options that are specified in the config file. For most cohorts the default settings should be fine. Please review these and contact us if you have any further questions. 
+There are other options that are specified in the `config` file. For most cohorts the default settings should be fine. Please review these and contact us if you have any further questions. 
 
 
 ## What if I have multiple datasets to process?
 
 The pipeline has been designed such that if you have multiple datasets, you only need to maintain one copy of the repository. This is preferable and it means it is easily to keep up to date and saves on space. 
 
-The pipeline assumes by default that your config file is located in your `scripts_directory` so the pipeline can find it easily. However, if you have multiple datasets you will need multiple config files, one per each dataset as well as multiple `home_directory` folders. There is the option to run each script in the pipeline with a custom path to the config file. This means you can maintain multiple config files, one for each dataset, on your system at different file paths (for example within the `home_directory`).
+The pipeline assumes by default that your config file is located in your `scripts_directory` so the pipeline can find it easily. However, if you have multiple datasets you will need multiple config files, one per each dataset as well as multiple `home_directory` folders. There is the option to run each script in the pipeline with a custom path to the `config` file. This means you can maintain multiple `config` files, one for each dataset, on your system at different file paths (for example within the `home_directory`).
 
-If you want to run a config file that is not located in the `scripts_directory` you add the flag `-c` followed by the path to the config file you want to include on that execution. You need to do this for every script in the pipeline. For example in the setup script described below you can run: 
+If you want to run a `config` file that is not located in the `scripts_directory` you add the flag `-c` followed by the path to the config file you want to include on that execution. You need to do this for every script in the pipeline. For example in the setup script described below you can run: 
 
 ```
 ./00-setup_folders.sh -c /path/to/config/file
@@ -198,11 +198,9 @@ If you want to run a config file that is not located in the `scripts_directory` 
 
 By directly specifing the config file you want to use, you can easily run the same pipeline on different sets of data. 
 
-
-
 ## Upload of results for meta-analysis
 
-Once modules are complete results will be shared to the relevant people from the core team for meta-analysis. Different core researchers have chosen different ways of doing this. For example they may be uploaded to sFTP servers at the University of Bristol (modules 01-05) or to Google drive.  
+Once modules are complete results will be shared to the relevant people from the core team. For example they will be uploaded to sFTP servers at the University of Bristol. For proposals we anticipate they will be uploaded to other sftp servers or Google Drive.  
 
 **Note: No individual level data will be uploaded by these scripts and results files will be encrypted!** 
 
@@ -212,7 +210,7 @@ For some of these servers you need to ensure you have the correct files on your 
 
 ### Setting up a key for the Bristol sFTP server
 
-You must [register](http://data.bris.ac.uk/collaborator/) as a collaborator before you can upload or download any files to the Bristol sftp server. Please email [Josine Min](mailto:josine.min@bristol.ac.uk) for project id or if you have any issues with setting this up. Please note that **every analyst** will need their own account to access the server. If there are two analysts at the same institution or analysing the same cohort you will need your own log in. Sharing passwords and usernames will not work due to the need to have an ssh key pair (see below). 
+You must [register](http://data.bris.ac.uk/collaborator/) as a collaborator before you can upload or download any files to the Bristol sftp server. Please email [Josine Min](mailto:josine.min@bristol.ac.uk) or [Hannah Elliott] (mailto:Hannah.Elliott@bristol.ac.uk)for project id or if you have any issues with setting this up. Please note that **every analyst** will need their own account to access the server. If there are two analysts at the same institution or analysing the same cohort you will need your own log in. Sharing passwords and usernames will not work due to the need to have an ssh key pair (see below). 
 
 To upload or download files from the Bristol server to your server/HPC you need to have a key pair on your server.
 
