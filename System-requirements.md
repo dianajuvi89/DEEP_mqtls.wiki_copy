@@ -73,8 +73,6 @@ Please ensure you have AT LEAST:
 * `Python3 version 3.9`
 * any distribution of `Java 11`
 
-## After you finish the step in [Install and set up](https://github.com/MRCIEU/DEEP_mqtls/wiki/Install-and-set-up). 
-
 ### If you don't use conda or mamba, please install these R packages in your R manually:
 ```r
 install.packages("MASS")
