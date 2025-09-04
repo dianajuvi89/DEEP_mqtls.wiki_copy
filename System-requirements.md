@@ -1,4 +1,4 @@
-## Download the pipeline scripts
+## Download the pipeline scripts from github
 
 To download the pipeline scripts you need to make sure you have git installed
 
@@ -6,7 +6,7 @@ To download the pipeline scripts you need to make sure you have git installed
 which git
 ```
 
-To download the scripts you will need to run the following git command:
+You will then need to run the following git command to download the scripts from the DEEP repository:
 
     git clone https://github.com/MRCIEU/DEEP_mqtls.git
 
