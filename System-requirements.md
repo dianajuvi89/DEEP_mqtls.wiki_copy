@@ -78,6 +78,7 @@ Please ensure you have AT LEAST:
 install.packages("MASS")
 install.packages("lattice")
 install.packages("ggplot2")
+install.packages("ggExtra")
 install.packages("data.table")
 install.packages("MatrixEQTL")
 install.packages("parallel")
