@@ -32,13 +32,13 @@ Please note, do not make any changes to the files cloned from GitHub into this f
 
 ## Set up of main environment for DEEP pipeline
 
-The pipeline scripts require `R version 4.1` or higher, `python 3 version 3.9`, `python 2.7`, and any distribution of `Java 11`. There are two options to install the necessary dependencies and Rpackages:
+The pipeline scripts require `R version 4.1` or higher, `Python 3 version 3.9 or higher`, `Python 2.7`, and any distribution of `Java 11`. There are two options to install the necessary dependencies and R-packages:
 
 ### Option 1: Create and activate conda/mamba environments (recommended) 
-[conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) environments allow you to manage the environment while running this pipeline eg they ensure that the correct dependency versions are used for the DEEP pipeline scripts. 
+[conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) environments allow you to manage the environment while running this pipeline, eg, they ensure that the correct dependency versions are used for the DEEP pipeline scripts. 
 
-For DEEP, we generated two different environments: `deep_env` for most of the QC and analyses and `hase_py2` for the mQTL analyses.
-The `deep_env` environment will require ~4.1 GB of storage, and the `hase_py2` will require 588 MB.
+For DEEP, we generated two different environments: `deep_env` for most of the QC and analyses, and `hase_py2` for the mQTL analyses.
+The `deep_env` environment will require ~4.1 GB of storage, and the `hase_py2`environment will require 588 MB.
 
 Please ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) **installed** and **initialised** before running these commands:
 ```
@@ -158,7 +158,7 @@ library(meffil)
 sessionInfo()
 ```
 
-Firstly install some of the dependencies:
+Firstly, install some of the dependencies:
 ```r
 BiocManager::install("SmartSVA")
 BiocManager::install("illuminaio")
