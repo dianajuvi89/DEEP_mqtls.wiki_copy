@@ -70,8 +70,8 @@ Then you need to install several other R packages (EpiDish, meffonym, meffil etc
 Please ensure you have AT LEAST:
 
 * `R version 4.1`
-* `Python3 version 3.9`
-* any distribution of `Java 11`
+* `Python3 version 3.9 or higher` and any distribution of `Java 11` for Hail
+* `Python 2.7` for Hase
 
 #### If you don't use conda or mamba, please install these R packages in your R manually:
 ```r
