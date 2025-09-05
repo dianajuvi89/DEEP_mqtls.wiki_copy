@@ -108,6 +108,46 @@ install.packages("R.utils")
 install.packages("BiocManager")
 install.packages("DescTools")
 ```
+### You need to test whether R can find the path to your R libraries
+
+You can test this in R:
+
+```r
+library(ggplot2)
+```
+
+If this doesn't work, then you may need to add the following line to your `.bashrc` file:
+
+Open your `.bashrc`
+```
+nano ~/.bashrc
+```
+Add the following line to your `.bashrc` 
+
+```
+export R_LIBS="/path/to/library/"
+```
+
+Restart the terminal, and any R-script should automatically look for packages in your specified directory. You can test this by opening R and testing a library
+
+```r
+library(ggplot2)
+```
+
+#### You also need to make sure the scripts in the pipeline can find Rscript
+
+You can test this by typing
+
+`Rscript`
+
+If this doesn't work, then you need to add the following line to your `bashrc` file
+
+```
+#You need to edit the line
+export PATH="$PATH:/path/to/directory/R-4.1.2/bin/"
+```
+
+
 ## Other R packages are required for both mamba users and non-mamba users.
 ### For users using conda/mamab, please activate the DEEP environment before running the following commands
 ```
@@ -213,44 +253,7 @@ R CMD INSTALL --configure-args="--disable-threading" path/to/preprocessCore
 ``` 
 
 
-### You need to test whether R can find the path to your R libraries
 
-You can test this in R:
-
-```r
-library(ggplot2)
-```
-
-If this doesn't work, then you may need to add the following line to your `.bashrc` file:
-
-Open your `.bashrc`
-```
-nano ~/.bashrc
-```
-Add the following line to your `.bashrc` 
-
-```
-export R_LIBS="/path/to/library/"
-```
-
-Restart the terminal, and any R-script should automatically look for packages in your specified directory. You can test this by opening R and testing a library
-
-```r
-library(ggplot2)
-```
-
-#### You also need to make sure the scripts in the pipeline can find Rscript
-
-You can test this by typing
-
-`Rscript`
-
-If this doesn't work, then you need to add the following line to your `bashrc` file
-
-```
-#You need to edit the line
-export PATH="$PATH:/path/to/directory/R-4.1.2/bin/"
-```
 #### You need to test whether you are able to generate plots in R
 Open R and type
 
