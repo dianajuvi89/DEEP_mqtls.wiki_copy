@@ -220,6 +220,7 @@ sessionInfo()
 Firstly, install some of the dependencies:
 ```r
 BiocManager::install("SmartSVA")
+BiocManager::install("base64")
 BiocManager::install("illuminaio")
 BiocManager::install("limma")
 BiocManager::install("DNAcopy")
