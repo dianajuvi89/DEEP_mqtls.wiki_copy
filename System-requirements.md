@@ -108,6 +108,10 @@ install.packages("BiocManager")
 install.packages("DescTools")
 ```
 ## Other R packages are required for both mamba users and non-mamba users.
+### For users using conda/mamab, please activate the DEEP environment before running the following commands
+```
+mamba activate deep_env
+```
 ### Please install EpiDISH and DunedinPACE from GitHub and not from Bioconductor.
 ```r
 library(remotes)
