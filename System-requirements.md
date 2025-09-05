@@ -53,7 +53,7 @@ If you use conda, please replace `mamba` with `conda` in all commands.
 In the location on your server where you have cloned this repository, you need to run:
 
 ```bash
-mamba activate deep_mqtl
+mamba activate deep_env
 wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
 ```
 
