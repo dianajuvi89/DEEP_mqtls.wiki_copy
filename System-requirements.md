@@ -113,6 +113,20 @@ install.packages("DescTools")
 ```
 mamba activate deep_env
 ```
+### Troubleshoot BiocManager
+When installing Bioconductor packages, you may encounter an error like:
+```
+Error: Bioconductor version '3.14' requires R version '4.1'; use
+  `BiocManager::install(version = '3.20')` with R version 4.4; see
+  https://bioconductor.org/install
+```
+To avoid this, please manually specify the BiocManager version:
+```
+BiocManager::install(version = "3.14") # for R 4.1
+BiocManager::install(version = "3.20") # for R 4.4
+BiocManager::install(version = "3.21") # for R 4.5
+```
+
 ### Please install EpiDISH and DunedinPACE from GitHub and not from Bioconductor.
 ```r
 library(remotes)
