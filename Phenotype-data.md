@@ -65,4 +65,4 @@ For blood: The pipeline will generate cell counts for 12 blood cell types from t
 
 For Saliva or buccal: The pipeline will generate cell counts for saliva or buccal derived methylation data using [Middleton reference dataset](https://pubmed.ncbi.nlm.nih.gov/33588693/) (child saliva) or [HepiDISH] (https://github.com/sjczheng/EpiDISH) (adult saliva or buccal)
 
-Estimated cell counts do not need to be provided in your phenotype file.
+Estimated cell counts do not need to be provided in your phenotype file, they will be derived within the DEEP pipeline
