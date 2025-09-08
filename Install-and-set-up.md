@@ -54,9 +54,11 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `age`: Age at methylation measurement. Please specify one of the following: "<18", ">18", "all".
 
+- `smoking`: Method for smoking prediction. Please specify one of the following: "own", "maternal". Own smoking is smoking of the individual. Maternal is smoking history of mother or environmental smoke exposure (for childhood cohorts)
+
 - `reference`: Please specify reference panel ("1000g", "1000g+h3a", "1000g+hrc", "topmed", "1000g+caapa", "hrc"). This is case-sensitive.
 
-- `ancestry`: Specify the most likely genetic ancestry of your samples with one of the following: "EUR", "AFR", "AMR", "EAS", "SAS", or "None" if you are not sure, or ancestry is not matching with any of these populations. This step is required by EasyQC, to compare the allele frequencies of your samples against reference panel of 1000G populations.
+- `ancestry`: Specify the most similar genetic ancestry of your samples with one of the following: "EUR", "AFR", "AMR", "EAS", "SAS", or "None" if you are not sure, or ancestry is not matching with any of these populations. This step is required by EasyQC, to compare the allele frequencies of your samples against reference panel of 1000G populations.
 
 
 ## Preparing data for the pipeline
