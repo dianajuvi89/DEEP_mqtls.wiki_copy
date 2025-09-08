@@ -11,7 +11,7 @@ An example of what your file should look like is below:
 
 ### Required
 
-The following covariates are **required** - these covariates are the minimum criteria for contributing to GoDMC:
+The following covariates are **required** - these covariates are the minimum criteria for contributing to DEEP:
 
 - `Sex_factor`: A column of `M`'s for males and `F`'s for females
 - `Age_numeric`: In years (can be integer or with decimals)
@@ -47,5 +47,11 @@ id3 0.16438292 0.1637806 -1.042249e-19 0.11164848 0.3932823 0.25849168
 
 ### Cell counts derived from DNA methylation data
 
-The pipeline will generate cell counts for 12 blood cell types from the normalized betas using [EpiDISH](https://github.com/sjczheng/EpiDISH) and the [Salas et al. 2022](https://doi.org/10.1038/s41467-021-27864-7) reference panel, so these don't need to be provided.
+### Cell counts derived from DNA methylation data
+
+For blood: The pipeline will generate cell counts for 12 blood cell types from the normalized betas using [EpiDISH](https://github.com/sjczheng/EpiDISH) and the [Salas et al. 2022](https://doi.org/10.1038/s41467-021-27864-7) reference panel.
+
+For Saliva or buccal: The pipeline will generate cell counts for saliva or buccal derived methylation data using [Middleton reference dataset](https://pubmed.ncbi.nlm.nih.gov/33588693/) (child saliva) or [HepiDISH] (https://github.com/sjczheng/EpiDISH) (adult saliva or buccal)
+
+Estimated cell counts do not need to be provided in your covariates file, they will be derived within the DEEP pipeline.
 
