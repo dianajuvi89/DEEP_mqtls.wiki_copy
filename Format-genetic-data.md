@@ -17,7 +17,7 @@ Once the imputed genetic data is in the [correct format](Imputed-genetic-data) a
 - Genotype missingness QC
 - Remove sexcheck outliers if chr X is available
 - Re-code SNP IDs (chr:position_A1_A2 (ascii sorted order))
-- Allow the maximum length of alleles to be 70
+- Set the maximum allele length to be 70
 - Remove duplicate SNPs
 - Remove poorly imputed SNPs
 - Construct kinship matrices
