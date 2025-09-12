@@ -45,7 +45,7 @@ grep outlier ./logs_a/log.txt
 ```
 
 If you think the outlier threshold should be adjusted, you can change the sd threshold `pca_sd` in the `config` file. If you change the threshold, you need to rerun `./01-check_data.sh` and  `02a-snp_data.sh`.\
-- If you find your PCA plot, which contains a V-shaped or poorly clustered distribution of samples when plotting PC1 vs. PC2. Please consider using PCA loadings to do PC projection and see [module 02c](https://github.com/genetics-of-dna-methylation-consortium/godmc_phase2/wiki/Run-pca-by-using-loadings).
+- If you find your PCA plot, which contains a V-shaped or poorly clustered distribution of samples when plotting PC1 vs. PC2. Please check the global PCA plot, which uses PCA loadings.
 
 - The `easyQC_hrc.rep` shows the number of SNPs that are flipped because they were on the wrong strand as compared to HRC ("AlleleChange"). Please find an example here: (https://github.com/genetics-of-dna-methylation-consortium/godmc_phase2/wiki/images//easyQC_hrc.rep)
 
