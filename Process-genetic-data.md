@@ -36,7 +36,7 @@ Note that for 'unrelated' samples, we are generating PCs by removing long LD tra
 
 After you have run this script, please check:
 ```
-cd results/02
+cd results/01
 ```
 
 **IMPORTANT PLEASE CHECK YOUR RESULTS:**
