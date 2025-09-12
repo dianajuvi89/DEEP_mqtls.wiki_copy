@@ -15,7 +15,7 @@
 - [Pipeline set up](Install-and-set-up)
 
 ### QC stage 01 (ready)
-[Pipeline Overview](Analyst-Quick-Start-Guide-to-Pipeline)
+
 <br>
 0\.  [Set up folders](Set-up-folders)
 <br>
