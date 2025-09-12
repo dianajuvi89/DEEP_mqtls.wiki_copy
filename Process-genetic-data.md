@@ -54,5 +54,3 @@ If you think the outlier threshold should be adjusted, you can change the sd thr
 - The `easyQC.multi.AFCHECK.png` plot shows a comparison between allele frequencies of your study as compared to HRC. Only outlying SNPs that differ > 0.2 in terms of allele frequency from the reference frequency, will be plotted. Please read the link for explanation of this plot [here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4083217/figure/F4/). Please find two examples below. All the SNVs in red will be removed from the analysis. You will see an empty plot if there are no SNPs to remove.
 
 [[Additionalfiles/easyQC.multi.AFCHECK.png]].   
-
-It will ensure everything looks correct and connects to the SFTP server. It will request your password (this should have been provided to you along with your username). Once you have entered your password, it will upload the results files from section 02.
