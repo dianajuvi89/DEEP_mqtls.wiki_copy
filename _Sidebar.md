@@ -21,7 +21,7 @@
 <br>
 1a\.  [Check data](Check-data)
 <br>
-1b\.  [Format genetic data](Format-genetic-data)
+1b\.  [Process genetic data](Process-genetic-data)
 <br>
 1c\.  [Check methylation and phenotypes](Check-methylation-phenotypes)
 <br>
