@@ -4,6 +4,6 @@
 
 **Scripts status:** Ready
 
-**Prerequisite scripts:** _Script 0_, _Script 01a_, _Script 01b_, _Script 01c_ and _Script 01d_
+**Prerequisite scripts:** _Script 0_, _01a_, _01b_, _01c_ and _01d_
 
 **Data upload method:** automated upload to sftp bristol
