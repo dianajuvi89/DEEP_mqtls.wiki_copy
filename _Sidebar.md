@@ -15,8 +15,6 @@
 - [Pipeline set up](Install-and-set-up)
 
 ### QC stage 01 (ready)
-
-<br>
 0\.  [Set up folders](Set-up-folders)
 <br>
 1a\.  [Check data](Check-data)
