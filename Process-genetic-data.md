@@ -21,10 +21,11 @@ Once the imputed genetic data is in the [correct format](Imputed-genetic-data) a
 - Remove duplicate SNPs
 - Remove poorly imputed SNPs
 - Construct kinship matrices
-- Remove PC outliers
+- Check PC outliers and generate PCA plots
 - Remove any cryptic relatedness for 'unrelated' data
 - Create a pedigree matrix for 'related' samples
 - Calculate principal components
+- Global PCA plot using PCA loadings
 - Remove SNPs with mismatched alleles and discordant allele frequency
 
 To do this, run the following script:
