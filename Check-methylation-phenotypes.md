@@ -51,9 +51,9 @@ Finally, it saves out the winsorized data.
 
 
 **predict_age_smoking**
-1. Predicts epigenetic age (Hannum clock) and smoking (both mcigarette and Elliott predictors) by using meffonym.
-2. Smoking must be coded as a factor (0/1); script will attempt auto-conversion if numeric. Please check the output messages to confirm the pipeline was able to convert this to a factor.
-3. Outputs three prediction plots; check correlation with age (may be weak if age range is limited). We do not expect the correlation with age to be good. 
+* Predicts epigenetic age (Hannum clock) and smoking (both mcigarette and Elliott predictors) by using meffonym.
+* Smoking must be coded as a factor (0/1); script will attempt auto-conversion if numeric. Please check the output messages to confirm the pipeline was able to convert this to a factor.
+* Generate three prediction plots; check correlation with age (may be weak if age range is limited). We do not expect the correlation with age to be good. 
 
 **cell_counts**
 
