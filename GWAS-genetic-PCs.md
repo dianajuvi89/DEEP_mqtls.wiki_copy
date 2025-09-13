@@ -8,4 +8,4 @@
 
 **Data upload method:** automated upload to sftp bristol
 
-Module 01e Overview: Conduct GWAS of genetic PCs
+# Module 01e Overview: Conduct GWAS of genetic PCs
