@@ -56,13 +56,12 @@ Finally, it saves out the winsorized data.
 * Generate three prediction plots; check correlation with age (may be weak if age range is limited). We do not expect the correlation with age to be good. 
 
 **cell_counts**
-* Predicts cell fractions using suitable cell reference panels by using [EpiDISH](https://github.com/sjczheng/EpiDISH) or [Meffil](https://github.com/perishky/meffil). References include Unilife, Salas, Zheng (), and Middleton.
+* Predicts cell fractions using appropriate cell reference panels by using [EpiDISH](https://github.com/sjczheng/EpiDISH) or [Meffil](https://github.com/perishky/meffil). References include [Unilife](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-025-01489-7) (blood samples at any age), [Salas](https://www.nature.com/articles/s41467-021-27864-7) (adult blood), [Zheng](https://www.tandfonline.com/doi/full/10.2217/epi-2018-0037) (adult saliva or buccal), and [Middleton](https://www.tandfonline.com/doi/full/10.1080/15592294.2021.1890874) (child saliva).
 * Produces per-sample predicted fractions (with prefix per reference), summary statistics, and diagnostic distribution plots.
 * Computes Spearman correlation matrices and generates correlation plots and scatter plots comparing predicted and predicted cell counts when multiple references are used and/or comparing predicted and measured cell counts when measured cell counts are available.
+
 **ewas**
-
 This script runs five EWAS analyses. These are EWAS where we know what to expect - their purpose is to check that the EWAS method and covariates are functioning as we expect in each dataset, and to identify any issues before running the main set of EWAS. We will be able to tell this from the EWAS report HTML files.
-
 Five EWAS analyses are:
 Smoking EWAS (adults only): should detect AHRR sites
 Age EWAS: should detect many age-associated sites
