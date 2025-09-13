@@ -30,7 +30,7 @@
 1f\.  [Normalisation of methylation data](Normalisation-of-methylation-data)
 <br>
 
-### The pipeline modules (in development)
+### The pipeline modules (under development)
 [Pipeline Overview](Analyst-Quick-Start-Guide-to-Pipeline)
 <br>
 2\.  [Process SNP data](Process-SNP-data)
