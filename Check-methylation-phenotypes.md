@@ -51,28 +51,23 @@ Finally, it saves out the winsorized data.
 
 
 **predict_age_smoking**
-
-This script predicts epigenetic age (using the Hannum clock), and smoking (using both mcigarette and Elliott predictors, which we will test to see which performs best across DEEP studies). 
-
-We care coding smoking as a factor (no=0 yes=1) across DEEP studies - if smoking is coded as a numeric variable for your study, please check the output messages to confirm the pipeline was able to convert this to a factor.
-
-This script will output three plots, one for each predictor. Please check the correlation with age - if there is limited variation in age in your dataset, we do not expect the correlation with age to be good. 
+1. Predicts epigenetic age (Hannum clock) and smoking (both mcigarette and Elliott predictors) by using meffonym.
+2. Smoking must be coded as a factor (0/1); script will attempt auto-conversion if numeric. Please check the output messages to confirm the pipeline was able to convert this to a factor.
+3. Outputs three prediction plots; check correlation with age (may be weak if age range is limited). We do not expect the correlation with age to be good. 
 
 **cell_counts**
+
 
 **ewas**
 
 This script runs five EWAS analyses. These are EWAS where we know what to expect - their purpose is to check that the EWAS method and covariates are functioning as we expect in each dataset, and to identify any issues before running the main set of EWAS. We will be able to tell this from the EWAS report HTML files.
 
-The first is a smoking EWAS. In the meffil EWAS report, please check that this EWAS identifies sites including AHRR as associated with smoking. This should not run for child studies.
-
-The second is an age EWAS. Please check the QQ plot; this should identify lots of sites associated with age.
-
-The third is a maternal smoking EWAS - this should only run if this is a child study. Please check there are sites associated including in MYO1G.
-
-The fourth is an EWAS of sex. Please check the QQ plot; this should identify lots of associations.
-
-The fifth is a negative control; it scrambles the sex variable and runs an EWAS of that. Because the sex variable is randomised, this EWAS should not identify sites associated with the randomised variable. If there is inflation of the QQ plot, please flag this to us.
+Five EWAS analyses are:
+Smoking EWAS (adults only): should detect AHRR sites
+Age EWAS: should detect many age-associated sites
+Maternal smoking EWAS (children only): should detect MYO1G sites
+Sex EWAS: should detect many sex-associated sites
+Negative control (scrambled sex): should show no true associations; QQ plot inflation must be flagged.
 
 **meth_pcs**
 
