@@ -76,9 +76,9 @@ We aim to identify major drivers of methylation variation so we can select appro
 Generate three plots:
 * PC1 vs PC2 scatter plot, colored by study variables.
 * PC3 vs PC4 scatter plot, colored by study variables.
-* Bar plots showing linear-model associations between PCs 1–10 and study variables (which variables explain most variance in each PC).
+* Bar plots showing linear-model associations between PCs 1–10 and study variables (which variables explain the most variance in each PC). \
 _**Important note:**_ Run ewas_age_smoking.R and methylation_pc_check.R twice — once with the Salas reference and once with Unilife. Confirm you have outputs for both panels before proceeding.
 
 **combine_covariates**
-* Combine the original covariate file with genetic PCs, predicted cell counts, and predicted smoking for Module 01d and 01e.
+* Combine the original covariate file with genetic PCs, predicted cell counts, and predicted smoking for Modules 01d and 01e.
 
