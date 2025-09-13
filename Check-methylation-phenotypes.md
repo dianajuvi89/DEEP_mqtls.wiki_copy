@@ -32,8 +32,8 @@ Importantly, Module 01c is designed to run in chunks, making it easier to fix pr
     ./01c-check_phenotypes_and_methylation.sh combine_covariates
 
 
-# The function of chunks
-** methy_outlier**
+# The functions of each chunk
+**methy_outlier**
 
 
 
