@@ -62,13 +62,13 @@ Finally, it saves out the winsorized data.
 * Computes Spearman correlation matrices and generates correlation plots and scatter plots comparing predicted and predicted cell counts when multiple references are used and/or comparing predicted and measured cell counts when measured cell counts are available.
 
 **ewas**
-This script runs five EWAS analyses. These are EWAS where we know what to expect - their purpose is to check that the EWAS method and covariates are functioning as we expect in each dataset, and to identify any issues before running the main set of EWAS. We will be able to tell this from the EWAS report HTML files.
+This script runs five EWAS analyses. These are EWAS where we know what to expect - their purpose is to check that the EWAS method and covariates are functioning as we expect in each dataset, and to identify any issues before running the main set of EWAS. We will be able to tell this from the EWAS report HTML files. \
 Five EWAS analyses are:
-Smoking EWAS (adults only): should detect AHRR sites
-Age EWAS: should detect many age-associated sites
-Maternal smoking EWAS (children only): should detect MYO1G sites
-Sex EWAS: should detect many sex-associated sites
-Negative control (scrambled sex): should show no true associations; QQ plot inflation must be flagged.
+* Smoking EWAS (adults only): should detect AHRR sites
+* Age EWAS: should detect many age-associated sites
+* Maternal smoking EWAS (children only): should detect MYO1G sites
+* Sex EWAS: should detect many sex-associated sites
+* Negative control (scrambled sex): should show no true associations; QQ plot inflation must be flagged.
 
 **meth_pcs**
 
