@@ -56,12 +56,13 @@ Finally, it saves out the winsorized data.
 * Smoking must be coded as a factor (0/1); script will attempt auto-conversion if numeric. Please check the output messages to confirm the pipeline was able to convert this to a factor.
 * Generate three prediction plots; check correlation with age (may be weak if age range is limited). We do not expect the correlation with age to be good. 
 
-**cell_counts**
+**cell_counts**\
+
 * Predicts cell fractions using appropriate cell reference panels in [EpiDISH](https://github.com/sjczheng/EpiDISH) or [Meffil](https://github.com/perishky/meffil). References include [Unilife](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-025-01489-7) (blood samples at any age), [Salas](https://www.nature.com/articles/s41467-021-27864-7) (adult blood), [Zheng](https://www.tandfonline.com/doi/full/10.2217/epi-2018-0037) (adult saliva or buccal), and [Middleton](https://www.tandfonline.com/doi/full/10.1080/15592294.2021.1890874) (child saliva).
 * Produces per-sample predicted fractions (with prefix per reference), summary statistics, and diagnostic distribution plots.
 * Computes Spearman correlation matrices and generates correlation plots and scatter plots comparing predicted and predicted cell counts when multiple references are used and/or comparing predicted and measured cell counts when measured cell counts are available.
 
-**ewas**
+**ewas** \
 This script runs five EWAS analyses. These are EWAS where we know what to expect - their purpose is to check that the EWAS method and covariates are functioning as we expect in each dataset, and to identify any issues before running the main set of EWAS. We will be able to tell this from the EWAS report HTML files. \
 Five EWAS analyses are:
 * Smoking EWAS (adults only): should detect AHRR sites
@@ -71,12 +72,12 @@ Five EWAS analyses are:
 * Negative control (scrambled sex): should show no true associations; QQ plot inflation must be flagged.
 
 **meth_pcs**
-
-This script generates principal components of the methylation data, and associates the PCs with genetic PCs, batch, and key study and participant characteristics. This is so we can identify what the big drivers of methylation variation are in each dataset. This will help us control for the right batch and study variables in our main analyses. It also helps identify any issues there might be.
-
-This script will create three plots. The first two plot PC1 vs PC2, and PC3 vs PC4, coloured by study variables. The third contains bar plots of linear model associations between the first 10 PCs and study variables - this helps us know which variables are most associated with each of the methylation PCs.
-
-_**Important note:**_ the ewas_age_smoking.R and methylation_pc_check.R should each run twice; once with the Salas cell type reference panel, and once with the Unilife panel. Please make sure that you have outputs from these scripts for both Salas and Unilife.
+We aim to identify major drivers of methylation variation so we can select appropriate PC/batch covariates for downstream EWAS and mQTL analyses and detect dataset-specific issues. We generate principal components (PCs) of the methylation data and assess their associations with genetic PCs, batch variables, and core study/participant covariates. \
+Generate three plots:\
+* PC1 vs PC2 scatter plot, colored by study variables.
+* PC3 vs PC4 scatter plot, colored by study variables.
+* Bar plots showing linear-model associations between PCs 1–10 and study variables (which variables explain most variance in each PC).
+_**Important note:**_ Run ewas_age_smoking.R and methylation_pc_check.R twice — once with the Salas reference and once with Unilife. Confirm you have outputs for both panels before proceeding.
 
 **combine_covariates**
 * Combine the original covariate file with genetic PCs, predicted cell counts, and predicted smoking for Module 01d and 01e.
