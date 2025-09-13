@@ -73,7 +73,7 @@ Five EWAS analyses are:
 
 **meth_pcs**
 We aim to identify major drivers of methylation variation so we can select appropriate PC/batch covariates for downstream EWAS and mQTL analyses and detect dataset-specific issues. We generate principal components (PCs) of the methylation data and assess their associations with genetic PCs, batch variables, and core study/participant covariates. \
-Generate three plots:\
+Generate three plots:
 * PC1 vs PC2 scatter plot, colored by study variables.
 * PC3 vs PC4 scatter plot, colored by study variables.
 * Bar plots showing linear-model associations between PCs 1–10 and study variables (which variables explain most variance in each PC).
