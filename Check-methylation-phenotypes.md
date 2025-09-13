@@ -8,13 +8,21 @@
 
 **Data upload method:** automated upload to sftp bristol
 
-The script can be run in chunks so you can fix problems more easily. We recommend to run this script interactively. If you have a large methylation dataset, then it is possible to run  `./01c-check_phenotypes_and_methylation.sh ewas` in a job.
+# Module 01c overview
+Module 03 processes DNA methylation data and phenotype data for the following aims, including:
+- Remove outliers in DNA methylation data for GWAS and/or EWAS.
+- Check positive controls
+- Predict cell counts by using cleaned DNA methylation data, compare predicted vs measured cell counts (if available), and compare predicted vs predicted cell counts (if multiple cell type references are used). 
+- Generate covariates for Module 01d (mQTL positive/negative control analysis).
+
+
+The script can be run in chunks so that you can fix problems more easily. We would recommend that you run this script interactively. If you have a large methylation dataset, then it is possible to run  `./01c-check_phenotypes_and_methylation.sh ewas` in a job.
     
     ./01c-check_phenotypes_and_methylation.sh methy_outlier
     ./01c-check_phenotypes_and_methylation.sh check_phenotype
     ./01c-check_phenotypes_and_methylation.sh predict_age_smoking
     ./01c-check_phenotypes_and_methylation.sh cell_counts
-    ./01c-check_phenotypes_and_methylation.sh ewas    
+    ./01c-check_phenotypes_and_methylation.sh ewas
     ./01c-check_phenotypes_and_methylation.sh meth_pcs
     ./01c-check_phenotypes_and_methylation.sh combine_covariates
 
