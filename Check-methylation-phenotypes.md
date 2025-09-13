@@ -17,7 +17,11 @@ Module 03 processes DNA methylation data and phenotype data for the following ai
 - Computes PCs for methylation data, and associates the PCs with genetic PCs, batch, and key study and participant characteristics.
 - Generate covariates for Module 01d (mQTL positive/negative control analysis).
 
-This script is designed to run in chunks, making it easier to fix problems as they arise. We would recommend that you run this script interactively. If you have a large methylation dataset, then it is possible to run  `./01c-check_phenotypes_and_methylation.sh ewas` in a job.
+To run the entire script, use the following command:
+```
+./01c-check_phenotypes_and_methylation.sh
+```
+Importantly, Module 01c is designed to run in chunks, making it easier to fix problems as they arise. We would recommend that you run this script interactively. If you have a large methylation dataset, then it is possible to run  `./01c-check_phenotypes_and_methylation.sh ewas` in a job.
     
     ./01c-check_phenotypes_and_methylation.sh methy_outlier
     ./01c-check_phenotypes_and_methylation.sh check_phenotype
@@ -30,7 +34,8 @@ This script is designed to run in chunks, making it easier to fix problems as th
 **remove_outliers**
 
 
-**check_phenotypes.R**
+
+**check_phenotypes**
 
 This script is designed to format the phenotypes based on whether you have designated them as _factor or _numeric, so it is very important that you have added either _factor or _numeric to the end of every variable column name in your phenotype file.
 
@@ -43,7 +48,7 @@ It will then winsorize numeric variables which contain outliers, and re-plot and
 Finally, it saves out the winsorized data.
 
 
-**predict_age_smoking.R**
+**predict_age_smoking**
 
 This script predicts epigenetic age (using the Hannum clock), and smoking (using both mcigarette and Elliott predictors, which we will test to see which performs best across DEEP studies). 
 
@@ -51,7 +56,7 @@ We care coding smoking as a factor (no=0 yes=1) across DEEP studies - if smoking
 
 This script will output three plots, one for each predictor. Please check the correlation with age - if there is limited variation in age in your dataset, we do not expect the correlation with age to be good. 
 
-**ewas_age_smoking.R**
+**ewas_age_smoking**
 
 This script runs five EWAS analyses. These are EWAS where we know what to expect - their purpose is to check that the EWAS method and covariates are functioning as we expect in each dataset, and to identify any issues before running the main set of EWAS. We will be able to tell this from the EWAS report html files.
 
@@ -65,7 +70,7 @@ The fourth is an EWAS of sex. Please check the QQ plot; this should identify lot
 
 The fifth is a negative control; it scrambles the sex variable and runs an EWAS of that. Because the sex variable is randomised, this EWAS should not identify sites associated with the randomised variable. If there is inflation of the QQ plot, please flag this to us.
 
-**methylation_pc_check.R**
+**methylation_pc_check**
 
 This script generates principal components of the methylation data, and associates the PCs with genetic PCs, batch, and key study and participant characteristics. This is so we can identify what the big drivers of methylation variation are in each dataset. This will help us control for the right batch and study variables in our main analyses. It also helps identify any issues there might be.
 
