@@ -56,7 +56,7 @@ Finally, it saves out the winsorized data.
 * Generate three prediction plots; check correlation with age (may be weak if age range is limited). We do not expect the correlation with age to be good. 
 
 **cell_counts**
-* Predicts cell fractions using appropriate cell reference panels by using [EpiDISH](https://github.com/sjczheng/EpiDISH) or [Meffil](https://github.com/perishky/meffil). References include [Unilife](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-025-01489-7) (blood samples at any age), [Salas](https://www.nature.com/articles/s41467-021-27864-7) (adult blood), [Zheng](https://www.tandfonline.com/doi/full/10.2217/epi-2018-0037) (adult saliva or buccal), and [Middleton](https://www.tandfonline.com/doi/full/10.1080/15592294.2021.1890874) (child saliva).
+* Predicts cell fractions using appropriate cell reference panels in [EpiDISH](https://github.com/sjczheng/EpiDISH) or [Meffil](https://github.com/perishky/meffil). References include [Unilife](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-025-01489-7) (blood samples at any age), [Salas](https://www.nature.com/articles/s41467-021-27864-7) (adult blood), [Zheng](https://www.tandfonline.com/doi/full/10.2217/epi-2018-0037) (adult saliva or buccal), and [Middleton](https://www.tandfonline.com/doi/full/10.1080/15592294.2021.1890874) (child saliva).
 * Produces per-sample predicted fractions (with prefix per reference), summary statistics, and diagnostic distribution plots.
 * Computes Spearman correlation matrices and generates correlation plots and scatter plots comparing predicted and predicted cell counts when multiple references are used and/or comparing predicted and measured cell counts when measured cell counts are available.
 
@@ -78,5 +78,5 @@ This script will create three plots. The first two plot PC1 vs PC2, and PC3 vs P
 _**Important note:**_ the ewas_age_smoking.R and methylation_pc_check.R should each run twice; once with the Salas cell type reference panel, and once with the Unilife panel. Please make sure that you have outputs from these scripts for both Salas and Unilife.
 
 **combine_covariates**
-
+* Combine the original covariate file with genetic PCs, predicted cell counts, and predicted smoking for Module 01d and 01e.
 
