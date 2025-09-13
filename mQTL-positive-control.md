@@ -8,4 +8,4 @@
 
 **Data upload method:** automated upload to sftp bristol
 
-* Module 01d Overview: Conducting mQTL Positive and Negative Controls
+*Module 01d Overview: Conducting mQTL Positive and Negative Controls
