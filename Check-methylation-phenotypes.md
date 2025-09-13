@@ -10,13 +10,14 @@
 
 # Module 01c overview
 Module 03 processes DNA methylation data and phenotype data for the following aims, including:
-- Remove outliers in DNA methylation data for GWAS and/or EWAS.
-- Check positive controls
-- Predict cell counts by using cleaned DNA methylation data, compare predicted vs measured cell counts (if available), and compare predicted vs predicted cell counts (if multiple cell type references are used). 
+- Detect and remove outliers in DNA methylation data for GWAS and/or EWAS.
+- Clean, format, and QC phenotype variables.
+- Predict epigenetic age and smoking status from methylation
+- Predict cell counts by using cleaned DNA methylation data, compare predicted vs measured cell counts (if available), and compare predicted vs predicted cell counts (if multiple cell type references are used).
+- Computes PCs for methylation data, and associates the PCs with genetic PCs, batch, and key study and participant characteristics.
 - Generate covariates for Module 01d (mQTL positive/negative control analysis).
 
-
-The script can be run in chunks so that you can fix problems more easily. We would recommend that you run this script interactively. If you have a large methylation dataset, then it is possible to run  `./01c-check_phenotypes_and_methylation.sh ewas` in a job.
+This script is designed to run in chunks, making it easier to fix problems as they arise. We would recommend that you run this script interactively. If you have a large methylation dataset, then it is possible to run  `./01c-check_phenotypes_and_methylation.sh ewas` in a job.
     
     ./01c-check_phenotypes_and_methylation.sh methy_outlier
     ./01c-check_phenotypes_and_methylation.sh check_phenotype
@@ -26,13 +27,16 @@ The script can be run in chunks so that you can fix problems more easily. We wou
     ./01c-check_phenotypes_and_methylation.sh meth_pcs
     ./01c-check_phenotypes_and_methylation.sh combine_covariates
 
+**remove_outliers**
+
+
 **check_phenotypes.R**
 
 This script is designed to format the phenotypes based on whether you have designated them as _factor or _numeric, so it is very important that you have added either _factor or _numeric to the end of every variable column name in your phenotype file.
 
-The script will generate plots and summary statistics of your data, to check that the distributions look as expected, and to check for any improbable values or missing codes that have not been removed (for example, missingness code of -9 that has not been recoded to NA).
+The script will generate plots and summary statistics of your data, to check that the distributions look as expected, and to check for any improbable values or missing codes that have not been removed (for example, a missingness code of -9 that has not been recoded to NA).
 
-It will print a warning message if there is >10% missing data for any variable - if this prints and is unexpected then please check your data.
+It will print a warning message if there is >10% missing data for any variable - if this prints and is unexpected, then please check your data.
 
 It will then winsorize numeric variables which contain outliers, and re-plot and generate new summary statistics for any variables that are winsorized - again, please check these plots.
 
