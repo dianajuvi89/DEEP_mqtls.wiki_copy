@@ -23,7 +23,7 @@
 <br>
 1c\.  [Check methylation and phenotypes](Check-methylation-phenotypes)
 <br>
-1d\.  [mQTL control GWAS](mQTL-positive-control)
+1d\.  [mQTL control GWAS](mQTL-control-GWAS)
 <br>
 1e\.  [GWAS of genetic PCs](GWAS-genetic-PCs)
 <br>
