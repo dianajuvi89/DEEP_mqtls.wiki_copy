@@ -39,7 +39,7 @@ Importantly, Module 01c is designed to run in chunks, making it easier to fix pr
 
 **check_phenotype**
 
-This script is designed to format the phenotypes based on whether you have designated them as _factor or _numeric, so it is very important that you have added either _factor or _numeric to the end of every variable column name in your phenotype file.
+This script is designed to format the phenotypes based on whether you have designated them as _factor or _numeric, so it is very important that you have added either _factor or _numeric to the end of every variable column name in your phenotype file (See examples in [Phenotype data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Phenotype-data)).
 
 The script will generate plots and summary statistics of your data, to check that the distributions look as expected, and to check for any improbable values or missing codes that have not been removed (for example, a missingness code of -9 that has not been recoded to NA).
 
@@ -51,14 +51,14 @@ Finally, it saves out the winsorized data.
 
 
 **predict_age_smoking**
-* Predicts epigenetic age (Hannum clock) and smoking (both mcigarette and Elliott predictors) by using meffonym.
+* Predicts epigenetic age (Hannum clock) and smoking (both mcigarette and Elliott predictors) by using [meffonym](https://github.com/perishky/meffonym).
 * Smoking must be coded as a factor (0/1); script will attempt auto-conversion if numeric. Please check the output messages to confirm the pipeline was able to convert this to a factor.
 * Generate three prediction plots; check correlation with age (may be weak if age range is limited). We do not expect the correlation with age to be good. 
 
 **cell_counts**
-* Predicts cell fractions using suitable reference panels by using [EpiDISH] (https://github.com/sjczheng/EpiDISH) (references include unilife, salas, zheng, and middleton).
-Produces per-sample predicted fractions (with prefix per reference), summary statistics, and diagnostic distribution plots.
-
+* Predicts cell fractions using suitable cell reference panels by using [EpiDISH](https://github.com/sjczheng/EpiDISH) or [Meffil](https://github.com/perishky/meffil). References include Unilife, Salas, Zheng (), and Middleton.
+* Produces per-sample predicted fractions (with prefix per reference), summary statistics, and diagnostic distribution plots.
+* Computes Spearman correlation matrices and generates correlation plots and scatter plots comparing predicted and predicted cell counts when multiple references are used and/or comparing predicted and measured cell counts when measured cell counts are available.
 **ewas**
 
 This script runs five EWAS analyses. These are EWAS where we know what to expect - their purpose is to check that the EWAS method and covariates are functioning as we expect in each dataset, and to identify any issues before running the main set of EWAS. We will be able to tell this from the EWAS report HTML files.
