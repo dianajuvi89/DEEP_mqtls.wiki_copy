@@ -34,8 +34,9 @@ Importantly, Module 01c is designed to run in chunks, making it easier to fix pr
 
 # The functions of each chunk
 **methy_outlier**
-
-
+* Detects and removes methylation outliers using the IQR method in [ewaff](https://github.com/perishky/ewaff) on the normalized beta matrix.
+* Removes CpGs that become >10% missing after outlier handling and saves cleaned methylation objects separately for GWAS and EWAS.
+* Produces per‑CpG summary (mean/median/sd) and a cohort descriptives file (sample counts, age/sex summaries).
 
 **check_phenotype**
 
