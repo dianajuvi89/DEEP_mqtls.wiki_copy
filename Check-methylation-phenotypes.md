@@ -51,8 +51,7 @@ This script is designed to format the phenotypes based on whether you have desig
 * Smoking must be coded as a factor (0/1); script will attempt auto-conversion if numeric. Please check the output messages to confirm the pipeline was able to convert this to a factor.
 * Generate three prediction plots; check correlation with age (may be weak if age range is limited). We do not expect the correlation with age to be good. 
 
-**cell_counts**\
-
+**cell_counts**
 * Predicts cell fractions using appropriate cell reference panels in [EpiDISH](https://github.com/sjczheng/EpiDISH) or [Meffil](https://github.com/perishky/meffil). References include [Unilife](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-025-01489-7) (blood samples at any age), [Salas](https://www.nature.com/articles/s41467-021-27864-7) (adult blood), [Zheng](https://www.tandfonline.com/doi/full/10.2217/epi-2018-0037) (adult saliva or buccal), and [Middleton](https://www.tandfonline.com/doi/full/10.1080/15592294.2021.1890874) (child saliva).
 * Produces per-sample predicted fractions (with prefix per reference), summary statistics, and diagnostic distribution plots.
 * Computes Spearman correlation matrices and generates correlation plots and scatter plots comparing predicted and predicted cell counts when multiple references are used and/or comparing predicted and measured cell counts when measured cell counts are available.
@@ -72,7 +71,7 @@ _**Important note:**_ the `ewas_age_smoking.R` and `methylation_pc_check.R` shou
 Generate three plots:
 * PC1 vs PC2 scatter plot, colored by study variables.
 * PC3 vs PC4 scatter plot, colored by study variables.
-* Bar plots showing linear-model associations between PCs 1–10 and study variables (which variables explain the most variance in each PC). \
+* Bar plots showing linear-model associations between PCs 1–10 and study variables (which variables explain the most variance in each PC).
 
 **combine_covariates**
 * Combine the original covariate file with genetic PCs, all predicted cell counts, and predicted smoking for Modules 01d and 01e.
