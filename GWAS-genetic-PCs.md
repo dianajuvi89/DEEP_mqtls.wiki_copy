@@ -9,3 +9,5 @@
 **Data upload method:** automated upload to sftp bristol
 
 # Module 01e Overview: Conduct GWAS of genetic PCs
+People adjust for PCs when conducting GWAS
+PCs capture population structure.
