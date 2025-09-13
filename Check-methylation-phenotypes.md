@@ -56,7 +56,8 @@ Finally, it saves out the winsorized data.
 * Generate three prediction plots; check correlation with age (may be weak if age range is limited). We do not expect the correlation with age to be good. 
 
 **cell_counts**
-
+* Predicts cell fractions using suitable reference panels by using [EpiDISH] (https://github.com/sjczheng/EpiDISH) (references include unilife, salas, zheng, and middleton).
+Produces per-sample predicted fractions (with prefix per reference), summary statistics, and diagnostic distribution plots.
 
 **ewas**
 
