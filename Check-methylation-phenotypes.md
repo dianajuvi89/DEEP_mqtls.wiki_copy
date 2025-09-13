@@ -71,13 +71,12 @@ Five EWAS analyses are:
 * Sex EWAS: should detect many sex-associated sites
 * Negative control (scrambled sex): should show no true associations; QQ plot inflation must be flagged.
 
-**meth_pcs**
-We aim to identify major drivers of methylation variation so we can select appropriate PC/batch covariates for downstream EWAS and mQTL analyses and detect dataset-specific issues. We generate principal components (PCs) of the methylation data and assess their associations with genetic PCs, batch variables, and core study/participant covariates. \
+**meth_pcs** \
+We aim to identify major drivers of methylation variation so we can select appropriate PC/batch covariates for downstream EWAS and mQTL analyses and detect dataset-specific issues. We generate principal components (PCs) of the methylation data and assess their associations with genetic PCs, batch variables, and core study/participant covariates. _**Important note:**_ Run ewas_age_smoking.R and methylation_pc_check.R twice — once with the Salas reference and once with Unilife. Confirm you have outputs for both panels before proceeding. \
 Generate three plots:
 * PC1 vs PC2 scatter plot, colored by study variables.
 * PC3 vs PC4 scatter plot, colored by study variables.
 * Bar plots showing linear-model associations between PCs 1–10 and study variables (which variables explain the most variance in each PC). \
-_**Important note:**_ Run ewas_age_smoking.R and methylation_pc_check.R twice — once with the Salas reference and once with Unilife. Confirm you have outputs for both panels before proceeding.
 
 **combine_covariates**
 * Combine the original covariate file with genetic PCs, predicted cell counts, and predicted smoking for Modules 01d and 01e.
