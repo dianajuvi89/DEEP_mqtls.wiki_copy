@@ -42,14 +42,9 @@ Importantly, Module 01c is designed to run in chunks, making it easier to fix pr
 
 This script is designed to format the phenotypes based on whether you have designated them as _factor or _numeric, so it is very important that you have added either _factor or _numeric to the end of every variable column name in your phenotype file (See examples in [Phenotype data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Phenotype-data)).
 
-The script will generate plots and summary statistics of your data, to check that the distributions look as expected, and to check for any improbable values or missing codes that have not been removed (for example, a missingness code of -9 that has not been recoded to NA).
-
-It will print a warning message if there is >10% missing data for any variable - if this prints and is unexpected, then please check your data.
-
-It will then winsorize numeric variables which contain outliers, and re-plot and generate new summary statistics for any variables that are winsorized - again, please check these plots.
-
-Finally, it saves out the winsorized data.
-
+* Produces distribution plots and summary tables for every variable to reveal unexpected values or coding problems (e.g., missingness codes like -9).
+* Message any variable with >10% missing values. If this prints and is unexpected, then please check your data.
+* Winsorize numeric variables that contain extreme outliers, then re-generate plots and summary statistics for those variables so you can review the effect of winsorization.
 
 **predict_age_smoking**
 * Predicts epigenetic age (Hannum clock) and smoking (both mcigarette and Elliott predictors) by using [meffonym](https://github.com/perishky/meffonym).
@@ -80,5 +75,4 @@ Generate three plots:
 * Bar plots showing linear-model associations between PCs 1–10 and study variables (which variables explain the most variance in each PC). \
 
 **combine_covariates**
-* Combine the original covariate file with genetic PCs, predicted cell counts, and predicted smoking for Modules 01d and 01e.
-
+* Combine the original covariate file with genetic PCs, all predicted cell counts, and predicted smoking for Modules 01d and 01e.
