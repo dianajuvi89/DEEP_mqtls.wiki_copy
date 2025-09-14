@@ -76,7 +76,8 @@ Inside this folder you need to ensure that there is:
 
 - Genetic data in binary plink format (i.e. `bed`, `bim` and `fam`) files without a genotype probability cut-off. Please see [here](Imputed-genetic-data) for more info.
 - Normalised and QC'd methylation data stored in an `.RData` file. Please see [here](Normalised-methylation-data) for more info.
-- Covariates stored as plain text files. Please see [here](Covariate-data) for more info.
+- Covariates stored as plain text file. Please see [here](Covariate-data) for more info.
+- Phenotypes for EWAS stored as plain text file. Please see [here](Phenotype-data) for more info.
 
 For simplicity you can copy or move your genetic data (e.g. `data.bed`, `data.bim`, `data.fam`), your methylation data (e.g. `beta.RData`), and your covariate data (e.g. `covariates.txt`) to the `input_data` directory. Then set the following variables in the config file:
 
@@ -84,6 +85,7 @@ For simplicity you can copy or move your genetic data (e.g. `data.bed`, `data.bi
 betas="${home_directory}/input_data/beta.RData"
 bfile_raw="${home_directory}/input_data/data"
 covariates="${home_directory}/input_data/covariates.txt"
+phenotypes="${home_directory}/input_data/phenotypes.txt"
 ```
 
 #### Imputation quality
