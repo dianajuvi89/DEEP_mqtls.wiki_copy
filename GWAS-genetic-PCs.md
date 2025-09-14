@@ -18,3 +18,6 @@ To run the entire script, use the following command:
 ```
 ./01e-genetic_pc_gwas.sh -c /path/to/config/file
 ```
+>[!IMPORTANT]
+> **Please check**
+> Please check Manhattan plots. If you found strong local associations then this will indicate that genetic PCs can't be used in GWAS analyses.
