@@ -1,4 +1,4 @@
-Welcome to the [Diverse Epigenetic Epidemiology Partnership](https://www.deep-epigenetics.org/) analysis pipeline. This wiki will guide you through the different stages of the analysis. We recommend you read this page before you start running the pipeline to familarise yourself with how it was designed and what it includes, how to use this wiki and what to do if it goes wrong.
+Welcome to the [Diverse Epigenetic Epidemiology Partnership](https://www.deep-epigenetics.org/) analysis pipeline. This wiki will guide you through the different stages of the analysis. We recommend you read this page before you start running the pipeline to familiarise yourself with how it was designed and what it includes, how to use this wiki, and what to do if it goes wrong.
 
 A reminder of our participation requirements can be found on this [**page**](Participation-requirements).
 
@@ -6,7 +6,7 @@ A reminder of our participation requirements can be found on this [**page**](Par
 
 The pipeline was designed to make it as automatic and reproducible as possible, minimising coding and input required by users ("analysts"). This makes the pipeline easy to execute, avoids duplication of effort, maintains consistency across cohorts and reduces potential for errors. 
 
-Analyst input is minimised by using a "config" file. This config file includes all cohort-specific parameters such as file paths, properties of the data, thresholds etc. 
+Analyst input is minimised by using a "config" file. This config file includes all cohort-specific parameters such as file paths, properties of the data, thresholds, etc. 
 
 Pipeline stages are separated into numbered modules. Modules need to be completed in sequence. [This flowchart](Script-Flowchart) represents the dependencies between the modules so you can see what order you need to run them in. 
 
