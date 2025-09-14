@@ -13,6 +13,6 @@ Southeast Asia: [https://www.nature.com/articles/s41525-024-00435-7](https://www
 
 Brazil: [https://pubmed.ncbi.nlm.nih.gov/29903722/](https://pubmed.ncbi.nlm.nih.gov/29903722/)
 
-Latin Americans (imputation with Native American reference panel: [(https://pubmed.ncbi.nlm.nih.gov/35046991/)](https://pubmed.ncbi.nlm.nih.gov/35046991/)
+Latin Americans (imputation with Native American reference panel: [https://pubmed.ncbi.nlm.nih.gov/35046991/](https://pubmed.ncbi.nlm.nih.gov/35046991/)
 
 
