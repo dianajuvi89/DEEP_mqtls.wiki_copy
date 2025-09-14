@@ -2,7 +2,7 @@
 
 **Developers:** Olalekan Awoniran & Josine Min
 
-**Scripts status:** Ready
+**Scripts status:** In development
 
 **Prerequisite scripts:** _script 00, 01, 02, 03_
 
