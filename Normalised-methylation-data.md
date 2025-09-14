@@ -16,7 +16,7 @@ Meffil has been optimised for speed and memory, and instructions on how to do th
 
 ### Option 2
 
-While we our prefer you follow our recommended normalisation approach, we do not enforce this. If not meffil, then we would prefer that you would use an alternative functional normalisation method. If you prefer to use an alternative normalisation method then please ensure that the DNA methylation data you provide meets the following criteria:
+While we prefer you follow our recommended normalisation approach, we do not enforce this. If not meffil, then we would prefer that you would use an alternative functional normalisation method. If you prefer to use an alternative normalisation method then please ensure that the DNA methylation data you provide meets the following criteria:
 - Beta values (i.e. proportions) should be used to quantify DNA methylation level.
 - The methylation data is an R numeric matrix object where each row is a CpG site and each column is a sample. 
 - The rownames must be the unique `cg` identifiers and the column names are the IDs that correspond to the samples, and that match to sample IDs in the other datasets (genetic, covariate etc).
