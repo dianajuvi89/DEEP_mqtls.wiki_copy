@@ -32,7 +32,7 @@ The pipeline will calculate genetic and DNA methylation principal components, so
 
 ## Cell counts
 
-We use cell counts as covariates in many of the analyses, interaction terms in the cell type interacting meQTL analysis. If you have directly measured cell counts, then we will use these measured cell counts to compare against predicted cell counts.
+We use cell counts as covariates in many of the analyses, or as interaction terms in the cell type interacting meQTL analysis. If you have directly measured cell counts, then we will use these measured cell counts to compare against predicted cell counts.
 
 ### Directly measured cell counts
 
@@ -47,11 +47,9 @@ id3 0.16438292 0.1637806 -1.042249e-19 0.11164848 0.3932823 0.25849168
 
 ### Cell counts derived from DNA methylation data
 
-### Cell counts derived from DNA methylation data
-
 For blood: The pipeline will generate cell counts for 12 blood cell types from the normalized betas using [EpiDISH](https://github.com/sjczheng/EpiDISH) and the [Salas et al. 2022](https://doi.org/10.1038/s41467-021-27864-7) reference panel.
 
 For Saliva or buccal: The pipeline will generate cell counts for saliva or buccal derived methylation data using [Middleton reference dataset](https://pubmed.ncbi.nlm.nih.gov/33588693/) (child saliva) or [HepiDISH] (https://github.com/sjczheng/EpiDISH) (adult saliva or buccal)
 
-Estimated cell counts do not need to be provided in your covariates file, they will be derived within the DEEP pipeline.
+Estimated cell counts do not need to be provided in your covariate file, they will be derived within the DEEP pipeline.
 
