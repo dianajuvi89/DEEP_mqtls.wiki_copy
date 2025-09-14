@@ -54,4 +54,4 @@ If you think the outlier threshold should be adjusted, you can change the sd thr
 
 - The `easyQC.multi.AFCHECK.png` plot shows a comparison between allele frequencies of your study as compared to HRC. Only SNPs with allele frequency differences greater than 0.2 from the reference are plotted. Please read the link for an explanation of this plot [here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4083217/figure/F4/). Please find two examples below. Currently, SNVs highlighted in red are NOT removed from the analysis. If all allele frequency differences between your data and the reference panel are ≤ 0.2, the plot will be empty.
 
-[[https://github.com/genetics-of-dna-methylation-consortium/godmc_phase2/wiki/Additionalfiles-easyQC.multi.AFCHECK.png]].   
+[https://github.com/genetics-of-dna-methylation-consortium/godmc_phase2/wiki/Additionalfiles-easyQC.multi.AFCHECK.png].   
