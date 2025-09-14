@@ -50,7 +50,7 @@ Example fam file for related data (twins, families, mother-offspring etc.):
 
 - Column 3 should be 0.
 
-- Column 4 should be basepair position for build 37 or 38.
+- Column 4 should be basepair position for build hg19/b37 or hg38.
 
 - Column 5 and 6: **IMPORTANT:** ensure that your alleles coded using the original impute2 or minimac coding. To perform a meta-analysis across cohorts, alleles should be matching across cohorts. 
 
