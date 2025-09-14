@@ -54,7 +54,7 @@ Example fam file for related data (twins, families, mother-offspring etc.):
 
 - Column 5 and 6: **IMPORTANT:** ensure that your alleles coded using the original impute2 or minimac coding. To perform a meta-analysis across cohorts, alleles should be matching across cohorts. 
 
-- Please note HRC has SNPs only and no INDELs. The pipeline will remove INDELs from those that have 1000G imputed data. 
+- We include SNPs and INDELs. Please note that HRC and maybe other reference panels have SNPs only and no INDELs.
 
 #### Bed file
 
