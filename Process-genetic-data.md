@@ -25,7 +25,7 @@ Once the imputed genetic data is in the [correct format](Imputed-genetic-data) a
 - Remove any cryptic relatedness for 'unrelated' data
 - Calculate principal components
 - Check PC outliers and generate PCA plots
-- Global PCA plot using PCA loadings
+- Create a global PCA plot using PCA loadings
 - Check allele frequencies between genetic data and ancestry-specific reference panel.
 
 To do this, run the following script:
