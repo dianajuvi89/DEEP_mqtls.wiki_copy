@@ -21,7 +21,7 @@ To run the entire script, use the following command:
 ```
 >[!IMPORTANT]
 > **Please check**
-> - `cg07959070` should give a signal on chromosome 22 as this cis methQTL was found in at least 3 cohorts (`p<1e-8`, index SNP `chr22:50053871:SNP`) and is profiled on 450k, EPIC and EPIC v2 arrays. This CpG survives stringent probe filtering based on Price et al, Chen et al and Naeem et al and no 1000 Genomes SNP was found in the probe sequence or CpG site. Obviously the strength of the association will depend on the sample size and ancestry of your cohort and is currently set to a pvalue of 0.001.
+> - `cg07959070` should give a signal on chromosome 22. This cis methQTL gives very strong signal in most GoDMC cohorts and is profiled on 450k, EPIC and EPIC v2 arrays. This CpG survives stringent probe filtering based on Price et al, Chen et al and Naeem et al and no 1000 Genomes SNP was found in the probe sequence or CpG site. Obviously the strength of the association will depend on the sample size and ancestry of your cohort and is currently set to a pvalue of 0.001.
 > - In addition this GWA is used to check the lambda (inflation statistic) of your data. 
 Please check the qqplots and lambdas in the results (`./results/01/`) section. 
 It is important to check lambda here before going on and any lambda above 1.08 is worrying. In general for a standard GWA you would expect to see a lambda below 1.08.
