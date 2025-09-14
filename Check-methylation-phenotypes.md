@@ -15,7 +15,7 @@ This Module processes DNA methylation data and phenotype data for the following 
 - Predict epigenetic age and smoking status from methylation
 - Predict cell counts by using cleaned DNA methylation data, compare predicted vs measured cell counts (if available), and compare predicted vs predicted cell counts (if multiple cell type references are used).
 - Computes PCs for methylation data, and associates the methylation PCs with genetic PCs, batch, and key study and participant characteristics.
-- Generate covariates for module 01d (positive/negative control mQTL analysis).
+- Generate covariates for module 1d (positive/negative control mQTL analysis).
 
 To run the entire script, use the following command:
 ```
