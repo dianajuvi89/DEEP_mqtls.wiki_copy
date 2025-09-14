@@ -17,6 +17,6 @@ Additionally, after running the positive controls, we shuffle the methylation va
 
 To run the entire script, use the following command:
 ```
-./01d-mqtl_controls.sh
+./01d-mqtl_controls.sh -c /path/to/config/file
 ```
 
