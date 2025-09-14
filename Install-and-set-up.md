@@ -87,6 +87,13 @@ bfile_raw="${home_directory}/input_data/data"
 covariates="${home_directory}/input_data/covariates.txt"
 phenotypes="${home_directory}/input_data/phenotypes.txt"
 ```
+#### idat files
+
+In module 01g we use idat files to be able to normalise across datasets. We use quantiles from methylation probes and control probes to normalise across different datasets.
+
+```
+idat_directory=""
+```
 
 #### Imputation quality
 
