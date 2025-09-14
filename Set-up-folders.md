@@ -22,6 +22,6 @@ It will generate folders for:
 
 To run:
 ```
-    ./00-setup_folders.sh -c path/to/config
+    ./00-setup_folders.sh -c /path/to/config/file
 ```
 This will be very quick to run.
