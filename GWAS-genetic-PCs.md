@@ -8,7 +8,7 @@
 
 **Data upload method:** automated upload to sftp bristol
 
-# Overview: Conduct GWAS of genetic PCs
+# Module 01e Overview: Conduct GWAS of genetic PCs
 GWAS commonly adjust for population stratification by using PCs as covariates. However, [Grinde (2024)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1011242#sec010) indicates that PCs may capture not only global ancestry but also local genomic features, which can introduce collider bias and lead to spurious associations. Excluding known high LD regions and then conducting strict LD pruning before PCA reduces local artifacts in PCs effectively, while excluding high LD regions alone is insufficient.
 
 In Module 01b, we have generated the genetic PCs by excluding high LD regions and conducting strict LD pruning (`r2 = 0.1` and `window = 10000kb`). Here, we conducted GWAS analysis for genetic PC1 to PC5, respectively, to confirm that genetic PCs are valid and do not capture 
