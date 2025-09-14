@@ -63,9 +63,9 @@ install.packages("parallel")
 install.packages("EasyQC_9.2.tar.gz")
 ``` 
 
-Then you need to install several other R packages (EpiDish, meffonym, meffil etc). See below in "Other R packages are required for both mamba users and non-mamba users are required for both mamba users and non-mamba users".
+Then you need to install several other R packages (EpiDish, meffonym, meffil etc). 
 
-please proceed to "Step 2"
+**Please proceed to "Step 2: Other R packages are required for both mamba users and non-mamba users".**
 
 ### Step 1 Option 2: Manual installation of dependencies and R-packages (if you do not use mamba/conda)
 
