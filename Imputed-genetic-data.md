@@ -25,14 +25,14 @@ Prior to running the DEEP pipeline we require that genetic data must be
 
 - Please note that you need to set the phenotype (column 6) to missing i.e. "-9". 
 
-Example fam file for unrelated data
+Example fam file for unrelated data:
 ```
 1A 1A  0  0  2 -9
 2A 2A  0  0  2 -9    
 3A 3A  0  0  2 -9
 ```
 
-Example fam file for related data (twins, families, mother-offspring etc.)
+Example fam file for related data (twins, families, mother-offspring etc.):
 ```
 1 1A  0  0  2 -9
 1 1B  0  0  2 -9    
@@ -50,7 +50,7 @@ Example fam file for related data (twins, families, mother-offspring etc.)
 
 - Column 3 should be 0.
 
-- Column 4 should be basepair position for build 37.
+- Column 4 should be basepair position for build 37 or 38.
 
 - Column 5 and 6: **IMPORTANT:** ensure that your alleles coded using the original impute2 or minimac coding. To perform a meta-analysis across cohorts, alleles should be matching across cohorts. 
 
