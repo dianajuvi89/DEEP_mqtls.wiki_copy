@@ -8,7 +8,7 @@
 
 **Data upload method:** automated upload to sftp bristol
 
-# Module 01a Overview: Check data 
+# Module 1a Overview: Check data 
 
 We have created a script that will check the data you have deposited and the `config` file parameters to make sure it all looks as expected. 
 It checks:
