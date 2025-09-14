@@ -2,7 +2,7 @@
 
 **Developer:** Developer's team
 
-**Scripts status:** Ready
+**Scripts status:** In development
 
 **Prerequisite scripts:** _script 00 and 01_
 
