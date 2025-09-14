@@ -9,6 +9,6 @@
 **Data upload method:** automated upload to sftp bristol
 
 
-### Module 01f Overview: Functional normalization of methylation data across cohorts
+### Overview: Functional normalization of DNA methylation data across cohorts
 
 technical difference between cohorts heterogeneity.
