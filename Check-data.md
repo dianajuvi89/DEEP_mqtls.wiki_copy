@@ -19,19 +19,19 @@ It checks:
 
 To run:
 
-    ./01a-check_data.sh
+    ./01a-check_data.sh -c /path/to/config/file
 
 **PLEASE NOTE:** It is important to monitor this script as it runs - it will stop with warnings/errors if it encounters problems. Please fix any errors/warnings that are encountered, and re-run the script until it completes without errors.
 
 The script can be run in chunks so you can fix problems more easily. We recommend to run this script interactively. If you have a large methylation dataset, then it is possible to run  `./01a-check_data.sh methylation` in a job.
     
-    ./01a-check_data.sh config
-    ./01a-check_data.sh download
-    ./01a-check_data.sh requirements
-    ./01a-check_data.sh genetic
-    ./01a-check_data.sh methylation    
-    ./01a-check_data.sh covariates
-    ./01a-check_data.sh summary
+    ./01a-check_data.sh -c /path/to/config/file config
+    ./01a-check_data.sh -c /path/to/config/file download
+    ./01a-check_data.sh -c /path/to/config/file requirements
+    ./01a-check_data.sh -c /path/to/config/file genetic
+    ./01a-check_data.sh -c /path/to/config/file methylation    
+    ./01a-check_data.sh -c /path/to/config/file covariates
+    ./01a-check_data.sh -c /path/to/config/file summary
 
 **IMPORTANT:** The script produces the following plots in the `results/01/` directory. Please check the following plots:
 ```
