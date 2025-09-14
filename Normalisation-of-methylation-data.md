@@ -16,5 +16,5 @@ In addition to a meta analysis approach we would like to conduct pooled analyses
 We will use the following approach in meffil: https://github.com/perishky/meffil/wiki/Functional-normalizing-separate-datasets
 
 ```
-./01f-normalization.sh -c -c /path/to/config/file shrink
+./01f-normalization.sh -c /path/to/config/file shrink
 ```
