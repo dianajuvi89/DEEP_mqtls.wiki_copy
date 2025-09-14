@@ -77,4 +77,4 @@ Generate three plots:
 * Bar plots showing linear-model associations between PCs 1–10 and study variables (which variables explain the most variance in each PC).
 
 **combine_covariates**
-* Combine the original covariate file with genetic PCs, all predicted cell counts, and predicted smoking for modules 1d and 1e.
+* Combine the original covariate file with genetic PCs, all predicted cell counts, and predicted smoking for Modules 1d and 1e.
