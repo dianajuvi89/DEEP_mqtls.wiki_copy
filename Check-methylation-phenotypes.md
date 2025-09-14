@@ -19,22 +19,22 @@ Module 03 processes DNA methylation data and phenotype data for the following ai
 
 To run the entire script, use the following command:
 ```
-./01c-check_phenotypes_and_methylation.sh
+./01c-check_phenotypes_and_methylation.sh -c /path/to/config/file
 ```
 Importantly, Module 01c is designed to run in chunks, making it easier to fix problems as they arise. We would recommend that you run this script interactively. If you have a large methylation dataset, then it is possible to run  `./01c-check_phenotypes_and_methylation.sh ewas` in a job.
     
-    ./01c-check_phenotypes_and_methylation.sh methy_outlier
-    ./01c-check_phenotypes_and_methylation.sh check_phenotype
-    ./01c-check_phenotypes_and_methylation.sh predict_age_smoking
-    ./01c-check_phenotypes_and_methylation.sh cell_counts
-    ./01c-check_phenotypes_and_methylation.sh ewas
-    ./01c-check_phenotypes_and_methylation.sh meth_pcs
-    ./01c-check_phenotypes_and_methylation.sh combine_covariates
+    ./01c-check_phenotypes_and_methylation.sh -c /path/to/config/file methy_outlier
+    ./01c-check_phenotypes_and_methylation.sh -c /path/to/config/file check_phenotype
+    ./01c-check_phenotypes_and_methylation.sh -c /path/to/config/file predict_age_smoking
+    ./01c-check_phenotypes_and_methylation.sh -c /path/to/config/file cell_counts
+    ./01c-check_phenotypes_and_methylation.sh -c /path/to/config/file ewas
+    ./01c-check_phenotypes_and_methylation.sh -c /path/to/config/file meth_pcs
+    ./01c-check_phenotypes_and_methylation.sh -c /path/to/config/file combine_covariates
 
 
-# The functions of each chunk
+# Descriptions of each chunk
 **methy_outlier**
-* Detects and removes methylation outliers using the IQR method in [ewaff](https://github.com/perishky/ewaff) on the normalized beta matrix.
+* Detects and removes methylation outliers using the Tukey method in [ewaff](https://github.com/perishky/ewaff) on the normalized beta matrix.
 * Removes CpGs that become >10% missing after outlier handling and saves cleaned methylation objects separately for GWAS and EWAS.
 * Produces per‑CpG summary (mean/median/sd) and a cohort descriptives file (sample counts, age/sex summaries).
 
@@ -67,11 +67,11 @@ Five EWAS analyses are:
 
 **meth_pcs** \
 We aim to identify major drivers of methylation variation so we can select appropriate PC/batch covariates for downstream EWAS and mQTL analyses and detect dataset-specific issues. We generate principal components (PCs) of the methylation data and assess their associations with genetic PCs, batch variables, and core study/participant covariates. \
-_**Important note:**_ the `ewas_age_smoking.R` and `methylation_pc_check.R` should each run twice; once with the Salas cell type reference panel, and once with the Unilife panel. Please make sure that you have outputs from these scripts for both Salas and Unilife.
+_**Important note:**_ the `ewas_age_smoking.R` and `methylation_pc_check.R` will be run twice; once with the Salas cell type reference panel, and once with the Unilife panel. Please make sure that you have outputs from these scripts for both Salas and Unilife.
 Generate three plots:
 * PC1 vs PC2 scatter plot, colored by study variables.
 * PC3 vs PC4 scatter plot, colored by study variables.
 * Bar plots showing linear-model associations between PCs 1–10 and study variables (which variables explain the most variance in each PC).
 
 **combine_covariates**
-* Combine the original covariate file with genetic PCs, all predicted cell counts, and predicted smoking for Modules 01d and 01e.
+* Combine the original covariate file with genetic PCs, all predicted cell counts, and predicted smoking for modules 01d and 01e.
