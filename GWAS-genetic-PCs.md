@@ -9,5 +9,4 @@
 **Data upload method:** automated upload to sftp bristol
 
 # Module 01e Overview: Conduct GWAS of genetic PCs
-People adjust for PCs when conducting GWAS
-PCs capture population structure.
+GWAS commonly adjust for population structure by using PCs as covirates. However, [Grinde (2024)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1011242#sec010) indicates that PCs may capture not only global ancestry but also local genomic features, which can introduce collider bias and lead to spurious associations. Excluding high LD regions and then conducting strict LD pruning reduces local artifacts in PCs effectively.
