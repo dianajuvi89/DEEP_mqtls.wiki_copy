@@ -8,7 +8,7 @@
 
 **Data upload method:** automated upload to sftp bristol
 
-# Module 01b Overview: Processing genetic data
+# Module 1b Overview: Processing genetic data
 
 Once the imputed genetic data is in the [correct format](Imputed-genetic-data) and in the [correct location](Install-and-set-up), the following tasks need to be performed:
 - Liftover to hg38 if hg19
