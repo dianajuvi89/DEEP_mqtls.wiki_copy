@@ -16,5 +16,5 @@ local genomic features.
 
 To run the entire script, use the following command:
 ```
-./01e-genetic_pc_gwas.sh
+./01e-genetic_pc_gwas.sh -c /path/to/config/file
 ```
