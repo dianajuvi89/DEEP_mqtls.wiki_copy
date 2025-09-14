@@ -11,7 +11,7 @@
 # Module 01b Overview: Processing genetic data
 
 Once the imputed genetic data is in the [correct format](Imputed-genetic-data) and in the [correct location](Install-and-set-up), the following tasks need to be performed:
-
+- Liftover to hg38 if hg19
 - Extract relevant IDs
 - HWE and MAF QC
 - Genotype missingness QC
