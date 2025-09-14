@@ -45,12 +45,13 @@ cd results/01
 grep outlier ./results/01/logs_b/log.txt
 ```
 
-If you think the outlier threshold should be adjusted, you can change the sd threshold `pca_sd` in the `config` file. If you change the threshold, you need to rerun `01b-ancestry_identify.sh`.\
-- If you find your PCA plot, which contains a V-shaped or poorly clustered distribution of samples when plotting PC1 vs. PC2. Please check the global PCA plot, which uses PCA loadings from global biobank.
+If you think the outlier threshold should be adjusted, you can change the sd threshold `pca_sd` in the `config` file. If you change the threshold, you need to rerun `01b-ancestry_identify.sh`.
+- If you find that your PCA plot contains a V-shaped or poorly clustered distribution of samples when plotting PC1 vs. PC2. Please check the global PCA plot, which uses PCA loadings from global biobank.
 
-- The `easyQC_hrc.rep` shows the number of SNPs that are flipped because they were on the wrong strand as compared to one of the TopMed reference panels ("AlleleChange"). Please find an example here: (https://github.com/genetics-of-dna-methylation-consortium/godmc_phase2/wiki/images//easyQC_hrc.rep)
+- The `easyQC_hrc.rep` shows the number of SNPs that are flipped because they were on the wrong strand as compared to one of the TopMed reference panels ("AlleleChange"). Please find an example here: (https://github.com/genetics-of-dna-methylation-consortium/godmc_phase2/wiki/images//easyQC_hrc.rep).
 
 - The `easyQC_hrc.rep` file also shows you the number of SNPs that are going to be removed. eg, allele mismatches ("AlleleMismatch") and also SNPs that have a discrepant allele frequency (>0.2) as compared to TopMed ("AFCHECK.numOutlier").
+
 - The `easyQC.multi.AFCHECK.png` plot shows a comparison between allele frequencies of your study as compared to HRC. Only SNPs with allele frequency differences greater than 0.2 from the reference are plotted. Please read the link for an explanation of this plot [here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4083217/figure/F4/). Please find two examples below. Currently, SNVs highlighted in red are NOT removed from the analysis. If all allele frequency differences between your data and the reference panel are ≤ 0.2, the plot will be empty.
 
 [[Additionalfiles/easyQC.multi.AFCHECK.png]].   
