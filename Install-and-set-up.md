@@ -79,7 +79,7 @@ Inside this folder you need to ensure that there is:
 - Covariates stored as plain text file. Please see [here](Covariate-data) for more info.
 - Phenotypes for EWAS stored as plain text file. Please see [here](Phenotype-data) for more info.
 
-For simplicity you can copy or move your genetic data (e.g. `data.bed`, `data.bim`, `data.fam`), your methylation data (e.g. `beta.RData`), and your covariate data (e.g. `covariates.txt`) to the `input_data` directory. Then set the following variables in the config file:
+For simplicity you can copy or move your genetic data (e.g. `data.bed`, `data.bim`, `data.fam`), your methylation data (e.g. `beta.RData`),  your covariate data (e.g. `covariates.txt`) and phenotype data (e.g. `phenotypes.txt`) to the `input_data` directory. Then set the following variables in the config file:
 
 ```
 betas="${home_directory}/input_data/beta.RData"
@@ -114,8 +114,8 @@ We use the following predictions and these will be chosen based on `tissue`, `ag
 * Blood (12 cell types in adults):  [Salas reference dataset](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE167998) using the [EpiDISH](https://github.com/sjczheng/EpiDISH) package. 
 * Blood (19 cell types adults/children): [Unilife reference dataset](https://rdcu.be/eD9FD) using the [EpiDISH] (https://github.com/sjczheng/EpiDISH) package.
 * Saliva (immune and epithelial cell type fractions in children): [Middleton reference dataset](https://pubmed.ncbi.nlm.nih.gov/33588693/) using [meffil](https://github.com/perishky/meffil/wiki). 
-* Saliva (epithelial, fibroblast and immune cell type fractions in adults): [Zheng reference dataset](https://pubmed.ncbi.nlm.nih.gov/29693419/) using the [HepiDISH] (https://github.com/sjczheng/EpiDISH) package.
-* Buccal (epithelial, fibroblast and immune cell type fractions in adults): [Zheng reference dataset](https://pubmed.ncbi.nlm.nih.gov/29693419/) using the [HepiDISH] (https://github.com/sjczheng/EpiDISH) package.
+* Saliva (epithelial, fibroblast and immune cell type fractions in adults): [Zheng reference dataset](https://pubmed.ncbi.nlm.nih.gov/29693419/) using the [HEpiDISH] (https://github.com/sjczheng/EpiDISH) package.
+* Buccal (epithelial, fibroblast and immune cell type fractions in adults): [Zheng reference dataset](https://pubmed.ncbi.nlm.nih.gov/29693419/) using the [HEpiDISH] (https://github.com/sjczheng/EpiDISH) package.
 
 If your DNA methylation data were generated from a heterogeneous set of cell types (e.g. whole blood), then please set the following variables in the `config` file:
 
@@ -198,7 +198,7 @@ If you want to run a `config` file that is not located in the `scripts_directory
 ./00-setup_folders.sh -c /path/to/config/file
 ```
 
-By directly specifing the config file you want to use, you can easily run the same pipeline on different sets of data. 
+By directly specifying the config file you want to use, you can easily run the same pipeline on different sets of data. 
 
 ## Upload of results for meta-analysis
 
@@ -212,7 +212,7 @@ For some of these servers you need to ensure you have the correct files on your 
 
 ### Setting up a key for the Bristol sFTP server
 
-You must [register](http://data.bris.ac.uk/collaborator/) as a collaborator before you can upload or download any files to the Bristol sftp server. Please email [Josine Min](mailto:josine.min@bristol.ac.uk) or [Hannah Elliott] (mailto:Hannah.Elliott@bristol.ac.uk)for project id or if you have any issues with setting this up. Please note that **every analyst** will need their own account to access the server. If there are two analysts at the same institution or analysing the same cohort you will need your own log in. Sharing passwords and usernames will not work due to the need to have an ssh key pair (see below). 
+You must [register](http://data.bris.ac.uk/collaborator/) as a collaborator before you can upload or download any files to the Bristol sftp server. Please email [Josine Min](mailto:josine.min@bristol.ac.uk) or [Hannah Elliott] (mailto:Hannah.Elliott@bristol.ac.uk) for project id or if you have any issues with setting this up. Please note that **every analyst** will need their own account to access the server. If there are two analysts at the same institution or analysing the same cohort you will need your own log in. Sharing passwords and usernames will not work due to the need to have an ssh key pair (see below). 
 
 To upload or download files from the Bristol server to your server/HPC you need to have a key pair on your server.
 
