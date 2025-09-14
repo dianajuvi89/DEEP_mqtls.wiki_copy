@@ -8,7 +8,7 @@
 
 **Data upload method:** automated upload to sftp bristol
 
-# Module 1c overview: Check methylation and phenotypes
+# Overview: Check methylation and phenotypes
 This Module processes DNA methylation data and phenotype data for the following aims, including:
 - Detect and remove outliers in DNA methylation data for GWAS and/or EWAS.
 - Clean, format, and QC phenotype variables.
