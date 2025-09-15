@@ -26,7 +26,7 @@ for i in {1..22}; do
     qctool -g filteredchr${i}.bgen -snp-stats -osnp data_chr${i}.snp-stats
 
     # Assume that column 14 is MAF and column 17 is info
-    awk '$14>=0.001 && $17>=0.8 {print $2,$14,$17}' <data_chr${i}.snp-stats > data_chr${i}.info
+    awk '$14>=0.01 && $17>=0.8 {print $2,$14,$17}' <data_chr${i}.snp-stats > data_chr${i}.info
 
     # Change format from chr:pos:A1:A2 to chr:pos_A1_A2
     awk 'NR==1 {print; next}
