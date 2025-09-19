@@ -38,6 +38,7 @@ The following variables are required to run EWAS. They are not essential variabl
 - `Height_numeric`: In cm 
 - `MaternalSmoking_factor`: Coded as `Current` for current smokers and `Former` for ex smokers and `Never` for never smokers 
 - `MaternalSmoking_numeric`: In pack years (can be integer or with decimals)
+- `Population_group_factor`: A factor containing the population group the participants in your study belong to. This will be study-specific and will represent a concept such as ethnicity, race, caste, tribe, village, or region.
 
 ### Not needed
 
