@@ -32,9 +32,9 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `key`: see "Upload of results for meta-analysis section" below on how to set up your key.
  
-- `home_directory`: This directory contains a folder called `input_data` where the genetic, methylation and covariate files are located. Within this folder the pipeline will create a `processed_data` and `results` folder for the intermediate and results files.  Please make sure you have enough space in this directory for all the output files and the correct permissions to create new files and folders.
+- `home_directory`: This directory contains a folder called `input_data` where the genetic, methylation and covariate files are located. Within this folder, the pipeline will create a `processed_data` and `results` folder for the intermediate and results files.  Please make sure you have enough space in this directory for all the output files and the correct permissions to create new files and folders.
 
-- `scripts_directory`: If you are in the `DEEP_mqtls` folder then type `pwd` and set this variable to the path: eg `scripts_directory="path/to/DEEP_mqtls"`.
+- `scripts_directory`: If you are in the `DEEP_mqtls` folder, then type `pwd` and set this variable to the path: eg, `scripts_directory="path/to/DEEP_mqtls"`.
 
 - `R_directory`: Full path to the R directory if you don't use conda/mamba. Otherwise, leave blank. 
 
@@ -46,7 +46,7 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `tissue`: One of the following: blood, PBMC, PBL, cord, saliva, or buccal
 
-- `study_specific_vars`: Names of study specific variables for EWAS. These need to be the column names for these variables and so will need _factor or _numeric at the end. Please leave a space between each variable "slide_factor plate_factor"
+- `study_specific_vars`: Names of study-specific variables for EWAS. These need to be the column names for these variables, and so will need _factor or _numeric at the end. Please leave a space between each variable, e.g, "slide_factor plate_factor".
 
 - `genome_build`: Please specify the genome build of the genetic data ("37" or "38").
 
@@ -58,7 +58,7 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `reference`: Please specify reference panel ("1000g", "1000g+h3a", "hrc", "topmed", "1000g+caapa", "hrc"). This is case-sensitive.
 
-- `ancestry`: Specify the most similar genetic ancestry of your samples with one of the following: "EUR", "AFR", "AMR", "EAS", "SAS", or "None" if you are not sure, or ancestry is not matching with any of these populations. This step is required by EasyQC, to compare the allele frequencies of your samples against reference panel of 1000G populations.
+- `ancestry`: Specify the most similar genetic ancestry of your samples with one of the following: "EUR", "AFR", "AMR", "EAS", "SAS", or "None" if you are not sure, or if any of these populations does not match the ancestry. This step is required by EasyQC to compare the allele frequencies of your samples against the reference panel of 1000G populations.
 
 
 ## Preparing data for the pipeline
@@ -79,7 +79,7 @@ Inside this folder you need to ensure that there is:
 - Covariates stored as plain text file. Please see [here](Covariate-data) for more info.
 - Phenotypes for EWAS stored as plain text file. Please see [here](Phenotype-data) for more info.
 
-For simplicity you can copy or move your genetic data (e.g. `data.bed`, `data.bim`, `data.fam`), your methylation data (e.g. `beta.RData`),  your covariate data (e.g. `covariates.txt`) and phenotype data (e.g. `phenotypes.txt`) to the `input_data` directory. Then set the following variables in the config file:
+For simplicity, you can copy or move your genetic data (e.g. `data.bed`, `data.bim`, `data.fam`), your methylation data (e.g. `beta.RData`),  your covariate data (e.g. `covariates.txt`) and phenotype data (e.g. `phenotypes.txt`) to the `input_data` directory. Then set the following variables in the config file:
 
 ```
 betas="${home_directory}/input_data/beta.RData"
