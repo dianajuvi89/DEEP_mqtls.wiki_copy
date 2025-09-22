@@ -20,9 +20,9 @@ Please ensure there are no missing values in the `Sex` and `Age` columns, even i
 
 ### Optional
 
-The following variables are required to run EWAS. They are not essential variables:
+The following variables are required to run EWAS. They are not essential variables, please include them if you have these measures in your study. Please ensure their column headings exactly match those below, including any capitalisation:
 
-- `Slide_factor`: The slide/chip/sentrix ID from the DNA methylation array
+- `Slide_factor`: The slide/chip/first part of the sentrix ID from the DNA methylation array
 -  Any other important batch covariates important for your cohort (list in `study_specific_vars` in your config file)
 - `PrevalentT2D_factor`: Coded as `Yes` for prevalent T2D and `No` for controls
 - `BMI_numeric`: In Kg/m2 
