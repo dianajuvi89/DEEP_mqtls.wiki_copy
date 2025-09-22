@@ -22,8 +22,12 @@ Please ensure there are no missing values in the `Sex` and `Age` columns, even i
 
 The following variables are required to run EWAS. They are not essential variables, please include them if you have these measures in your study. Please ensure their column headings exactly match those below, including any capitalisation:
 
+All studies:
 - `Slide_factor`: The slide/chip/first part of the sentrix ID from the DNA methylation array
 -  Any other important batch covariates important for your cohort (list in `study_specific_vars` in your config file)
+- `Population_group_factor`: A factor containing the population group the participants in your study belong to. This will be study-specific and will represent a concept such as ethnicity, race, caste, tribe, village, or region.
+
+Adult studies only:
 - `PrevalentT2D_factor`: Coded as `Yes` for prevalent T2D and `No` for controls
 - `BMI_numeric`: In Kg/m2 
 - `SysBloodPressure_numeric`: In mmHg 
@@ -35,10 +39,12 @@ The following variables are required to run EWAS. They are not essential variabl
 - `TG_numeric`: In mmol/L
 - `Smoking_factor`: Coded as `Current` for current smokers and `Former` for ex smokers and `Never` for never smokers
 - `Smoking_numeric`: In pack years (can be integer or with decimals)
+
+Child studies only:
 - `Height_numeric`: In cm 
 - `MaternalSmoking_factor`: Coded as `Current` for current smokers and `Former` for ex smokers and `Never` for never smokers 
 - `MaternalSmoking_numeric`: In pack years (can be integer or with decimals)
-- `Population_group_factor`: A factor containing the population group the participants in your study belong to. This will be study-specific and will represent a concept such as ethnicity, race, caste, tribe, village, or region.
+
 
 ### Not needed
 
