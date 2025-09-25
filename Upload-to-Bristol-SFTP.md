@@ -9,3 +9,7 @@
 **Data upload method:** None
 
 # Upload the summary data to Bristol SFTP server
+To upload, please run this command
+```
+
+```
