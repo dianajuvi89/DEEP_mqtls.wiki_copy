@@ -11,5 +11,5 @@
 # Upload the summary data to Bristol SFTP server
 To upload, please run this command
 ```
-
+./check_upload.sh -c /path/to/config
 ```
