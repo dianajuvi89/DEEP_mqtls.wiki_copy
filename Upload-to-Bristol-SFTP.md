@@ -9,7 +9,7 @@
 **Data upload method:** None
 
 # Upload the summary data to Bristol SFTP server
-To upload, please run this command
+To check if you have successfully finished , please run this command
 ```
-./check_upload.sh -c /path/to/config
+./check_upload.sh -c /path/to/config/file 01 check
 ```
