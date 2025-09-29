@@ -31,7 +31,7 @@ On the Bristol SFTP server, we will estimate the optimal number of control probe
 <img src="images/expand.png" alt="expand" width="500"/>
 
 
-After you receive cross-cohort normalized data from Bristol, please put the norm.object of your cohort back into `input_data` folder and then run the following command:
+After you receive cross-cohort normalized data from Bristol, please put the norm.object dataset back into the `input_data` folder and then run the following command:
 ```
 ./01f-normalization.sh -c /path/to/config/file expand
 ```
