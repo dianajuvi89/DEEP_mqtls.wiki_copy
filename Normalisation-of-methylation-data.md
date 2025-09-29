@@ -18,6 +18,8 @@ Step 1:
 [shrink.pdf](https://github.com/user-attachments/files/22595732/shrink.pdf)
 Step 2:
 [expand.pdf](https://github.com/user-attachments/files/22595730/expand.pdf)
+<iframe src="https://github.com/user-attachments/files/22595730/expand.pdf" width="600" height="400"></iframe>
+
 To 
 ```
 ./01f-normalization.sh -c /path/to/config/file shrink
