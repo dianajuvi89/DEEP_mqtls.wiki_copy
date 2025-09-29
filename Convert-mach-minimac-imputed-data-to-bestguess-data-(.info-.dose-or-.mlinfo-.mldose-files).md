@@ -16,15 +16,11 @@ awk -F':' '{print $2}' <data_chr${i}_filtered.bim |awk '{print $1}'>pos$i.txt
 paste pos$i.txt data_chr${i}_filtered.bim |awk '{print '$i',"chr" '$i'":"$1,$4,$1,$6,$7}' >data_chr${i}_filtered.bim2
 mv data_chr${i}_filtered.bim2 data_chr${i}_filtered.bim
 
-# Rename the SNP IDs if necessary to avoid possible duplicates
-
-    cp data_chr${i}_filtered.bim data_chr${i}_filtered.bim.orig
-    awk '{
-        if (($5 == "A" || $5 == "T" || $5 == "C" || $5=="G") &&  ($6 == "A" || $6 == "T" || $6 == "C" || $6=="G")) 
-            print $1, "chr"$1":"$4":SNP", $3, $4, $5, $6;
-    else 
-        print $1, "chr"$1":"$4":INDEL", $3, $4, $5, $6;
-   }' data_chr${i}_filtered.bim.orig > data_chr${i}_filtered.bim
+# Rename SNP IDs without restricting alleles
+cp data_chr${i}_filtered.bim data_chr${i}_filtered.bim.orig
+awk '{
+    print $1, "chr"$1":"$4, $3, $4, $5, $6
+}' data_chr${i}_filtered.bim.orig > data_chr${i}_filtered.bim
 
 paste chr${i}_filtered.info data_chr${i}_filtered.bim |awk '{print $5,$2,$3}' >chr${i}_filtered.info2
 mv chr${i}_filtered.info2 chr${i}_filtered.info
