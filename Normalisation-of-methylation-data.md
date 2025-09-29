@@ -20,11 +20,13 @@ Step 1:
 
 Step 2:
 <img src="images/expand.png" alt="expand" width="500"/>
-To 
+To obtain QC objects from your dataset, please run the following command:
 ```
 ./01f-normalization.sh -c /path/to/config/file shrink
 ```
-To 
+This will generate a `qc_objects_shrink.rda` in `/results/01` and `qc_objects.rda` in `/processed_data/methylation_data`. `qc_objects_shrink.rda` does not contain ID information and will be uploaded to Bristol SFTP server for cross-cohort functional normalization.
+
+After you receive cross-cohort normalized data from Bristol, please run the following command:
 ```
 ./01f-normalization.sh -c /path/to/config/file expand
 ```
