@@ -24,10 +24,16 @@ To run the script, use the following command:
 Example outputs:
 
 PC1:
+
+
 <img src="images/gwas_PC1_manhattan_beta.png" alt="expand" width="200"/>
 PC2:
+
+
 <img src="images/gwas_PC2_manhattan_beta.png" alt="expand" width="200"/>
 PC3:
+
+
 <img src="images/gwas_PC3_manhattan_beta.png" alt="expand" width="200"/>
 PC4:
 <img src="images/gwas_PC4_manhattan_beta.png" alt="expand" width="200"/>
