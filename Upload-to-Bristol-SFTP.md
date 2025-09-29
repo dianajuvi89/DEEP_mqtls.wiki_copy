@@ -17,3 +17,194 @@ To upload the encrypted results to Bristol SFTP server
 ```
 ./check_upload.sh -c /path/to/config/file 01 upload
 ```
+# The check will show a similar message like the following context:
+```
+Already up to date.
+-----------------------------------------------
+ 
+Using config located at: /path/to/config/file
+
+-----------------------------------------------
+found deep_env environment in mamba
+Using mamba to run the script
+ 
+Checking log files for 01
+Version required: 1.0.0
+Version used:    1.0.0
+Correct script version
+01a-check_data.sh completed successfully.
+Version required: 1.0.0
+Version used:    1.0.0
+Correct script version
+01b-process_genetic_data.sh completed successfully.
+Version required: 1.0.0
+Version used:    1.0.0
+Correct script version
+Checking for pattern: Successfully completed script 01c methy_outlier chunk
+Checking for pattern: Successfully completed script 01c check_phenotype chunk
+Checking for pattern: Successfully completed script 01c predict_age_smoking chunk
+Checking for pattern: Successfully completed script 01c cell_counts chunk
+Checking for pattern: Successfully completed script 01c ewas chunk
+Checking for pattern: Successfully completed script 01c meth_pcs chunk
+Checking for pattern: Successfully completed script 01c combine_covariates chunk
+Successful chunks: 7/7
+01c-check_phenotypes_and_methylation.sh completed successfully.
+Version required: 1.0.0
+Version used:    1.0.0
+Correct script version
+01d-mqtl_controls.sh completed successfully.
+Version required: 1.0.0
+Version used:    1.0.0
+Correct script version
+01e-genetic_pc_gwas.sh completed successfully.
+ 
+Checking results for 01
+Cohort descriptives file present
+Age distribution plot file present
+SNP chromosome distribution files present
+Quality scores plot file present
+Sex prediction plot file is absent. Please check that the samples are of a single sex (e.g., all male or all female).
+Inferred build file present
+PCA plot present
+Global PCA plot present
+easyQC plot and results present
+Allele frequency file present
+HWE file present
+Imputation quality file present
+Sample missingness file present in processed_data folder
+Three methylation_summary RData files are present
+cohort_descriptives_was.RData is present
+Summary statistics of cell counts are present
+Plots of cell counts are present
+Ori and combined correlation plots of cell counts are present
+Correlation matrix of observed vs predicted cell counts is present
+cellcounts_comp folder contains 15 PDF files
+Smoking and age prediction plot is present
+The meth PCs plots are present
+The pc_var_association plot is present
+EWAS stats file present
+EWAS report file present
+Raw and edited phenotypes summary files are present
+Filtered positive control file is present in processed_data folder
+Checking positive control: cg07959070
+positive control cg07959070 results present
+positive control cg07959070 Manhattan plot present
+positive control cg07959070 no cis chromosome Manhattan plot present
+positive control cg07959070 QQ plot present
+positive control cg07959070 no cis chromosome QQ plot present
+Checking negative control: NEG_cg07959070
+negative control NEG_cg07959070 results present
+negative control NEG_cg07959070 Manhattan plot present
+negative control NEG_cg07959070 no cis chromosome Manhattan plot present
+negative control NEG_cg07959070 QQ plot present
+negative control NEG_cg07959070 no cis chromosome QQ plot present
+Checking positive control: cg26684673
+positive control cg26684673 results present
+positive control cg26684673 Manhattan plot present
+positive control cg26684673 no cis chromosome Manhattan plot present
+positive control cg26684673 QQ plot present
+positive control cg26684673 no cis chromosome QQ plot present
+Checking negative control: NEG_cg26684673
+negative control NEG_cg26684673 results present
+negative control NEG_cg26684673 Manhattan plot present
+negative control NEG_cg26684673 no cis chromosome Manhattan plot present
+negative control NEG_cg26684673 QQ plot present
+negative control NEG_cg26684673 no cis chromosome QQ plot present
+Checking positive control: cg12334488
+positive control cg12334488 results present
+positive control cg12334488 Manhattan plot present
+positive control cg12334488 no cis chromosome Manhattan plot present
+positive control cg12334488 QQ plot present
+positive control cg12334488 no cis chromosome QQ plot present
+Checking negative control: NEG_cg12334488
+negative control NEG_cg12334488 results present
+negative control NEG_cg12334488 Manhattan plot present
+negative control NEG_cg12334488 no cis chromosome Manhattan plot present
+negative control NEG_cg12334488 QQ plot present
+negative control NEG_cg12334488 no cis chromosome QQ plot present
+Checking positive control: cg15059639
+positive control cg15059639 results present
+positive control cg15059639 Manhattan plot present
+positive control cg15059639 no cis chromosome Manhattan plot present
+positive control cg15059639 QQ plot present
+positive control cg15059639 no cis chromosome QQ plot present
+Checking negative control: NEG_cg15059639
+negative control NEG_cg15059639 results present
+negative control NEG_cg15059639 Manhattan plot present
+negative control NEG_cg15059639 no cis chromosome Manhattan plot present
+negative control NEG_cg15059639 QQ plot present
+negative control NEG_cg15059639 no cis chromosome QQ plot present
+Checking positive control: cg00269725
+positive control cg00269725 results present
+positive control cg00269725 Manhattan plot present
+positive control cg00269725 no cis chromosome Manhattan plot present
+positive control cg00269725 QQ plot present
+positive control cg00269725 no cis chromosome QQ plot present
+Checking negative control: NEG_cg00269725
+negative control NEG_cg00269725 results present
+negative control NEG_cg00269725 Manhattan plot present
+negative control NEG_cg00269725 no cis chromosome Manhattan plot present
+negative control NEG_cg00269725 QQ plot present
+negative control NEG_cg00269725 no cis chromosome QQ plot present
+Checking positive control: cg00116315
+positive control cg00116315 results present
+positive control cg00116315 Manhattan plot present
+positive control cg00116315 no cis chromosome Manhattan plot present
+positive control cg00116315 QQ plot present
+positive control cg00116315 no cis chromosome QQ plot present
+Checking negative control: NEG_cg00116315
+negative control NEG_cg00116315 results present
+negative control NEG_cg00116315 Manhattan plot present
+negative control NEG_cg00116315 no cis chromosome Manhattan plot present
+negative control NEG_cg00116315 QQ plot present
+negative control NEG_cg00116315 no cis chromosome QQ plot present
+Checking positive control: cg22495460
+positive control cg22495460 results present
+positive control cg22495460 Manhattan plot present
+positive control cg22495460 no cis chromosome Manhattan plot present
+positive control cg22495460 QQ plot present
+positive control cg22495460 no cis chromosome QQ plot present
+Checking negative control: NEG_cg22495460
+negative control NEG_cg22495460 results present
+negative control NEG_cg22495460 Manhattan plot present
+negative control NEG_cg22495460 no cis chromosome Manhattan plot present
+negative control NEG_cg22495460 QQ plot present
+negative control NEG_cg22495460 no cis chromosome QQ plot present
+Checking positive control: cg05589743
+positive control cg05589743 results present
+positive control cg05589743 Manhattan plot present
+positive control cg05589743 no cis chromosome Manhattan plot present
+positive control cg05589743 QQ plot present
+positive control cg05589743 no cis chromosome QQ plot present
+Checking negative control: NEG_cg05589743
+negative control NEG_cg05589743 results present
+negative control NEG_cg05589743 Manhattan plot present
+negative control NEG_cg05589743 no cis chromosome Manhattan plot present
+negative control NEG_cg05589743 QQ plot present
+negative control NEG_cg05589743 no cis chromosome QQ plot present
+Checking positive control: cg14817867
+positive control cg14817867 results present
+positive control cg14817867 Manhattan plot present
+positive control cg14817867 no cis chromosome Manhattan plot present
+positive control cg14817867 QQ plot present
+positive control cg14817867 no cis chromosome QQ plot present
+Checking negative control: NEG_cg14817867
+negative control NEG_cg14817867 results present
+negative control NEG_cg14817867 Manhattan plot present
+negative control NEG_cg14817867 no cis chromosome Manhattan plot present
+negative control NEG_cg14817867 QQ plot present
+negative control NEG_cg14817867 no cis chromosome QQ plot present
+GWAS PC1 results present
+GWAS PC1 beta Manhattan plot present
+GWAS PC2 results present
+GWAS PC2 beta Manhattan plot present
+GWAS PC3 results present
+GWAS PC3 beta Manhattan plot present
+GWAS PC4 results present
+GWAS PC4 beta Manhattan plot present
+GWAS PC5 results present
+GWAS PC5 beta Manhattan plot present
+ 
+Section 01 has been successfully completed!
+```
+
