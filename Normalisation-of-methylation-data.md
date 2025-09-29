@@ -18,6 +18,11 @@ Step 1:
 
 Step 2:
 
+To 
+```
+./01f-normalization.sh -c /path/to/config/file shrink
+```
+To 
 ```
 ./01f-normalization.sh -c /path/to/config/file shrink
 ```
