@@ -22,8 +22,8 @@ To run the script, use the following command:
 > Please check Manhattan plots. If you found strong local associations, then this will indicate that genetic PCs can't be used in GWAS analyses.
 
 Example output of Manhattan plots of genetic PC1 to PC5:
-<img src="images/gwas_PC1_manhattan_beta.png" alt="expand" width="500"/>
-<img src="images/gwas_PC2_manhattan_beta.png" alt="expand" width="500"/>
-<img src="images/gwas_PC3_manhattan_beta.png" alt="expand" width="500"/>
-<img src="images/gwas_PC4_manhattan_beta.png" alt="expand" width="500"/>
-<img src="images/gwas_PC5_manhattan_beta.png" alt="expand" width="500"/>
+<img src="images/gwas_PC1_manhattan_beta.png" alt="expand" width="300"/>
+<img src="images/gwas_PC2_manhattan_beta.png" alt="expand" width="300"/>
+<img src="images/gwas_PC3_manhattan_beta.png" alt="expand" width="300"/>
+<img src="images/gwas_PC4_manhattan_beta.png" alt="expand" width="300"/>
+<img src="images/gwas_PC5_manhattan_beta.png" alt="expand" width="300"/>
