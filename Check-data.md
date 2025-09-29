@@ -23,7 +23,7 @@ To run:
 
 **PLEASE NOTE:** It is important to monitor this script as it runs - it will stop with warnings/errors if it encounters problems. Please fix any errors/warnings that are encountered, and re-run the script until it completes without errors.
 
-The script can be run in chunks so you can fix problems more easily. We recommend to run this script interactively. If you have a large methylation dataset, then it is possible to run  `./01a-check_data.sh methylation` in a job.
+The script can be run in chunks, so you can fix problems more easily. We recommend running this script interactively. If you have a large methylation dataset, then it is possible to run  `./01a-check_data.sh methylation` in a job. Once each chunk has been successfully executed and any issues have been resolved, please rerun the complete 01a script before proceeding to the next module.
     
     ./01a-check_data.sh -c /path/to/config/file config
     ./01a-check_data.sh -c /path/to/config/file download
