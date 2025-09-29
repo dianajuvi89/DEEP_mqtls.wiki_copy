@@ -13,7 +13,7 @@ To check if you have successfully finished the whole module 01, please run this 
 ```
 ./check_upload.sh -c /path/to/config/file 01 check
 ```
-To upload the encrypted results to the Bristol SFTP server
+To encrypt and upload the results to the Bristol SFTP server
 ```
 ./check_upload.sh -c /path/to/config/file 01 upload
 ```
@@ -21,10 +21,9 @@ To upload the encrypted results to the Bristol SFTP server
 > **Please check**
 The upload script packages all files in `results/01`. Although the check script may warn about certain file contents, users **MUST** ensure that no individual-level data remains in results/01 to avoid uploading sensitive information.
 For example, the 01b script generates the smiss file, which contains individual IDs, in results/01 and then moves it to `processed_data/genetic_data`. The check script will prompt you to confirm that smiss is in `processed_data/genetic_data` rather than in `results/01`.
-
 > **Enter your encryption password**
-<img src="images/encryp_password.png" alt="expand" width="200"/>
-After you run upload script, it will ask you to enter your encryption password. Please copy and paste the password Hannah sent you.
+<img src="images/encryp_password.png" alt="expand" width="400"/>
+After running the upload script, you will be prompted to enter your encryption password. Please copy and paste the password provided by Hannah during the [Pipeline set up](https://github.com/MRCIEU/DEEP_mqtls/wiki/Install-and-set-up) registration step.
 
 # Example output of the check command:
 The check will return a message similar to the following:
