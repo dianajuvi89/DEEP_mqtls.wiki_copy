@@ -15,10 +15,8 @@ Functional normalization is employed to adjust for unwanted variation in methyla
 We will use the following approach in meffil: https://github.com/perishky/meffil/wiki/Functional-normalizing-separate-datasets
 
 Step 1:
-[shrink.pdf](https://github.com/user-attachments/files/22595732/shrink.pdf)
+
 Step 2:
-[expand.pdf](https://github.com/user-attachments/files/22595730/expand.pdf)
-<iframe src="https://github.com/user-attachments/files/22595730/expand.pdf" width="600" height="400"></iframe>
 
 To 
 ```
@@ -26,5 +24,5 @@ To
 ```
 To 
 ```
-./01f-normalization.sh -c /path/to/config/file shrink
+./01f-normalization.sh -c /path/to/config/file expand
 ```
