@@ -36,6 +36,10 @@ PC3:
 
 <img src="images/gwas_PC3_manhattan_beta.png" alt="expand" width="200"/>
 PC4:
+
+
 <img src="images/gwas_PC4_manhattan_beta.png" alt="expand" width="200"/>
 PC5:
+
+
 <img src="images/gwas_PC5_manhattan_beta.png" alt="expand" width="200"/>
