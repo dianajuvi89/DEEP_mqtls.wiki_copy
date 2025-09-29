@@ -17,7 +17,12 @@ To upload the encrypted results to Bristol SFTP server
 ```
 ./check_upload.sh -c /path/to/config/file 01 upload
 ```
-# The check will show a similar message like the following context:
+Important: The upload script packages all files in results/01. Although the check script may warn about certain file contents, users must ensure that no individual-level data remain in results/01 to avoid uploading sensitive information.
+
+For example, the 01b script generates the smiss file, which contains individual IDs, in results/01 and then moves it to `processed_data/genetic_data`. The check script will prompt you to confirm that smiss is in `processed_data/genetic_data` rather than in `results/01`.
+
+# Example output of the check command:
+The check will return a message similar to the following:
 ```
 Already up to date.
 -----------------------------------------------
