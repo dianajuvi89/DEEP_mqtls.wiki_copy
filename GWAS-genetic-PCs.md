@@ -20,4 +20,6 @@ To run the entire script, use the following command:
 ```
 >[!IMPORTANT]
 > **Please check**
-> Please check Manhattan plots. If you found strong local associations then this will indicate that genetic PCs can't be used in GWAS analyses.
+> Please check Manhattan plots. If you found strong local associations, then this will indicate that genetic PCs can't be used in GWAS analyses.
+
+Example output of Manhattan plots of genetic PC1 to PC5:
