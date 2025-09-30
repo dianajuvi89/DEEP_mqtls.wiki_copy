@@ -31,7 +31,7 @@ On the Bristol SFTP server, we will estimate the optimal number of control probe
 <img src="images/expand.png" alt="expand" width="500"/>
 
 
-Do not proceed until you have received the cross-cohort normalized quantiles from Bristol. Once received, please place your `norms.rda` file in the `input_data` folder and then run the following command:
+**DO NOT** proceed until you have received the cross-cohort normalized quantiles from Bristol. Once received, please place your `norms.rda` file in the `input_data` folder and then run the following command:
 ```
 ./01f-normalization.sh -c /path/to/config/file expand
 ```
