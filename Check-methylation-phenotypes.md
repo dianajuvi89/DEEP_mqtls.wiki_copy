@@ -21,7 +21,7 @@ To run the entire script, use the following command:
 ```
 ./01c-check_phenotypes_and_methylation.sh -c /path/to/config/file
 ```
-Importantly, Module 01c is designed to run in chunks, making it easier to fix problems as they arise. We would recommend that you run this script interactively. If you have a large methylation dataset, then it is possible to run  `./01c-check_phenotypes_and_methylation.sh ewas` in a job.
+Importantly, Module 01c is designed to run in chunks, making it easier to fix problems as they arise. We recommend that you run this script interactively. If you have a large methylation dataset, then it is possible to run  `./01c-check_phenotypes_and_methylation.sh ewas` in a job. Note that runtime may be long, depending on the dataset size and the number of surrogate variables (SVs) generated. If you are submitting a job on an HPC system, please refer to [the 01c example template](https://github.com/MRCIEU/DEEP_mqtls/blob/main/submission_scripts_template/deep_01c_ewas_template.sh).
     
     ./01c-check_phenotypes_and_methylation.sh -c /path/to/config/file methy_outlier
     ./01c-check_phenotypes_and_methylation.sh -c /path/to/config/file check_phenotype
