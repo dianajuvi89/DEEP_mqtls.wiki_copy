@@ -266,7 +266,7 @@ Open R and type
 ```
 png should be TRUE
 
-#### Step 3: Please ensure you have encryption software installed
+### Step 3: Please ensure you have encryption software installed
 
 We are encrypting and uploading the results with AES encryption using `gpg`, `pinentry`, and `sshpass`. If you are using mamba/conda, the environment should contain these three software. You can directly test whether the gpg, pinentry, and sshpass Linux packages have been installed in the environment with the following command:
 
