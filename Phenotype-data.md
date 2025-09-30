@@ -49,7 +49,7 @@ All studies:
 | VZV (Varicella Zoster Virus)	| Categorical (0=no, 1=yes)	| `VZV_factor` |
 | RSV (Respiratory Syncytial Virus)	| Categorical (0=no, 1=yes)	| `RSV_factor` |
 | Malaria	| Categorical (0=no, 1=yes)	| `Malaria_factor` |
-| Other	infections | Categorical | (0=no, 1=yes)	| `*variable_name*_infection_factor` |
+| Other	infections | Categorical (0=no, 1=yes)	| `*variable_name*_infection_factor` |
 
 Child studies only:
 
