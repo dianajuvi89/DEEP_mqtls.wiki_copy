@@ -24,7 +24,7 @@ Please ensure there are no missing values in the `Sex` and `Age` columns, even i
 
 The following variables are required to run EWAS. They are not essential variables, please include them if you have these measures in your study. Please ensure their column headings exactly match those below, including any capitalisation:
 
-All studies:
+### All studies:
 | Phenotype | Variable coding | Variable name |
 | --- | --- | --- |
 | Batch (slide) | Categorical (Sentrix slide ID) | `Slide_factor` |
@@ -51,7 +51,7 @@ All studies:
 | Malaria	| Categorical (0=no, 1=yes)	| `Malaria_factor` |
 | Other	infections | Categorical (0=no, 1=yes)	| `*variable_name*_infection_factor` |
 
-Child studies only:
+### Child studies only:
 
 | Phenotype | Variable coding | Variable name |
 | --- | --- | --- |
@@ -66,7 +66,7 @@ Child studies only:
 | Cigarette smoking - paternal	| Please categorise as 0=no, 1=yes	| `Paternal_smoking_factor` |
 | Alcohol - Maternal	| Please categorise as 0=no, 1=yes	| `Maternal_alcohol_factor` |
 
-Adult studies only:
+### Adult studies only:
 
 | Phenotype | Variable coding | Variable name |
 | --- | --- | --- |
