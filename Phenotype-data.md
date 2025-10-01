@@ -16,7 +16,7 @@ The following covariates are **required** - these covariates are the minimum cri
 | Phenotype | Variable coding | Variable name |
 | --- | --- | --- |
 | Age at time of blood sample	| Numeric (years)	| `Age_numeric` |
-| Sex	| categorical, 0=female, 1=male | `Sex_factor` |
+| Sex	| categorical, F=female, M=male | `Sex_factor` |
 
 Please ensure there are no missing values in the `Sex` and `Age` columns, even if your data is all the same age or all the same sex. Please also ensure that the capitalisation of column headers in the example above is followed.
 
