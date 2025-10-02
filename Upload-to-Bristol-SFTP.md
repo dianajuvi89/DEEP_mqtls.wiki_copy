@@ -93,8 +93,10 @@ cellcounts_comp folder contains 15 PDF files
 Smoking and age prediction plot is present
 The meth PCs plots are present
 The pc_var_association plot is present
-EWAS stats file present
-EWAS report file present
+EWAS stats files present (6):
+...
+EWAS report files present (12):
+...
 Raw and edited phenotypes summary files are present
 Filtered positive control file is present in processed_data folder
 Checking positive control: cg07959070
