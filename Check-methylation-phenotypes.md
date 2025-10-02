@@ -45,14 +45,14 @@ Importantly, Module 01c is designed to run in chunks, making it easier to fix pr
 
 This script is designed to format the phenotypes based on whether you have designated them as _factor or _numeric, so it is very important that you have added either _factor or _numeric to the end of every variable column name in your phenotype file (See examples in [Phenotype data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Phenotype-data)).
 
-* Produces distribution plots and summary tables for every variable to reveal unexpected values or coding problems (e.g., missingness codes like -9).
+* Produces distribution plots and summary tables for every variable to reveal unexpected values or coding problems (e.g., missingness codes like -9, biologically implausible values eg age of 150). Please check all plots and tables.
 * Message any variable with >10% missing values. If this prints and is unexpected, then please check your data.
-* Winsorize numeric variables that contain extreme outliers, then re-generate plots and summary statistics for those variables so you can review the effect of winsorization.
+* Winsorize numeric variables that contain extreme outliers, then re-generate plots and summary statistics for those variables so you can review the effect of winsorization. Please check these plots and tables.
 
 **predict_age_smoking**
 * Predicts epigenetic age (Hannum clock) and smoking (both mcigarette and Elliott predictors) by using [meffonym](https://github.com/perishky/meffonym).
 * Smoking must be coded as a factor (0/1); script will attempt auto-conversion if numeric. Please check the output messages to confirm the pipeline was able to convert this to a factor.
-* Generate three prediction plots; check correlation with age (may be weak if age range is limited). We do not expect the correlation with age to be good. 
+* Generate three prediction plots; check correlation with age (may be weak if age range is limited). We do not necessarily expect the correlation with age to be good because we do not know how well this predictor will work in populations across the DEEP consortium. 
 
 **cell_counts**
 * Predicts cell fractions using appropriate cell reference panels in [EpiDISH](https://github.com/sjczheng/EpiDISH) or [Meffil](https://github.com/perishky/meffil). References include [Unilife](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-025-01489-7) (blood samples at any age), [Salas](https://www.nature.com/articles/s41467-021-27864-7) (adult blood), [Zheng](https://www.tandfonline.com/doi/full/10.2217/epi-2018-0037) (adult saliva or buccal), and [Middleton](https://www.tandfonline.com/doi/full/10.1080/15592294.2021.1890874) (child saliva).
@@ -60,13 +60,13 @@ This script is designed to format the phenotypes based on whether you have desig
 * Computes Spearman correlation matrices and generates correlation plots and scatter plots comparing predicted and predicted cell counts when multiple references are used and/or comparing predicted and measured cell counts when measured cell counts are available.
 
 **ewas** \
-This script runs five EWAS analyses. These are EWAS where we know what to expect - their purpose is to check that the EWAS method and covariates are functioning as we expect in each dataset, and to identify any issues before running the main set of EWAS. We will be able to tell this from the EWAS report HTML files. \
+This script runs five EWAS analyses. These are EWAS where we know what to expect - their purpose is to check that the EWAS method and covariates are functioning as we expect in each dataset, and to identify any issues before running the main set of EWAS. We will be able to tell this from the EWAS report HTML files - please check these files for QQ and miami plots. \
 Five EWAS analyses are:
 * Smoking EWAS (adults only): should detect AHRR sites
-* Age EWAS: should detect many age-associated sites
+* Age EWAS: should detect many age-associated sites (will not run if there is no variation in age)
 * Maternal smoking EWAS (children only): should detect MYO1G sites
-* Sex EWAS: should detect many sex-associated sites
-* Negative control (scrambled sex): should show no true associations; QQ plot inflation must be flagged.
+* Sex EWAS: should detect many sex-associated sites (will not run for single-sex studies)
+* Negative control (scrambled sex): should show no true associations; QQ plot inflation must be flagged. Will run for all studies.
 
 **meth_pcs** \
 We aim to identify major drivers of methylation variation so we can select appropriate PC/batch covariates for downstream EWAS and mQTL analyses and detect dataset-specific issues. We generate principal components (PCs) of the methylation data and assess their associations with genetic PCs, batch variables, and core study/participant covariates. \
