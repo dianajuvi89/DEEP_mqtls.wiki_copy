@@ -31,6 +31,7 @@ The script can be run in chunks, so you can fix problems more easily. We recomme
     ./01a-check_data.sh -c /path/to/config/file genetic
     ./01a-check_data.sh -c /path/to/config/file methylation    
     ./01a-check_data.sh -c /path/to/config/file covariates
+    ./01a-check_data.sh -c /path/to/config/file phenotypes_for_ewas
     ./01a-check_data.sh -c /path/to/config/file summary
 
 **IMPORTANT:** The script produces the following plots in the `results/01/` directory. Please check the following plots:
