@@ -3,7 +3,7 @@ This file is used for running DEEP EWAS. Your phenotypes file should be a text f
 
 An example of what your file should look like is below:
 ```
-    IID Sex_factor Age_numeric Slide_factor PrevalentT2D_factor BMI_numeric SysBloodPressure_numeric DiaBloodPressure_numeric FastingGlucose_numeric HbA1c_numeric HDL_numeric LDL_numeric TG_numeric Smoking_factor Smoking_numeric Height_numeric MaternalSmoking_factor MaternalSmoking_numeric
+    IID Sex_factor Age_numeric Slide_factor T2D_factor BMI_numeric SBP_numeric DBP_numeric FGlucose_numeric HbA1c_numeric HDL_numeric LDL_numeric TG_numeric Smoking_factor Smoking_numeric Height_numeric Maternal_smoking_factor Maternal_smoking_numeric
     id1 F 30 12345678 no 23 120 80 3.0 2.0 / 1.2-1.5 1.2 1.8/ no 0 162 yes 20
     id2 M 42 12345678 no 26 130 76 4.0 2.0 1.3 1.3 1.9 yes no 0 173 no 0
     id3 M 76 87654321 yes 32 139 68 1.0 3.0 2.5 no 0 156 no 0
