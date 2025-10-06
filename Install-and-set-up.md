@@ -60,6 +60,9 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `ancestry`: Specify the most similar genetic ancestry of your samples with one of the following: "EUR", "AFR", "AMR", "EAS", "SAS", or "None" if you are not sure, or if any of these populations does not match the ancestry. This step is required by EasyQC to compare the allele frequencies of your samples against the reference panel of 1000G populations.
 
+- `mem`: Specifies the amount of memory (in GB) to allocate. When running on an HPC system, ensure this value matches the memory requested in your job submission. The default is 20 GB.
+
+- `nthreads`: Specifies the number of CPU threads to use. The default is 16.
 
 ## Preparing data for the pipeline
 
