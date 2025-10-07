@@ -46,4 +46,7 @@ cd results/01
 - Summary statistics of the input data (`cohort_descriptives.RData`). Please check there are no unexpected NAs in there. These statistics will be used for the cohort characteristics Table in the paper.
 - The `log.txt` will be used to check you have used the right version of the pipeline
 
+>[!IMPORTANT]
+> **Please check**
+> Please check the error log to identify whether the phenotypes for EWAS file contains the expected phenotypes labelled in the expected way (please see the phenotypes tab for more details). It will produce error messages in section "phenotypes_for_ewas" if anything does not look as expected (which will cause issues later in section 01c). 
 
