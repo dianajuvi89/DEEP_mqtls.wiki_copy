@@ -1,6 +1,11 @@
 ## Phenotypes
 This file is used for running DEEP EWAS. Your phenotypes file should be a text file (white space separated) with the sample ID labeled as `IID` in the first column followed by headed columns for each subsequent covariate. In the column name you need to specify whether the covariate is a categorical (`factor`) or continuous (`numeric`) variable. For example: `{Name}_factor` or `{Name}_numeric`.  
 
+>[!IMPORTANT]
+> **Variable coding**
+> Please check the 'Variable coding' columns below, and ensure your data is coded in this way. Some variables may not be coded as they currently are in your dataset, as we have had to harmonise these variables across the DEEP consortium. This means you may have to recode some of the phenotypes. If you are uncertain about the best way to do so, please get in contact with the DEEP study team.
+
+
 An example of what your file should look like is below:
 ```
     IID Sex_factor Age_numeric Slide_factor T2D_factor BMI_numeric SBP_numeric DBP_numeric FGlucose_numeric HbA1c_numeric HDL_numeric LDL_numeric TG_numeric Smoking_factor Smoking_numeric Height_numeric Maternal_smoking_factor Maternal_smoking_numeric
