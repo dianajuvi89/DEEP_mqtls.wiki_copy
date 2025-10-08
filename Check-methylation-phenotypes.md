@@ -70,11 +70,10 @@ Five EWAS analyses are:
 
 **meth_pcs** \
 We aim to identify major drivers of methylation variation so we can select appropriate PC/batch covariates for downstream EWAS and mQTL analyses and detect dataset-specific issues. We generate principal components (PCs) of the methylation data and assess their associations with genetic PCs, batch variables, and core study/participant covariates. \
-_**Important note:**_ the `ewas_age_smoking.R` and `methylation_pc_check.R` will be run twice; once with the Salas cell type reference panel, and once with the Unilife panel. Please make sure that you have outputs from these scripts for both Salas and Unilife.
 Generate three plots:
 * PC1 vs PC2 scatter plot, colored by study variables.
 * PC3 vs PC4 scatter plot, colored by study variables.
-* Bar plots showing linear-model associations between PCs 1–10 and study variables (which variables explain the most variance in each PC).
+* Forest plots visualizing the associations between each methylation PC (PC1–PC10) and relevant covariates (estimates with 95% confidence intervals), including demographic variables (e.g., age, sex), batch factors, estimated cell counts, genetic PCs, and study-specific variables.
 
 **combine_covariates**
 * Combine the original covariate file with genetic PCs, all predicted cell counts, and predicted smoking for Modules 1d and 1e.
