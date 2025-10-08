@@ -45,9 +45,10 @@ Importantly, Module 01c is designed to run in chunks, making it easier to fix pr
 
 This script is designed to format the phenotypes based on whether you have designated them as _factor or _numeric, so it is very important that you have added either _factor or _numeric to the end of every variable column name in your phenotype file (See examples in [Phenotype data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Phenotype-data)).
 
-* Produces distribution plots and summary tables for every variable to reveal unexpected values or coding problems (e.g., missingness codes like -9, biologically implausible values eg age of 150). Please check all plots and tables.
-* Message any variable with >10% missing values. If this prints and is unexpected, then please check your data.
-* Winsorize numeric variables that contain extreme outliers, then re-generate plots and summary statistics for those variables so you can review the effect of winsorization. Please check these plots and tables.
+* Produces distribution plots and summary tables for every variable to reveal unexpected values or coding problems (e.g., missingness codes like -9, biologically implausible values eg age of 150). Please check all plots and tables - in this below example, for BMI there is a small peak at -10. -10 is not a possible value for BMI, and indeed when we went back to check then -10 is the missingness code, so we go back to our phenotype data and set values of -10 to NA.
+![example phenotype check](https://github.com/MRCIEU/DEEP_mqtls/blob/main/images/missing_code_example.jpg)
+* Prints a message if any variable contains >10% missing values. If this prints and is unexpected, then please check your data.
+* Winsorizes numeric variables that contain extreme outliers. Then re-generates plots and summary statistics for those variables, so you can review the effect of winsorization. Please check these plots and tables.
 
 **predict_age_smoking**
 * Predicts epigenetic age (Hannum clock) and smoking (both mcigarette and Elliott predictors) by using [meffonym](https://github.com/perishky/meffonym).
