@@ -70,6 +70,7 @@ The following variables are required to run EWAS. They are not essential variabl
 | Cigarette smoking - Maternal	| Please categorise as 0=no, 1=yes	| `Maternal_smoking_factor` |
 | Cigarette smoking - paternal	| Please categorise as 0=no, 1=yes	| `Paternal_smoking_factor` |
 | Alcohol - Maternal	| Please categorise as 0=no, 1=yes	| `Maternal_alcohol_factor` |
+| Season of conception	| Categorical (0=spring, 1=summer, 2=autumn, 3=winter)	| `SoC_factor` |
 
 ### Adult studies only:
 
@@ -85,7 +86,6 @@ The following variables are required to run EWAS. They are not essential variabl
 | Alcohol - Own	numeric | Numeric measure (frequency or quantity)	| `Alcohol_numeric` |
 | Physical activity levels	| Ordinal categories. Code with 0 as lowest level and increase from there. If you have a numeric measure please divide into quintiles with 0=lowest and 4=highest quintile.	| `Physical_activity_factor` |
 | Air pollution	| Numeric. Add each pollution variable separately. 	| `*variable_name*_pollution_numeric` |
-| Season of conception	| Categorical (0=spring, 1=summer, 2=autumn, 3=winter)	| `SoC_factor` |
 | Length of time living at current address	| Numeric (years)	| `Time_at_address_numeric` |
 | Fasting glucose	| Numeric (mmol/L)	| `FGlucose_numeric` |
 | Non- fasting glucose	| Numeric (mmol/L)	| `NFGlucose_numeric` |
