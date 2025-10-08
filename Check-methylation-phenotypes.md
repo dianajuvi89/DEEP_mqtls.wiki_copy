@@ -67,8 +67,12 @@ In the below example, the distribution plot for BMI shows a small peak at -10. -
 This script runs five EWAS analyses. These are EWAS where we know what to expect - their purpose is to check that the EWAS method and covariates are functioning as we expect in each dataset, and to identify any issues before running the main set of EWAS. We will be able to tell this from the EWAS report HTML files - please check these files for QQ and miami plots. \
 Five EWAS analyses are:
 * Smoking EWAS (adults only): should detect AHRR sites
-* Age EWAS: should detect many age-associated sites (will not run if there is no variation in age)
-* Maternal smoking EWAS (children only): should detect MYO1G sites
+* Age EWAS: should detect many age-associated sites (will not run if there is no variation in age). If there is limited variation in age we should still see genome-wide inflation:
+<img src="https://github.com/MRCIEU/DEEP_mqtls/blob/main/images/ewas_age_eg.jpg" width="750" />
+
+* Maternal smoking EWAS (children only): should detect a few distinct peaks of association with MYO1G sites likely being the strongest:
+<img src="https://github.com/MRCIEU/DEEP_mqtls/blob/main/images/mat_smoking_eg_ewas.jpg" width="750" />
+
 * Sex EWAS: should detect many sex-associated sites (will not run for single-sex studies)
 * Negative control (scrambled sex): should show no true associations; QQ plot inflation must be flagged. Will run for all studies.
 
