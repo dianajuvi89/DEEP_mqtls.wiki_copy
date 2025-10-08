@@ -50,12 +50,13 @@ In the below example, the distribution plot for BMI shows a small peak at -10. -
 <img src="https://github.com/MRCIEU/DEEP_mqtls/blob/main/images/missing_code_example.jpg" width="250" />
 
 * Prints a message if any variable contains >10% missing values. If this prints and is unexpected, then please check your data.
-* Winsorizes numeric variables that contain extreme outliers. Then re-generates plots and summary statistics for those variables, so you can review the effect of winsorization. Please check these plots and tables.
+* Winsorizes numeric variables that contain extreme outliers. Then re-generates plots and summary statistics for those variables, so you can review the effect of winsorization. Please check these plots and tables to ensure outliers have been removed.
 
 **predict_age_smoking**
 * Predicts epigenetic age (Hannum clock) and smoking (both mcigarette and Elliott predictors) by using [meffonym](https://github.com/perishky/meffonym).
 * Smoking must be coded as a factor (0/1); script will attempt auto-conversion if numeric. Please check the output messages to confirm the pipeline was able to convert this to a factor.
-* Generate three prediction plots; check correlation with age (may be weak if age range is limited). We do not necessarily expect the correlation with age to be good because we do not know how well this predictor will work in populations across the DEEP consortium. 
+* Generate three prediction plots; check correlation with age (may be weak if age range is limited). We do not necessarily expect the correlation with age to be good because we do not know how well this predictor will work in populations across the DEEP consortium. The below plot shows how we don't find correlation in age-limited datasets:
+<img src="https://github.com/MRCIEU/DEEP_mqtls/blob/main/images/age_correlation_example.jpg" width="350" />
 
 **cell_counts**
 * Predicts cell fractions using appropriate cell reference panels in [EpiDISH](https://github.com/sjczheng/EpiDISH) or [Meffil](https://github.com/perishky/meffil). References include [Unilife](https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-025-01489-7) (blood samples at any age), [Salas](https://www.nature.com/articles/s41467-021-27864-7) (adult blood), [Zheng](https://www.tandfonline.com/doi/full/10.2217/epi-2018-0037) (adult saliva or buccal), and [Middleton](https://www.tandfonline.com/doi/full/10.1080/15592294.2021.1890874) (child saliva).
