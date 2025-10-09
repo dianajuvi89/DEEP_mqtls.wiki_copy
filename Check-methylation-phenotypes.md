@@ -43,14 +43,14 @@ Importantly, Module 01c is designed to run in chunks, making it easier to fix pr
 
 **check_phenotype**
 
-This script is designed to format the phenotypes based on whether you have designated them as _factor or _numeric, so it is very important that you have added either _factor or _numeric to the end of every variable column name in your phenotype file (See examples in [Phenotype data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Phenotype-data)).
+This script is designed to format the phenotypes based on whether you have designated them as _factor or _numeric, so **it is very important that you have added either _factor or _numeric to the end of every variable column name** in your phenotype file (See examples in [Phenotype data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Phenotype-data)).
 
-* Produces distribution plots and summary tables for every variable to reveal unexpected values or coding problems (e.g., missingness codes like -9; biologically implausible values (such as age of 150)). Please check all plots and tables! 
-In the below example, the distribution plot for BMI shows a small peak at -10. -10 is not a possible value for BMI, and indeed when we went back to check then -10 is the missingness code, so we go back to our phenotype data and set values of -10 to NA.
+* Produces distribution plots and summary tables for every variable to reveal unexpected values or coding problems (e.g., missingness codes like -9; biologically implausible values (such as age of 150)). **Please check all plots and tables! **
+In the below example, the distribution plot for BMI shows a small peak at -9. -9 is not a possible value for BMI, and indeed when we went back to check then -9 is the missingness code, so we go back to our phenotype data and set values of -9 to NA.
 <img src="https://github.com/MRCIEU/DEEP_mqtls/blob/main/images/missing_code_example.jpg" width="250" />
 
 * Prints a message if any variable contains >10% missing values. If this prints and is unexpected, then please check your data.
-* Winsorizes numeric variables that contain extreme outliers. Then re-generates plots and summary statistics for those variables, so you can review the effect of winsorization. Please check these plots and tables to ensure outliers have been removed.
+* Winsorizes numeric variables that contain extreme outliers. Then re-generates plots and summary statistics for those variables, so you can review the effect of winsorization. **Please check these plots and tables to ensure outliers have been removed.**
 
 **predict_age_smoking**
 * Predicts epigenetic age (Hannum clock) and smoking (both mcigarette and Elliott predictors) by using [meffonym](https://github.com/perishky/meffonym).
@@ -78,10 +78,15 @@ Five EWAS analyses are:
 
 **meth_pcs** \
 We aim to identify major drivers of methylation variation so we can select appropriate PC/batch covariates for downstream EWAS and mQTL analyses and detect dataset-specific issues. We generate principal components (PCs) of the methylation data and assess their associations with genetic PCs, batch variables, and core study/participant covariates. \
-Generate three plots:
+Generate four plots:
+* Scree plot (illustrating how much of the variance in methylation is captured by each of the top 50 PCs):
+<img src="https://github.com/MRCIEU/DEEP_mqtls/blob/main/images/meth_pcs_scree_plot.jpg" width="150" />
+
 * PC1 vs PC2 scatter plot, colored by study variables.
 * PC3 vs PC4 scatter plot, colored by study variables.
-* Forest plots visualizing the associations between each methylation PC (PC1–PC10) and relevant covariates (estimates with 95% confidence intervals), including demographic variables (e.g., age, sex), batch factors, estimated cell counts, genetic PCs, and study-specific variables.
+* Forest plots visualizing the associations between each methylation PC (PC1–PC10) and relevant covariates (estimates with 95% confidence intervals), including demographic variables (e.g., age, sex), batch factors, estimated cell counts, genetic PCs, and study-specific variables. Please check for the factors that are driving DNAm, for example in the below plot cell counts seem to be driving PC1:
+<img src="https://github.com/MRCIEU/DEEP_mqtls/blob/main/images/meth_pcs_associations.jpg" width="150" />
+
 
 **combine_covariates**
 * Combine the original covariate file with genetic PCs, all predicted cell counts, and predicted smoking for Modules 1d and 1e.
