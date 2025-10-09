@@ -31,6 +31,7 @@ The script can be run in chunks, so you can fix problems more easily. We recomme
     ./01a-check_data.sh -c /path/to/config/file genetic
     ./01a-check_data.sh -c /path/to/config/file methylation    
     ./01a-check_data.sh -c /path/to/config/file covariates
+    ./01a-check_data.sh -c /path/to/config/file phenotypes_for_ewas
     ./01a-check_data.sh -c /path/to/config/file summary
 
 **IMPORTANT:** The script produces the following plots in the `results/01/` directory. Please check the following plots:
@@ -45,4 +46,7 @@ cd results/01
 - Summary statistics of the input data (`cohort_descriptives.RData`). Please check there are no unexpected NAs in there. These statistics will be used for the cohort characteristics Table in the paper.
 - The `log.txt` will be used to check you have used the right version of the pipeline
 
+>[!IMPORTANT]
+> **Please check**
+> Please check the error log to identify whether the phenotypes for EWAS file contains the expected phenotypes labelled in the expected way (please see the phenotypes tab for more details). It will produce error messages in section "phenotypes_for_ewas" if anything does not look as expected (which will cause issues later in section 01c). 
 

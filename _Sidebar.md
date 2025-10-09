@@ -29,7 +29,7 @@
 <br>
 1f\.  [Normalisation of methylation data](Normalisation-of-methylation-data)
 <br>
-1upload\. [Upload to Bristol SFTP](Upload-to-Bristol-SFTP)
+1 upload\. [Upload to Bristol SFTP](Upload-to-Bristol-SFTP)
 <br>
 
 ### The pipeline modules (under development)

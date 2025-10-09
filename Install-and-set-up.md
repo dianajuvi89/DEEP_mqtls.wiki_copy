@@ -60,6 +60,9 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `ancestry`: Specify the most similar genetic ancestry of your samples with one of the following: "EUR", "AFR", "AMR", "EAS", "SAS", or "None" if you are not sure, or if any of these populations does not match the ancestry. This step is required by EasyQC to compare the allele frequencies of your samples against the reference panel of 1000G populations.
 
+- `mem`: Specifies the amount of memory (in GB) to allocate. When running on an HPC system, ensure this value matches the memory requested in your job submission. The default is 20 GB.
+
+- `nthreads`: Specifies the number of CPU threads to use. The default is 16.
 
 ## Preparing data for the pipeline
 
@@ -219,7 +222,7 @@ For some of these servers you need to ensure you have the correct files on your 
 
 ### Setting up a key for the Bristol sFTP server
 
-You must [register](http://data.bris.ac.uk/collaborator/) as a collaborator before you can upload or download any files to the Bristol sftp server. Please email [Josine Min](mailto:josine.min@bristol.ac.uk) or [Hannah Elliott] (mailto:Hannah.Elliott@bristol.ac.uk) for project id or if you have any issues with setting this up. Please note that **every analyst** will need their own account to access the server. If there are two analysts at the same institution or analysing the same cohort you will need your own log in. Sharing passwords and usernames will not work due to the need to have an ssh key pair (see below). 
+You must [register](http://data.bris.ac.uk/collaborator/) as a collaborator before you can upload or download any files to the Bristol sftp server. Please email [Josine Min](mailto:josine.min@bristol.ac.uk) or [Hannah Elliott](mailto:Hannah.Elliott@bristol.ac.uk) for project id or if you have any issues with setting this up. Please note that **every analyst** will need their own account to access the server. If there are two analysts at the same institution or analysing the same cohort you will need your own log in. Sharing passwords and usernames will not work due to the need to have an ssh key pair (see below). 
 
 To upload or download files from the Bristol server to your server/HPC you need to have a key pair on your server.
 

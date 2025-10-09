@@ -266,16 +266,22 @@ Open R and type
 ```
 png should be TRUE
 
-#### You need to make sure you have encryption software installed
+### Step 3: Please ensure you have encryption software installed
 
-We are encrypting and uploading the results with aes encryption using `gpg` and `pinentry`, and `sshpass`. You can test whether the gpg, pinentry, and sshpass Linux packages have been installed with the following command:
+We are encrypting and uploading the results with AES encryption using `gpg`, `pinentry`, and `sshpass`. If you are using mamba/conda, the environment should contain these three software. You can directly test whether the gpg, pinentry, and sshpass Linux packages have been installed in the environment with the following command:
 
+```
+mamba activate deep_env
+which sshpass
+which gpg
+which pinentry
+```
+If you are **NOT** using mamba/conda, gpg, sshpass, and pinentry haven't been installed. Please install gpg from here: [https://gnupg.org/download/](https://gnupg.org/download/); pinentry from here: [https://www.gnupg.org/download/index.html#pinentry](https://www.gnupg.org/download/index.html#pinentry); sshpass from here: [https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/](https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/). After installation, please check:
 ```
 which sshpass
 which gpg
 which pinentry
 ```
-If gpg hasn't been installed, then you can install it from here: [https://gnupg.org/download/](https://gnupg.org/download/). You can install pinentry from here: [https://www.gnupg.org/download/index.html#pinentry](https://www.gnupg.org/download/index.html#pinentry). You can install sshpass from here: [https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/](https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/).
 
  
 
