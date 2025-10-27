@@ -185,6 +185,8 @@ remotes::install_github("danbelsky/DunedinPACE")
 library(BiocManager)
 BiocManager::install("rtracklayer")
 BiocManager::install("biomaRt")
+BiocManager::install("VariantAnnotation")
+remotes::install_github("mrcieu/gwasvcf")
 remotes::install_github("MRCIEU/GwasDataImport")
 ```
 
