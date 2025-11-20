@@ -17,7 +17,7 @@ The pipeline starts with a number of sequential modules that ensure you have the
 ### QC stage 1
 Perform QC without removing individuals, such as: checking variant and sample missingness rates, sex-mismatch, performing positive/negative control for mQTL and EWAS.
 ### QC stage 2
-Collect summary-level information and perform QC by removing individuals for cross-cohort analysis
+Collect summary-level information from QC stage 1, and perform QC by removing individuals for cross-cohort analysis
 
 ## The main analyses within the pipeline are:
 ### Perform an mQTL analysis
