@@ -63,6 +63,7 @@ After starting R, run:
 .libPaths()
 ```
 Please ensure it returns the first path, which points to the R library inside your conda environment, e.g., `/user/home/user_name/miniforge3/envs/deep_env/lib/R/library`
+
 Then install the packages in R:
 ```r
 install.packages("parallel")
