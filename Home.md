@@ -61,4 +61,4 @@ This wiki is structured to guide you through each stage of the analysis. There i
 
 After this, the page will describe the analysis performed in the module, and it will give example commands to implement the script. 
 
-## Thank you for reading this guide, and for your partnership in the DEEP study. You are ready to get started!
+*Thank you for reading this guide, and for your partnership in the DEEP study. You are ready to get started!*
