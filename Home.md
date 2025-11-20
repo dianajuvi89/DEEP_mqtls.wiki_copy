@@ -3,27 +3,25 @@ Welcome to the [Diverse Epigenetic Epidemiology Partnership](https://www.deep-ep
 A reminder of our participation requirements can be found on this [**page**](Participation-requirements).
 
 ## Design overview
-Each analyst runs the pipeline for their cohort on their own server.
+Each analyst runs the pipeline for their cohort on their own server, e.g., High-Performance Computing (HPC) server. The pipeline was designed to make it as automatic and reproducible as possible, minimising coding and input required by users ("analysts"). This makes the pipeline easy to execute, avoids duplication of effort, maintains consistency across cohorts, and reduces potential for errors. 
 
-The pipeline was designed to make it as automatic and reproducible as possible, minimising coding and input required by users ("analysts"). This makes the pipeline easy to execute, avoids duplication of effort, maintains consistency across cohorts and reduces potential for errors. 
-
-Analyst input is minimised by using a `config` file. This config file includes all cohort-specific parameters such as file paths, properties of the data, thresholds, etc. 
+Analyst input is minimised by using a `config` file and pre-formatted genetic, methylation, phenotype, and covariate data. This config file includes all cohort-specific parameters, such as file paths, properties of the data, thresholds, etc. Details on data formatting are provided in the Data preparation prior to pipeline section: [Imputed genetic data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Imputed-genetic-data), [Normalised methylation data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Normalised-methylation-data), [Covariate data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Covariate-data) and [Phenotype data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Phenotype-data).
 
 Pipeline stages are separated into numbered modules. Modules need to be completed in sequence. [This flowchart](Script-Flowchart) represents the dependencies between the modules so you can see what order you need to run them in. 
 
 ## Content overview
 
-The pipeline starts with a number of sequential modules that ensure you have the correct software requirements, genetic data, DNA methylation data, phenotype data and covariate data. This generates a number of outputs that analysis modules can use later in the pipeline.
+The pipeline starts with a number of sequential modules that ensure you have the correct software requirements, genetic data, DNA methylation data, phenotype data, and covariate data. This generates several outputs that analysis modules can use later in the pipeline.
 
-The analyses within this pipeline are:
+The main analyses within this pipeline are:
 
-### Perform a mQTL analysis
+### Perform an mQTL analysis
 
 Perform a full GWAS on every methylation probe available in the sample. Variations of this analysis will be performed, including:
 
 - a standard mQTL analysis using bestguess imputed SNPs covering the full surface using new software
 - cell-type interacting mQTL analyses for abundant cell types
-- a var-mQTL analysis which looks for SNPs that influence the variance of a probe.
+- a var-mQTL analysis, which looks for SNPs that influence the variance of a probe.
 
 ### EWAS of cardiometabolic traits
 
