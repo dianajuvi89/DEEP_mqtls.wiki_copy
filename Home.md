@@ -1,13 +1,11 @@
-Welcome to the [Diverse Epigenetic Epidemiology Partnership](https://www.deep-epigenetics.org/) analysis pipeline. This wiki will guide you through the different stages of the analysis. Our collaborative framework follows the principle of federated analysis, where individual-level data remain on local servers and only non-disclosive summary statistics are shared across cohorts. We recommend you read this page before you start running the pipeline to familiarise yourself with how it was designed and what it includes, how to use this wiki, and what to do if it goes wrong.
+Welcome to the [Diverse Epigenetic Epidemiology Partnership](https://www.deep-epigenetics.org/) analysis pipeline. This wiki will guide you through the different stages of the analysis. We recommend you read this page before you start running the pipeline to familiarise yourself with how it was designed and what it includes, how to use this wiki, and what to do if it goes wrong.
 
 A reminder of our participation requirements can be found on this [**page**](Participation-requirements).
 
 ## Design overview
-Each analyst runs the pipeline for their cohort on their own server, e.g., High-Performance Computing (HPC) server. The pipeline is designed to make it as automatic and reproducible as possible, minimising coding and input required by users ("analysts"). This makes the pipeline easy to execute, avoids duplication of effort, maintains consistency across cohorts, and reduces potential for errors. 
+The pipeline is designed to make it as automatic and reproducible as possible, minimising coding and input required by users ("analysts"). This makes the pipeline easy to execute, avoids duplication of effort, maintains consistency across cohorts, and reduces potential for errors. Pipeline stages are separated into numbered modules. Modules need to be completed in sequence. [This flowchart](Script-Flowchart) represents the dependencies between the modules so you can see what order you need to run them in. 
 
-Pipeline stages are separated into numbered modules. Modules need to be completed in sequence. [This flowchart](Script-Flowchart) represents the dependencies between the modules so you can see what order you need to run them in. 
-
-Running the pipeline itself does not require [DataSHIELD](https://datashield.org/). DataSHIELD is only needed when performing cross-cohort methylation analyses.
+Our collaborative framework follows the principle of federated analysis, where individual-level data remain on local servers and only non-disclosive summary statistics are shared across cohorts. Each analyst runs the pipeline for their cohort on their own server, e.g., High-Performance Computing (HPC) server. Running the pipeline itself does not require [DataSHIELD](https://datashield.org/). DataSHIELD is only needed when performing cross-cohort methylation analyses.
 
 Analyst input is minimised by using a `config` file and pre-formatted genetic, methylation, phenotype, and covariate data. This config file includes all cohort-specific parameters, such as file paths, properties of the data, thresholds, etc. Details on data formatting are provided in `Data preparation prior to pipeline` Section in the Sidebar: [Imputed genetic data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Imputed-genetic-data), [Normalised methylation data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Normalised-methylation-data), [Covariate data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Covariate-data), and [Phenotype data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Phenotype-data).
 
@@ -17,8 +15,9 @@ The pipeline starts with a number of sequential modules that ensure you have the
 
 The QC stages within the pipeline are:
 ### QC stage 1
-
+Perform QC without removing individuals, such as: checking variant and sample missingness rates, sex-mismatch, performing positive/negative control for mQTL and EWAS.
 ### QC stage 2
+Collect summary-level information and perform QC by removing individuals for cross-cohort analysis
 
 The main analyses within the pipeline are:
 
@@ -59,9 +58,9 @@ Please note, not all of these modules are ready to be run. Those that are have b
 
 ## How to use the wiki
 
-This wiki is structured to guide you through each stage of the analysis. There is one page per module. At the top of each page is a standard header which lets you know the status of each module (whether it is ready to be run or not), which scripts need to be completed before running this module, and instructions for uploading results at the end. 
+This wiki is structured to guide you through each stage of the analysis. There is one page per module. At the top of each page is a standard header that lets you know the status of each module (whether it is ready to be run or not), which scripts need to be completed before running this module, and instructions for uploading results at the end. 
 
-After this, the page will describe the analysis performed in the module and it will give example commands to implement the script. 
+After this, the page will describe the analysis performed in the module, and it will give example commands to implement the script. 
 
 ## What to do if it goes wrong
 
@@ -69,7 +68,7 @@ If you encounter any unexpected behaviour when you follow the instructions withi
 
 There are two mechanisms for sharing any errors or comments.
 
-1. [Issues](https://github.com/MRCIEU/DEEP_mqtls/issues). This is the mechanism to report bugs or errors with the pipeline or documentation. Essentially anything which requires us to make edits to the content in the repository. There are more guidelines on how to submit an issue below.
+1. [Issues](https://github.com/MRCIEU/DEEP_mqtls/issues). This is the mechanism to report bugs or errors with the pipeline or documentation. Essentially, anything that requires us to make edits to the content in the repository. There are more guidelines on how to submit an issue below.
 2. [Discussions](https://github.com/MRCIEU/DEEP_mqtls/discussions). This is the place to ask questions or make suggestions about the pipeline and analyses. 
 
 ## Submitting an issue
