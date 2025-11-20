@@ -13,14 +13,13 @@ Analyst input is minimised by using a `config` file and pre-formatted genetic, m
 
 The pipeline starts with a number of sequential modules that ensure you have the correct software requirements, genetic data, DNA methylation data, phenotype data, and covariate data. This generates several outputs that analysis modules can use later in the pipeline.
 
-The QC stages within the pipeline are:
+## The QC stages within the pipeline are:
 ### QC stage 1
 Perform QC without removing individuals, such as: checking variant and sample missingness rates, sex-mismatch, performing positive/negative control for mQTL and EWAS.
 ### QC stage 2
 Collect summary-level information and perform QC by removing individuals for cross-cohort analysis
 
-The main analyses within the pipeline are:
-
+## The main analyses within the pipeline are:
 ### Perform an mQTL analysis
 
 Perform a full GWAS on every methylation probe available in the sample. Variations of this analysis will be performed, including:
