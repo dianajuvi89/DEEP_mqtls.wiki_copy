@@ -2,6 +2,7 @@
 - [Home](Home)
 - [Frequently Asked Questions](Frequently-Asked-Questions)
 - [Participation requirements](Participation-requirements)
+- [Submit an issue or start a discussion](Submit-an-issue-or-discussion)
 - [System requirements and pipeline installation](System-requirements)
 
 
