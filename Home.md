@@ -3,6 +3,7 @@ Welcome to the [Diverse Epigenetic Epidemiology Partnership](https://www.deep-ep
 A reminder of our participation requirements can be found on this [**page**](Participation-requirements).
 
 ## Design overview
+Each analyst runs the pipeline for their cohort on their own server.
 
 The pipeline was designed to make it as automatic and reproducible as possible, minimising coding and input required by users ("analysts"). This makes the pipeline easy to execute, avoids duplication of effort, maintains consistency across cohorts and reduces potential for errors. 
 
