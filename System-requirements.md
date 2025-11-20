@@ -1,6 +1,8 @@
+Each analyst runs the pipeline for their cohort on their own server.
+
 ## Download the pipeline scripts from github
 
-To download the pipeline scripts you need to make sure you have git installed
+To download the pipeline scripts you need to make sure you have git installed and have access to a HPC server
 
 ```
 which git
