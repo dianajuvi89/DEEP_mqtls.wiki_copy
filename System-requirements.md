@@ -1,6 +1,6 @@
 ## Approach
 
-Each analyst runs the pipeline for their cohort on their own server. You will download scripts from github to your HPC server and then run the scripts sequentially.
+Each analyst runs the pipeline for their cohort on their own server. You will download scripts from github to your HPC server and then run the scripts sequentially. You will need to install dependencies and Rpackages using one of the options below.
 
 ## Download the pipeline scripts from github
 
