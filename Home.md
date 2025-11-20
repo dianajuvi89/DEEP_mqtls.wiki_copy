@@ -5,7 +5,7 @@ A reminder of our participation requirements can be found on this [**page**](Par
 ## Design overview
 The pipeline is designed to make it as automatic and reproducible as possible, minimising coding and input required by users ("analysts"). This makes the pipeline easy to execute, avoids duplication of effort, maintains consistency across cohorts, and reduces potential for errors. Pipeline stages are separated into numbered modules. Modules need to be completed in sequence. [This flowchart](Script-Flowchart) represents the dependencies between the modules so you can see what order you need to run them in. 
 
-Our collaborative framework follows the principle of federated analysis, where individual-level data remain on local servers and only non-disclosive summary statistics are shared across cohorts. Each analyst runs the pipeline for their cohort on their own server, e.g., High-Performance Computing (HPC) server. Running the pipeline itself does not require [DataSHIELD](https://datashield.org/). DataSHIELD is only needed when performing cross-cohort methylation analyses.
+Our collaborative framework follows the principle of federated analysis, where individual-level data remain on local servers and only non-disclosive summary statistics are shared across cohorts. Each analyst runs the pipeline for their cohort on their own server, e.g., a High-Performance Computing (HPC) server. Running the pipeline itself does not require [DataSHIELD](https://datashield.org/). DataSHIELD is only needed when performing cross-cohort methylation analyses.
 
 Analyst input is minimised by using a `config` file and pre-formatted genetic, methylation, phenotype, and covariate data. This config file includes all cohort-specific parameters, such as file paths, properties of the data, thresholds, etc. Details on data formatting are provided in `Data preparation prior to pipeline` Section in the Sidebar: [Imputed genetic data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Imputed-genetic-data), [Normalised methylation data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Normalised-methylation-data), [Covariate data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Covariate-data), and [Phenotype data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Phenotype-data).
 
@@ -61,29 +61,4 @@ This wiki is structured to guide you through each stage of the analysis. There i
 
 After this, the page will describe the analysis performed in the module, and it will give example commands to implement the script. 
 
-## What to do if it goes wrong
-
-If you encounter any unexpected behaviour when you follow the instructions within this wiki please report this to us. We would like all communication about the pipeline to go through GitHub and this repository. 
-
-There are two mechanisms for sharing any errors or comments.
-
-1. [Issues](https://github.com/MRCIEU/DEEP_mqtls/issues). This is the mechanism to report bugs or errors with the pipeline or documentation. Essentially, anything that requires us to make edits to the content in the repository. There are more guidelines on how to submit an issue below.
-2. [Discussions](https://github.com/MRCIEU/DEEP_mqtls/discussions). This is the place to ask questions or make suggestions about the pipeline and analyses. 
-
-## Submitting an issue
-
-Before you submit an issue, please take a moment to review these guidelines to ensure your issue is addressed effectively.
-
-### General Guidelines
-
-**Search Existing Issues:** Before submitting a new issue, please search the existing issues (including closed issues) to see if your problem has already been reported. This helps avoid duplicates and allows us to focus on a single thread of discussion for each issue.
-
-**Use Clear and Descriptive Titles:** Provide a concise summary of the issue in the title. This helps others understand and search for similar issues.
-
-**Provide Detailed Information:**
-
-For Bugs: Tell us which script you were running when the error occurred, the expected result, and the actual result. Provide any relevant logs or screenshots.
-For Documentation: Specify the page & section where the documentation was misleading or confusing. 
-
-Thank you for reading this guide, and for your partnership in the DEEP study. You are ready to get started!
-
+## Thank you for reading this guide, and for your partnership in the DEEP study. You are ready to get started!
