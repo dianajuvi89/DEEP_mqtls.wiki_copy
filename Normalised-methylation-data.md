@@ -43,9 +43,11 @@ Normalised methylation data across cohorts is crucial for large-scale DNA methyl
 The cross-cohort functional normalization occurs in two stages:
 
 Central quantile alignment ([Module 01f Step 1](https://github.com/MRCIEU/DEEP_mqtls/wiki/Cross%E2%80%90cohort-normalisation-of-methylation-data))
+
 After cohorts upload their within-cohort processed methylation data, the DEEP core team performs a central step using only quantile information, which does not include any individual-level data. The central team aligns quantiles across cohorts to remove systematic technical differences.
 
 Local cross-cohort normalization by each cohort ([Module 01f Step 2](https://github.com/MRCIEU/DEEP_mqtls/wiki/Cross%E2%80%90cohort-normalisation-of-methylation-data))
+
 The centrally aligned quantiles are then returned to each cohort. Using these quantiles, cohorts complete the full cross-cohort functional normalization locally, on their own individual-level methylation data.
 
 After all cohorts complete this step, the resulting harmonised methylation datasets will be used in future pooled EWAS analyses through  DataSHIELD in the Analysis stage
