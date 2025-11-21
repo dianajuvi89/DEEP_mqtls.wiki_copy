@@ -38,3 +38,4 @@ save(norm.beta, file="/path/to/deep/input_data/methylation.RData")
 ```
 
 ## Cross-cohort DNA methylation data preprocessing
+Normalised methylation data across cohorts is crucial for large-scale DNA methylation studies.
