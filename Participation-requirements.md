@@ -9,7 +9,9 @@ The DEEP mQTLs will build on the **DNA methylation quantitative trait loci (mQTL
 
 - Please note we will include cohorts with DNAm generated with Illumina EPIC/450k arrays with matched imputed GWA or sequence data available for at least 100 individuals. 
 - We will include participants of mainly non-European origin (non-migrant in first phase).
-- In our analyses, we will include samples with DNAm profiled from whole blood, cord blood, peripheral blood mononuclear cells (PBMC), peripheral blood leukocytes(PBL), buccal or saliva tissue. We also include sorted blood cell types to compare to cell-type interacting mQTLs. LCLs will not be included. Please email [Josine Min](mailto:josine.min@bristol.ac.uk) and [Hannah Eliott](mailto:hannah.elliott@bristol.ac.uk) if you have methylation data on sorted cell type data or on other tissues. 
+- In our analyses, we will include samples with DNAm profiled from whole blood, cord blood, peripheral blood mononuclear cells (PBMC), peripheral blood leukocytes(PBL), buccal or saliva tissue. We also include sorted blood cell types to compare to cell-type interacting mQTLs. LCLs will not be included. Please email [Josine Min](mailto:josine.min@bristol.ac.uk) and [Hannah Eliott](mailto:hannah.elliott@bristol.ac.uk) if you have methylation data on sorted cell type data or on other tissues.
+- Our scripts work on cohorts with different study designs including cohorts with related and unrelated participants and cohorts with participants that are the same age or sex.
+
 
 ##### Case-control studies
 
