@@ -28,7 +28,7 @@
 <br>
 1e\.  [GWAS of genetic PCs](GWAS-genetic-PCs)
 <br>
-1f\.  [Cross-cohort Normalisation of methylation data](Normalisation-of-methylation-data)
+1f\.  [Cross-cohort Normalisation of methylation data](Cross-cohort normalisation-of-methylation-data)
 <br>
 1 upload\. [Upload to Bristol SFTP](Upload-to-Bristol-SFTP)
 <br>
