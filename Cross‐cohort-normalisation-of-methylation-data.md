@@ -26,13 +26,12 @@ To obtain shrunk QC objects from your dataset, please run the following command:
 This will generate a `qc_objects_shrink.rda` in `/results/01` and `qc_objects.rda` in `/processed_data/methylation_data`. The `qc_objects_shrink.rda` excludes ID information and should be uploaded to the Bristol SFTP server for cross-cohort functional normalization.
 
 
-On the Bristol SFTP server, the DEEP core team will estimate the optimal number of control probe principal components to include in the normalization and use [meffil.normalize.quantiles()](https://github.com/perishky/meffil/blob/master/R/normalize-quantiles.r) to normalize the pooled objects from all DEEP cohorts. Then, we send the cross-cohort functionally normalized quantiles back to the corresponding cohort.
+Cross-cohort functional normalisation will be performed on the Bristol SFTP server. The DEEP core team will estimate the optimal number of control probe principal components to include in the normalization and use [meffil.normalize.quantiles()](https://github.com/perishky/meffil/blob/master/R/normalize-quantiles.r) to normalize the pooled objects from all DEEP cohorts. Then, we send the cross-cohort functionally normalized quantiles back to the corresponding cohort.
 
 ## **Step 2**: Restore information to normalized QC objects derived from shrunk QC objects  
 <img src="images/expand.png" alt="expand" width="500"/>
 
-
-**DO NOT** proceed until you have received the cross-cohort normalized quantiles from Bristol. Once received, please place your `norms.rda` file in the `input_data` folder and then run the following command:
+Please **DO NOT** proceed until you have received the cross-cohort normalized quantiles from Bristol. Once received, please place your `norms.rda` file in the `input_data` folder and then run the following command:
 ```
 ./01f-normalization.sh -c /path/to/config/file expand
 ```
