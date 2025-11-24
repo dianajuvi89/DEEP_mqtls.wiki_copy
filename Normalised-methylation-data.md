@@ -23,32 +23,22 @@ While we prefer you follow our recommended normalisation approach, we do not enf
 
 ## Data format
 
-Regardless which normalisation method you use the following need to be adhered to:
+Regardless of which normalisation method you use, the following need to be adhered to:
 
 - You should avoid spaces in your file name.
 - You should keep sites from chrX and chrY.
 - You should exclude the SNP probes with IDs that start with rsXXXX (65 on the 450K array and 59 on the EPIC array).
 - You should keep nonspecific binding probes, probes with SNPs in their sequence, multimapping probes. We will filter out these probes at the end.
 - Underscores should not be used in the sample IDs.
-- The pipeline removes outliers with the Tukey method in the processing methylation module so you shouldn't have NAs in your methylation dataset.
-- The methylation matrix should be saved as a `.RData` file (each row is a CpG site and each column is a sample) and the methylation matrix object should be called `norm.beta`. e.g. in R:
+- The pipeline removes outliers with the Tukey method in the processing methylation module, so you shouldn't have NAs in your methylation dataset.
+- The methylation matrix should be saved as a `.RData` file (each row is a CpG site and each column is a sample,) and the methylation matrix object should be called `norm.beta`. e.g. in R:
 
 ```
 save(norm.beta, file="/path/to/deep/input_data/methylation.RData")
 ```
 
 ## Cross-cohort DNA methylation data preprocessing
-Normalised methylation data across cohorts is crucial for large-scale DNA methylation studies.
 
-The cross-cohort functional normalization occurs in two stages:
+For large-scale DNA methylation studies, it is essential that data from different cohorts are processed in a consistent and comparable way. The DEEP pipeline supports this by applying a unified cross-cohort functional normalization procedure (see [Module 01f Step 1](https://github.com/MRCIEU/DEEP_mqtls/wiki/Cross%E2%80%90cohort-normalisation-of-methylation-data)). To do this, please specify the path to your `idat` files in your configuration file.
 
-### Central quantile alignment ([Module 01f Step 1](https://github.com/MRCIEU/DEEP_mqtls/wiki/Cross%E2%80%90cohort-normalisation-of-methylation-data))
-
-After cohorts upload their within-cohort processed methylation data, the DEEP core team performs a central step using only quantile information, which does not include any individual-level data. The central team aligns quantiles across cohorts to remove systematic technical differences.
-
-### Local cross-cohort normalization by each cohort ([Module 01f Step 2](https://github.com/MRCIEU/DEEP_mqtls/wiki/Cross%E2%80%90cohort-normalisation-of-methylation-data))
-
-The centrally aligned quantiles are then returned to each cohort. Using these quantiles, cohorts complete the full cross-cohort functional normalization locally, on their own individual-level methylation data.
-
-After all cohorts complete this step, the resulting harmonised methylation datasets will be used in future pooled EWAS analyses through  DataSHIELD in the Analysis stage
-For the QC stages, cohorts only need to complete the within-cohort preprocessing and upload the required quantile files via the Bristol SFTP system.
+For the QC stages, cohorts only need to complete the within-cohort preprocessing and upload the required shrunk QC objects via the Bristol SFTP system. The resulting harmonised methylation datasets will be used in future pooled EWAS analyses through  DataSHIELD in the Analysis stage.
