@@ -83,7 +83,7 @@ Then you need to install several other R packages (EpiDish, meffonym, meffil etc
 Please ensure you have AT LEAST:
 
 * `R version 4.1`
-* `Python3 version 3.9 or higher` and any distribution of `Java 11` for Hail
+* `Python3 version 3.9 or higher` and any distribution of `Java 11` for Hail. To install Hail, please refer to [Hail installation website](https://hail.is/docs/0.2/getting_started.html).
 * `Python 2.7` for Hase
 
 #### If you don't use conda or mamba, please install these R packages in your R manually:
