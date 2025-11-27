@@ -2,9 +2,9 @@
 
 Each analyst runs the pipeline for their cohort on their own server. You will download scripts from github to your HPC server and then run the scripts sequentially. You will need to install dependencies and Rpackages using one of the options below.
 
-## Download the pipeline scripts from github
+## Download the pipeline scripts from GitHub
 
-To download the pipeline scripts you need to make sure you have git installed. 
+To download the pipeline scripts, you need to make sure you have Git installed. 
 
 ```
 which git
@@ -16,7 +16,7 @@ You will then need to run the following git command to download the scripts from
 
 This will create a new directory called `DEEP_mqtls` in your current folder and contains the files needed to run the analysis, [i.e. those listed here](https://github.com/MRCIEU/DEEP_mqtls).
 
-Ideally you should clone the scripts to a location on your server that you can interact with and which is visible to your compute nodes. Please contact us if you have any questions about this.
+Ideally, you should clone the scripts to a location on your server that you can interact with and which is visible to your compute nodes. Please contact us if you have any questions about this.
 
 Because this is a `git` repository it means that it is very easy for you to update these files if we need to make any changes to the code, for example to fix bugs. In order to update the scripts you simply run 
 
