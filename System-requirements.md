@@ -162,7 +162,7 @@ export PATH="$PATH:/path/to/directory/R-4.1.2/bin/"
 ```
 
 
-## Step 2: Other R packages are required for both mamba users and non-mamba users.
+## Step 2: Other R packages are required for BOTH mamba users and non-mamba users.
 ### For users using conda/mamab, please activate the DEEP environment before running the following commands
 ```
 mamba activate deep_env
