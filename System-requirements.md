@@ -179,6 +179,7 @@ To avoid this, please manually specify the BiocManager version:
 BiocManager::install(version = "3.14") # for R 4.1
 BiocManager::install(version = "3.20") # for R 4.4
 BiocManager::install(version = "3.21") # for R 4.5
+BiocManager::install(version = "3.22") # for R 4.5.2
 ```
 
 ### Please install EpiDISH and DunedinPACE from GitHub and not from Bioconductor.
