@@ -1,5 +1,5 @@
 ## Approach
-<img src="sysreq_pipeline_flowchart.drawio.svg">
+<img src="sysreq_pipeline_flowchart.drawio.svg" />
 
 This flowchart shows the 
 
