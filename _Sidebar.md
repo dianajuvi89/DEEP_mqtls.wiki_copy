@@ -2,6 +2,7 @@
 - [Home](Home)
 - [Frequently Asked Questions](Frequently-Asked-Questions)
 - [Participation requirements](Participation-requirements)
+- [Submit an issue or start a discussion](Submit-an-issue-or-discussion)
 - [System requirements and pipeline installation](System-requirements)
 
 
@@ -27,7 +28,7 @@
 <br>
 1e\.  [GWAS of genetic PCs](GWAS-genetic-PCs)
 <br>
-1f\.  [Normalisation of methylation data](Normalisation-of-methylation-data)
+1f\.  [Cross-cohort normalisation of methylation data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Cross%E2%80%90cohort-normalisation-of-methylation-data)
 <br>
 1 upload\. [Upload to Bristol SFTP](Upload-to-Bristol-SFTP)
 <br>

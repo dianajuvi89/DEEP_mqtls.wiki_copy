@@ -1,6 +1,10 @@
-## Download the pipeline scripts from github
+## Approach
 
-To download the pipeline scripts you need to make sure you have git installed
+Each analyst runs the pipeline for their cohort on their own server. You will download scripts from github to your HPC server and then run the scripts sequentially. You will need to install dependencies and Rpackages using one of the options below.
+
+## Download the pipeline scripts from GitHub
+
+To download the pipeline scripts, you need to make sure you have Git installed. 
 
 ```
 which git
@@ -12,7 +16,7 @@ You will then need to run the following git command to download the scripts from
 
 This will create a new directory called `DEEP_mqtls` in your current folder and contains the files needed to run the analysis, [i.e. those listed here](https://github.com/MRCIEU/DEEP_mqtls).
 
-Ideally you should clone the scripts to a location on your server that you can interact with and which is visible to your compute nodes. Please contact us if you have any questions about this.
+Ideally, you should clone the scripts to a location on your server that you can interact with and which is visible to your compute nodes. Please contact us if you have any questions about this.
 
 Because this is a `git` repository it means that it is very easy for you to update these files if we need to make any changes to the code, for example to fix bugs. In order to update the scripts you simply run 
 
@@ -40,7 +44,8 @@ The pipeline scripts require `R version 4.1` or higher, `Python 3 version 3.9 or
 For DEEP, we generated two different environments: `deep_env` for most of the QC and analyses, and `hase_py2` for the mQTL analyses.
 The `deep_env` environment will require ~4 GB of storage, and the `hase_py2`environment will require ～600 MB. Before installation, please make sure that no environments with the same names (`deep_env` or `hase_py2`) already exist in your conda/mamba environment list.
 
-Please ensure you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) **installed** and **initialised** before running these commands:
+Please ensure that these environment names do not already exist in your conda/mamba environment list 
+and that you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) **installed** and **initialised** before running these commands:
 ```
 # Please ensure that no duplicate environment names are used before creating our environment.
 # To create the main environment for DEEP pipeline
@@ -56,8 +61,14 @@ In the location on your server where you have cloned this repository, you need t
 mamba activate deep_env
 wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
 ```
+If you are working on an HPC system, do NOT load any system-wide R module (e.g., module load languages/R/4.5.1), because it may allow R to use packages outside your conda environment.
+After starting R, run:
+```
+.libPaths()
+```
+Please ensure it returns the first path, which points to the R library inside your conda environment, e.g., `/user/home/user_name/miniforge3/envs/deep_env/lib/R/library`
 
-Then in R, run:
+Then install the packages in R:
 ```r
 install.packages("parallel")
 install.packages("EasyQC_9.2.tar.gz")
@@ -72,7 +83,7 @@ Then you need to install several other R packages (EpiDish, meffonym, meffil etc
 Please ensure you have AT LEAST:
 
 * `R version 4.1`
-* `Python3 version 3.9 or higher` and any distribution of `Java 11` for Hail
+* `Python3 version 3.9 or higher` and any distribution of `Java 11` for Hail. To install Hail, please refer to [Hail installation website](https://hail.is/docs/0.2/getting_started.html).
 * `Python 2.7` for Hase
 
 #### If you don't use conda or mamba, please install these R packages in your R manually:
@@ -151,7 +162,7 @@ export PATH="$PATH:/path/to/directory/R-4.1.2/bin/"
 ```
 
 
-## Step 2: Other R packages are required for both mamba users and non-mamba users.
+## Step 2: Other R packages are required for BOTH mamba users and non-mamba users.
 ### For users using conda/mamab, please activate the DEEP environment before running the following commands
 ```
 mamba activate deep_env
@@ -168,6 +179,7 @@ To avoid this, please manually specify the BiocManager version:
 BiocManager::install(version = "3.14") # for R 4.1
 BiocManager::install(version = "3.20") # for R 4.4
 BiocManager::install(version = "3.21") # for R 4.5
+BiocManager::install(version = "3.22") # for R 4.5.2
 ```
 
 ### Please install EpiDISH and DunedinPACE from GitHub and not from Bioconductor.
@@ -185,6 +197,9 @@ remotes::install_github("danbelsky/DunedinPACE")
 library(BiocManager)
 BiocManager::install("rtracklayer")
 BiocManager::install("biomaRt")
+BiocManager::install("VariantAnnotation")
+BiocManager::install("GenomeInfoDb")
+remotes::install_github("mrcieu/gwasvcf")
 remotes::install_github("MRCIEU/GwasDataImport")
 ```
 
