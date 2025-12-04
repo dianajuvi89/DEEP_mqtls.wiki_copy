@@ -1,9 +1,7 @@
 ## Approach
 <img src="images/sysreq_pipeline_flowchart.drawio.svg" />
-![alt](url)
-This flowchart shows the 
 
-Each analyst runs the pipeline for their cohort on their own server. You will download scripts from GitHub to your HPC server and then run the scripts sequentially. You will need to install dependencies and R packages using one of the options below.
+This flowchart illustrates the steps required to set up the DEEP pipeline environment. Each analyst runs the pipeline for their cohort on their own server. You will download scripts from GitHub to your HPC server and then run the scripts sequentially. You will need to install dependencies and R packages using one of the options below.
 
 
 ## Download the pipeline scripts from GitHub
