@@ -3,11 +3,17 @@ Welcome to the [Diverse Epigenetic Epidemiology Partnership](https://www.deep-ep
 A reminder of our participation requirements can be found on this [**page**](Participation-requirements).
 
 ## Design overview
-<img src="images/Overall_design_flowchatv1.drawio.svg" />
-This flowchart presents the design overview of the pipeline.
-The pipeline is designed to make it as automatic and reproducible as possible, minimising coding and input required by users ("analysts"). This makes the pipeline easy to execute, avoids duplication of effort, maintains consistency across cohorts, and reduces potential for errors. Pipeline stages are separated into numbered modules. Modules need to be completed in sequence. [This flowchart](Script-Flowchart) represents the dependencies between the modules so you can see what order you need to run them in. 
+<img src="images/Overall_design_flowchartv1.drawio.svg" />
+This flowchart provides an overview of the pipeline workflow, encompassing multiple stages within the DEEP scope.
+* Blue chunk indicate tasks executed by each DEEP cohort on their respective local HPC servers.
+* Orange chunk represents tasks performed by the DEEP core team on the Bristol HPC.
+* Green sections show the Stage where scripts are ready to be run.
+* Yellow sections show the Stage is currently under development.
+* White sections show the Stage to be developed.
 
 Our collaborative framework follows the principle of federated analysis, where individual-level data remain on local servers, and only non-disclosive summary statistics are shared across cohorts. Each analyst runs the pipeline for their cohort on their own server, e.g., a High-Performance Computing (HPC) server, and uploads encrypted results (incl. summary statistics, plots) to an SFTP server in Bristol.
+
+The pipeline is designed to make it as automatic and reproducible as possible, minimising coding and input required by users ("analysts"). This makes the pipeline easy to execute, avoids duplication of effort, maintains consistency across cohorts, and reduces potential for errors. Pipeline stages are separated into numbered modules. Modules need to be completed in sequence. [This script flowchart](Script-Flowchart) represents the dependencies between the modules so you can see what order you need to run them in. 
 
 Analyst input is minimised by using a `config` file and pre-formatted genetic, methylation, phenotype, and covariate data. This config file includes all cohort-specific parameters, such as file paths, properties of the data, thresholds, etc. Details on data formatting are provided in `Data preparation prior to pipeline` Section in the Sidebar: [Imputed genetic data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Imputed-genetic-data), [Normalised methylation data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Normalised-methylation-data), [Covariate data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Covariate-data), and [Phenotype data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Phenotype-data).
 
