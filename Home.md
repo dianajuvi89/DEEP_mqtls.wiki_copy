@@ -4,6 +4,7 @@ A reminder of our participation requirements can be found on this [**page**](Par
 
 ## Design overview
 <img src="images/Overall_design_flowchatv1.drawio.svg" />
+This flowchart presents the design overview of the pipeline.
 The pipeline is designed to make it as automatic and reproducible as possible, minimising coding and input required by users ("analysts"). This makes the pipeline easy to execute, avoids duplication of effort, maintains consistency across cohorts, and reduces potential for errors. Pipeline stages are separated into numbered modules. Modules need to be completed in sequence. [This flowchart](Script-Flowchart) represents the dependencies between the modules so you can see what order you need to run them in. 
 
 Our collaborative framework follows the principle of federated analysis, where individual-level data remain on local servers, and only non-disclosive summary statistics are shared across cohorts. Each analyst runs the pipeline for their cohort on their own server, e.g., a High-Performance Computing (HPC) server, and uploads encrypted results (incl. summary statistics, plots) to an SFTP server in Bristol.
