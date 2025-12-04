@@ -5,11 +5,13 @@ A reminder of our participation requirements can be found on this [**page**](Par
 ## Design overview
 <img src="images/Overall_design_flowchartv1.drawio.svg" />
 This flowchart provides an overview of the pipeline workflow, encompassing multiple stages within the DEEP scope. \
-* Blue chunk indicate tasks executed by each DEEP cohort on their respective local HPC servers.
-* Orange chunk represents tasks performed by the DEEP core team on the Bristol HPC.
-* Green sections show the Stage where scripts are ready to be run.
-* Yellow sections show the Stage is currently under development.
-* White sections show the Stage to be developed.
+
+- **Blue chunk** indicates tasks executed by each DEEP cohort on their respective local HPC servers.
+- **Orange chunk** represents tasks performed by the DEEP core team on the Bristol HPC.
+- **Green sections** show the stage where scripts are ready to be run.
+- **Yellow sections** show the stage currently under development.
+- **White sections** show the stage planned in DEEP.
+
 
 Our collaborative framework follows the principle of federated analysis, where individual-level data remain on local servers, and only non-disclosive summary statistics are shared across cohorts. Each analyst runs the pipeline for their cohort on their own server, e.g., a High-Performance Computing (HPC) server, and uploads encrypted results (incl. summary statistics, plots) to an SFTP server in Bristol.
 
