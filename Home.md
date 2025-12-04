@@ -4,7 +4,7 @@ A reminder of our participation requirements can be found on this [**page**](Par
 
 ## Design overview
 <img src="images/Overall_design_flowchartv1.drawio.svg" />
-This flowchart provides an overview of the pipeline workflow, encompassing multiple stages within the DEEP scope. \
+This flowchart provides an overview of the pipeline workflow, encompassing multiple stages within the DEEP scope.
 
 - **Blue chunk** indicates tasks executed by each DEEP cohort on their respective local HPC servers.
 - **Orange chunk** represents tasks performed by the DEEP core team on the Bristol HPC.
