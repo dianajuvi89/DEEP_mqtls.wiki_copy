@@ -32,9 +32,9 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `key`: see "Upload of results for meta-analysis section" below on how to set up your key.
  
-- `home_directory`: This directory contains a folder called `input_data` where the genetic, methylation and covariate files are located. Within this folder, the pipeline will create a `processed_data` and `results` folder for the intermediate and results files.  Please make sure you have enough space in this directory for all the output files and the correct permissions to create new files and folders.
+- `home_directory`: This directory contains a folder called `input_data` where the genetic, methylation, and covariate files are located.  Within this folder, the pipeline will create a `processed_data` and `results` folder for the intermediate and results files.  Please make sure you have enough space in this directory for all the output files and the correct permissions to create new files and folders.
 
-- `scripts_directory`: If you are in the `DEEP_mqtls` folder, then type `pwd` and set this variable to the path: eg, `scripts_directory="path/to/DEEP_mqtls"`.
+- `scripts_directory`: If you are in the `DEEP_mqtls` folder, then type `pwd` and set this variable to the path: eg, `scripts_directory="path/to/DEEP_mqtls"`. We recommend not setting `scripts_directory` and `home_directory` to the same location (see [What if I have multiple datasets to process?](#what-if-i-have-multiple-datasets-to-process)).
 
 - `R_directory`: Full path to the R directory if you don't use conda/mamba. Otherwise, leave blank. 
 
@@ -50,7 +50,7 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `genome_build`: Please specify the genome build of the genetic data ("37" or "38").
 
-- `sorted_methylation`: Please specify whether methylation has been obtained for sorted cell types or bulk tissue (yes if you have e.g DNA methylation from sorted cell types. no if you don't).
+- `sorted_methylation`: Please specify whether methylation has been obtained for sorted cell types or bulk tissue (yes if you have e.g DNA methylation from sorted cell types; no if you don't).
 
 - `age`: Age at methylation measurement. Please specify one of the following: "<18", ">18", "all".
 
@@ -108,7 +108,7 @@ rs2 0.42 0.95
 rs3 0.23 0.81
 ```
 
-where the first column is the SNP identifier (that matches the SNP identifiers in the `bim` file), the second column is the MAF and the third column is the info score. Details on how to generate this file are provided [here](Imputed-genetic-data). Please copy this file to `${home_directory}/input_data` and set the relevant variables in the `config` file, e.g. if the file is called `data.info`.
+where the first column is the SNP identifier (that matches the SNP identifiers in the `bim` file), the second column is the MAF, and the third column is the info score. Details on how to generate this file are provided [here](Imputed-genetic-data). Please copy this file to `${home_directory}/input_data` and set the relevant variables in the `config` file, e.g. if the file is called `data.info`.
 
 ```
 quality_scores="${home_directory}/input_data/data.info"
@@ -167,7 +167,7 @@ If you have family relationships in your data (i.e. twin or family study design)
 related="yes"
 ```
 
-Otherwise set the parameter:
+Otherwise, set the parameter:
 
 ```
 related="no"
@@ -198,9 +198,9 @@ There are other options that are specified in the `config` file. For most cohort
 
 ## What if I have multiple datasets to process?
 
-The pipeline has been designed such that if you have multiple datasets, you only need to maintain one copy of the repository. This is preferable and it means it is easily to keep up to date and saves on space. 
+The pipeline has been designed such that if you have multiple datasets, you only need to maintain one copy of the repository. This is preferable, and it means it is easy to keep up to date and saves on space. 
 
-The pipeline assumes by default that your config file is located in your `scripts_directory` so the pipeline can find it easily. However, if you have multiple datasets you will need multiple config files, one per each dataset as well as multiple `home_directory` folders. There is the option to run each script in the pipeline with a custom path to the `config` file. This means you can maintain multiple `config` files, one for each dataset, on your system at different file paths (for example within the `home_directory`).
+The pipeline assumes by default that your config file is located in your `scripts_directory`, so the pipeline can find it easily. However, if you have multiple datasets, you will need multiple config files, one per each dataset, as well as multiple `home_directory` folders. There is the option to run each script in the pipeline with a custom path to the `config` file. This means you can maintain multiple `config` files, one for each dataset, on your system at different file paths (for example, within the `home_directory`).
 
 If you want to run a `config` file that is not located in the `scripts_directory` you add the flag `-c` followed by the path to the config file you want to include on that execution. You need to do this for every script in the pipeline. For example in the setup script described below you can run: 
 
