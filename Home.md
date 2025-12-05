@@ -1,4 +1,4 @@
-Welcome to the [Diverse Epigenetic Epidemiology Partnership](https://www.deep-epigenetics.org/) analysis pipeline. This wiki will guide you through the different stages of the analysis. We recommend you read this page before you start running the pipeline to familiarise yourself with how it was designed and what it includes, how to use this wiki, and what to do if it goes wrong.
+Welcome to the [Diverse Epigenetic Epidemiology Partnership](https://www.deep-epigenetics.org/) analysis pipeline. This wiki will guide you through the different stages of the analysis. We recommend that you read this page before running the pipeline to familiarize yourself with its design, contents, and usage, as well as how to use this wiki and what to do if you encounter issues.
 
 A reminder of our participation requirements can be found on this [**page**](Participation-requirements).
 
@@ -8,9 +8,9 @@ This flowchart provides an overview of the pipeline workflow, encompassing multi
 
 - **Blue chunk** indicates tasks executed by each DEEP cohort on their respective local HPC servers.
 - **Orange chunk** represents tasks performed by the DEEP core team on the Bristol HPC.
-- **Green sections** show the stage where scripts are ready to be run.
-- **Yellow sections** show the stage currently under development.
-- **White sections** show the stage planned in DEEP.
+- **Green sections** show the Stage where scripts are ready to be run.
+- **Yellow sections** show the Stage currently under development.
+- **White sections** show the Stage planned in DEEP.
 
 
 Our collaborative framework follows the principle of federated analysis, where individual-level data remain on local servers, and only non-disclosive summary statistics are shared across cohorts. Each analyst runs the pipeline for their cohort on their own server, e.g., a High-Performance Computing (HPC) server, and uploads encrypted results (incl. summary statistics, plots) to an SFTP server in Bristol.
