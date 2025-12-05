@@ -207,7 +207,7 @@ If you want to run a `config` file that is not located in the `scripts_directory
 ```
 ./00-setup_folders.sh -c /path/to/config/file
 ```
-The structure of your folders may look like this:
+The structure of your folders may look like this, which is easy to understand and manage:
 ```
 ├── DEEPCohort1_QC_phase1
 │ ├── input_data
