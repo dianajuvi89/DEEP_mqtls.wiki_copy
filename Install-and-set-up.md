@@ -208,7 +208,7 @@ If you want to run a `config` file that is not located in the `scripts_directory
 ./00-setup_folders.sh -c /path/to/config/file
 ```
 The structure of your folders may look like this:
-
+```
 ├── DEEPCohort1_QC_phase1
 │ ├── input_data
 │ ├── job_reports
@@ -220,7 +220,7 @@ The structure of your folders may look like this:
 │ ├── processed_data
 │ └── results
 └── DEEP_mqtls
-
+```
 
 By directly specifying the config file you want to use, you can easily run the same pipeline on different sets of data. 
 
