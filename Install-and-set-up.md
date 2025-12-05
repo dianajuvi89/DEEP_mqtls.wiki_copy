@@ -210,16 +210,18 @@ If you want to run a `config` file that is not located in the `scripts_directory
 The structure of your folders may look like this, which is easy to understand and manage:
 ```
 ├── DEEPCohort1_QC_phase1
-│ ├── input_data
-│ ├── job_reports
-│ ├── processed_data
-│ └── results
+│   ├── input_data/
+│   ├── job_reports/
+│   ├── processed_data/
+│   ├── results/
+│   └── config_file1
 ├── DEEPCohort2_QC_phase1
-│ ├── input_data
-│ ├── job_reports
-│ ├── processed_data
-│ └── results
-└── DEEP_mqtls
+│   ├── input_data/
+│   ├── job_reports/
+│   ├── processed_data/
+│   ├── results/
+│   └── config_file2
+└── DEEP_mqtls/
 ```
 
 By directly specifying the config file you want to use, you can easily run the same pipeline on different sets of data. 
