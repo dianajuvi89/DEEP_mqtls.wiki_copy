@@ -209,13 +209,13 @@ If you want to run a `config` file that is not located in the `scripts_directory
 ```
 The structure of your folders may look like this, which is easy to understand and manage:
 ```
-├── DEEPCohort1_QC_phase1
+├── DEEPCohort1
 │   ├── input_data/
 │   ├── job_reports/
 │   ├── processed_data/
 │   ├── results/
 │   └── config_file1
-├── DEEPCohort2_QC_phase1
+├── DEEPCohort2
 │   ├── input_data/
 │   ├── job_reports/
 │   ├── processed_data/
