@@ -8,6 +8,8 @@
 
 **Data upload method:** automated upload to sftp bristol
 
+**Issue report to:** Haotian Tang <haotian.tang@bristol.ac.uk> 
+
 # Module 01d Overview: Conducting Positive and Negative mQTL Controls
 Previously [GoDMC](https://www.nature.com/articles/s41588-021-00923-x) used a full GWAS of `cg07959070` as a positive control, as it showed a strong cis-mQTL in several datasets on chr22, and there hasn’t been a proposal to exclude it from the analyses by probe annotation efforts. However, the paper only focused on European datasets.
 
