@@ -8,6 +8,8 @@
 
 **Data upload method:** automated upload to sftp bristol
 
+**Issue report to:** Sarah Watkins <s.h.watkins@bristol.ac.uk> and Haotian Tang <haotian.tang@bristol.ac.uk> 
+
 # Overview: Check methylation and phenotypes
 This Module processes DNA methylation data and phenotype data for the following aims, including:
 - Detect and remove outliers in DNA methylation data for GWAS and/or EWAS.
