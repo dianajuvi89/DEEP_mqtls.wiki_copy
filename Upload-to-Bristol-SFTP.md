@@ -8,6 +8,8 @@
 
 **Data upload method:** Upload to the Bristol SFTP server
 
+**Issue report to:** Haotian Tang <haotian.tang@bristol.ac.uk> 
+
 # Check and upload the encrypted summary data to the Bristol SFTP server
 To check if you have successfully finished the whole module 01, please run this command:
 ```
