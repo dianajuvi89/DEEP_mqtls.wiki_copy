@@ -8,6 +8,7 @@
 
 **Data upload method:** automated upload to sftp bristol
 
+**Issue report to:** Haotian Tang <haotian.tang@bristol.ac.uk> 
 
 # Overview: Functional normalization of DNA methylation data across cohorts
 Functional normalization is employed to adjust for unwanted variation in methylation data, such as batch effects or technical variation. When datasets are processed separately, combining them for normalization ensures that these biases are corrected across all cohorts, leading to more accurate and comparable results. This method is crucial for large-scale DNA methylation studies where data integration from multiple sources is necessary for comprehensive analysis, e.g., meta-analysis, pooled EWAS analyses where the outcome is confounded with the cohort. To minimize batch-related associations, we will normalize the datasets across all cohorts using quantiles derived from both methylation probes and control probes. 
