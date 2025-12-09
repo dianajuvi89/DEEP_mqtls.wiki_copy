@@ -7,6 +7,7 @@
 **Prerequisite scripts:** _Script 0_
 
 **Data upload method:** automated upload to sftp bristol
+**Issue report to:** Haotian Tang <haotian.tang@bristol.ac.uk>
 
 # Overview: Check data 
 
