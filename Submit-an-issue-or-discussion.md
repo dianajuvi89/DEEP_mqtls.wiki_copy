@@ -1,11 +1,12 @@
 ## What to do if it goes wrong
 
-If you encounter any unexpected behaviour when you follow the instructions within this wiki please report this to us. We would like all communication about the pipeline to go through GitHub and this repository. 
+If you encounter any unexpected behaviour when you follow the instructions within this wiki, please report this to us. We would like all communication about the pipeline to go through GitHub and this repository or emails. 
 
 There are two mechanisms for sharing any errors or comments.
 
 1. [Issues](https://github.com/MRCIEU/DEEP_mqtls/issues). This is the mechanism to report bugs or errors with the pipeline or documentation. Essentially, anything that requires us to make edits to the content in the repository. There are more guidelines on how to submit an issue below.
 2. [Discussions](https://github.com/MRCIEU/DEEP_mqtls/discussions). This is the place to ask questions or make suggestions about the pipeline and analyses. 
+3. In each module, the Status provides a contact email that you can use to report any issues.
 
 ## Submitting an issue
 
