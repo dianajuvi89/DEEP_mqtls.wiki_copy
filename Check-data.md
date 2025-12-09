@@ -8,7 +8,7 @@
 
 **Data upload method:** automated upload to sftp bristol
 
-**Issue report to:** Haotian Tang <haotian.tang@bristol.ac.uk>
+**Issue report to:** Sarah Watkins <s.h.watkins@bristol.ac.uk> and Haotian Tang <haotian.tang@bristol.ac.uk> 
 
 # Overview: Check data 
 
