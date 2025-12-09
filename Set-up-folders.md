@@ -8,9 +8,11 @@
 
 **Data upload method:** None
 
+**Issue report to:** Haotian Tang <haotian.tang@bristol.ac.uk>
+
 # Set up folders
 
-We have created a script which will generate folders for each module. It also makes the bash scripts executable.
+We have created a script that will generate folders for each module. It also makes the bash scripts executable.
 
 It will generate folders for:
 
