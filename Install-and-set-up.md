@@ -90,12 +90,17 @@ bfile_raw="${home_directory}/input_data/data"
 covariates="${home_directory}/input_data/covariates.txt"
 phenotypes="${home_directory}/input_data/phenotypes.txt"
 ```
-#### idat files
+#### IDAT files
 
-In module 01g we use idat files to be able to normalise across datasets. We use quantiles from methylation probes and control probes to normalise across different datasets.
+In module 01f, we use IDAT files to be able to normalise methylation data across cohorts. We use quantiles from methylation probes and control probes to normalise across different datasets.
 
 ```
 idat_directory=""
+```
+#### VCF files
+In module 01g, we use phased VCF files to compute haplotype components (HCs) through [PBWTpaint](https://github.com/richarddurbin/pbwt). We require one phased genotype file per chromosome. The input files must follow a consistent naming format: they should begin with chr${i}_ and end with either an uncompressed .vcf extension or a compressed VCF extension (e.g., .vcf.gz, .vcf.bgz, .vcf.bz2, etc.). ${i} is from 1 to 22.
+```
+vcf_dir=""
 ```
 
 #### Imputation quality
@@ -141,7 +146,7 @@ sorted_methylation="yes"
 measured_cellcounts="NULL"
 ```
 
-If you have empirically measured cell counts available which can be used for comparison to the predicted cell counts for your methylation samples then set these variables to:
+If you have empirically measured cell counts available that can be used for comparison to the predicted cell counts for your methylation samples, then set these variables to:
 
 ```
 sorted_methylation="no"
@@ -161,7 +166,7 @@ Please note that we are not including data generated from cord blood samples at 
 
 ### Relatedness
 
-If you have family relationships in your data (i.e. twin or family study design) then please specify this by setting the parameters in the config file:
+If you have family relationships in your data (i.e. twin or family study design), then please specify this by setting the parameters in the config file:
 
 ```
 related="yes"
