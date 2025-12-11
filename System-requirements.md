@@ -199,6 +199,9 @@ remotes::install_github("danbelsky/DunedinPACE")
 ### Please install GwasDataImport to infer genome build
 ```r
 library(BiocManager)
+if (!requireNamespace("restfulr", quietly = TRUE)) {
+  BiocManager::install("restfulr")
+}
 BiocManager::install("rtracklayer")
 BiocManager::install("biomaRt")
 BiocManager::install("VariantAnnotation")
