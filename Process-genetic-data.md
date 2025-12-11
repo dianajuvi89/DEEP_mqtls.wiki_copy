@@ -32,7 +32,7 @@ Once the imputed genetic data is in the [correct format](Imputed-genetic-data) a
 
 To do this, run the following script:
 ```
-    ./01b-ancestry_identify.sh -c /path/to/config/file
+./01b-process_genetic_data.sh -c /path/to/config/file
 ```
 Note that for 'unrelated' samples, we are generating PCs by removing long LD tracts, extracting HapMap3 SNPs, LD pruning, and then calculating PCs on the data after cryptic relateds have been removed. For 'related' samples, we are using a general method implemented in the Rpackage 'GENESIS' for estimating PCs that account for any relatedness. This involves estimating a kinship matrix that is robust to population structure and relatedness ([Manichaikil et al 2010](http://bioinformatics.oxfordjournals.org/content/26/22/2867.long)), estimating principal components on an unrelated subset, and then projecting principal components onto the related subset based on estimated kinships ([Conomos et al 2015](http://onlinelibrary.wiley.com/doi/10.1002/gepi.21896/abstract)).
 
