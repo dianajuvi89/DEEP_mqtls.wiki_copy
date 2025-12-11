@@ -63,7 +63,8 @@ In the location on your server where you have cloned this repository, you need t
 mamba activate deep_env
 wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
 ```
-If you are working on an HPC system, do NOT load any system-wide R module (e.g., module load languages/R/4.5.1), because it may allow R to use packages outside your conda environment.
+If you are working on an HPC system, **do NOT load any system-wide R module** (e.g., `module load languages/R/4.5.1`), because it may allow R to use packages outside your conda environment.
+
 After starting R, run:
 ```
 .libPaths()
