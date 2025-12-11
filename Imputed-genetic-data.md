@@ -77,4 +77,32 @@ We also require imputation quality scores for each SNP. Instructions on how to c
 
 ### Phased VCF files (specific for module 1g)
 #### Data pre-processing
+Phased VCF files required for [module 1g][Compute haplotype components](https://github.com/MRCIEU/DEEP_mqtls/wiki/Compute-haplotype-components). If you impute your genetic data by using imputation servers (e.g., Michigan, TOPMed, Sanger), which already provide phased VCF output, please download the phased VCF files directly. See [here](Imputation) for more available Imputation Servers.
+Alternatively, if you generate imputed genetic data on your local HPC server, then please phase your genetic data by using [SHAPEIT5](https://odelaneau.github.io/shapeit5/) or other software.
+
+#### VCF format
+VCF files must meet the requirement that:
+- Variant positions in hg19/GRCh37 or hg38/GRCh38.
+- In a phased format.
+- Other filtering, such as variant/sample inclusion and imputation quality, is not required for VCF files, as we will perform data cleaning for VCF files by using the sample and variants info from Module 01b, where we performed basic cleaning for bfiles.
+
+To check if your VCF files are phased 
+Phased genotypes are typically represented as:
+```
+0|0, 0|1, 1|0, 1|1
+```
+Note that the vertical bar “|” indicates phased genotypes, and unphased formats using “/” are not acceptable.
+
+#### Example output files (Michigan Imputation Server)
+
+A typical download structure is as follows:
+```
+chr1.dose.vcf.gz
+chr2.dose.vcf.gz
+...
+chr22.dose.vcf.gz
+```
+
+These files can be used directly as phased VCF input for DEEP module 1g, and should be placed in the vcf_dir specified in your config file [Install and set up](https://github.com/MRCIEU/DEEP_mqtls/wiki/Install-and-set-up).
+
 
