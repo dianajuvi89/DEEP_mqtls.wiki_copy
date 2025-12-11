@@ -1,8 +1,8 @@
-### Genetic data 
+## Genetic data 
 
 ### Data pre-processing
-Prior to running the DEEP pipeline we require that genetic data must be
-- Imputed to 1000G phase3 or any other relevant reference panel. Several institutions offer a free imputation service which you can use. By far the easiest way to do imputation now is to use one of these services. See [here](Imputation) for more information.
+Prior to running the DEEP pipeline, we require that the genetic data must be
+- Imputed to 1000G phase 3 or any other relevant reference panel. Several institutions offer a free imputation service which you can use. By far the easiest way to do imputation now is to use one of these services. See [here](Imputation) for more information.
 - Variant positions in hg19/GRCh37 or hg38/GRCh38.
 - Filtered to have MAF >= 0.01 and imputation quality score >= 0.8
 - **IMPORTANT:** Converted to best guess binary plink format **without a probability threshold**
@@ -63,7 +63,7 @@ Please make sure you don't filter on a probability threshold as some software pa
 
 #### Imputation quality
 
-We also require imputation quality scores for each SNP. Some instructions on how to get imputed data into the desired format including your imputation quality file are below.
+We also require imputation quality scores for each SNP. Instructions on how to convert imputed data into the desired format, including your imputation quality file, are provided below.
 
 ```
     SNP MAF Info
@@ -74,3 +74,5 @@ We also require imputation quality scores for each SNP. Some instructions on how
   - [Convert minimac3 imputed data to bestguess data (vcf files)](Convert-minimac3-imputed-data-to-bestguess-data-(vcf-files))
   - [Convert impute2 imputed data to bestguess data (.gen/bgen files)](Convert-impute2-imputed-data-to-bestguess-data)
   - [Convert mach/minimac imputed data to bestguess data (.info/.dose or .mlinfo/.mldose files)](Convert-mach-minimac-imputed-data-to-bestguess-data-(.info-.dose-or-.mlinfo-.mldose-files))
+
+
