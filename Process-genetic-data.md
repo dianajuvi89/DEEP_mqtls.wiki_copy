@@ -47,7 +47,7 @@ cd results/01
 grep outlier ./results/01/logs_b/log.txt
 ```
 
-If you think the outlier threshold should be adjusted, you can change the sd threshold `pca_sd` in the `config` file. If you change the threshold, you need to rerun `01b-ancestry_identify.sh`.
+If you think the outlier threshold should be adjusted, you can change the sd threshold `pca_sd` in the `config` file. If you change the threshold, you need to rerun `01b-process_genetic_data.sh`.
 - If you find that your PCA plot contains a V-shaped or poorly clustered distribution of samples when plotting PC1 vs. PC2. Please check the global PCA plot, which uses PCA loadings from global biobank.
 
 - The `easyQC_topmed.rep` shows the number of SNPs that are flipped because they were on the wrong strand as compared to one of the TopMed reference panels ("AlleleChange"). Please find an example here: (https://github.com/genetics-of-dna-methylation-consortium/godmc_phase2/wiki/images//easyQC_hrc.rep).
