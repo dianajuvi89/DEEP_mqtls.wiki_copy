@@ -1,6 +1,6 @@
 ## Genetic data 
-
-### Data pre-processing
+### Unphased bfiles
+#### Data pre-processing
 Prior to running the DEEP pipeline, we require that the genetic data must be
 - Imputed to 1000G phase 3 or any other relevant reference panel. Several institutions offer a free imputation service which you can use. By far the easiest way to do imputation now is to use one of these services. See [here](Imputation) for more information.
 - Variant positions in hg19/GRCh37 or hg38/GRCh38.
@@ -11,7 +11,7 @@ Prior to running the DEEP pipeline, we require that the genetic data must be
 - All autosomes
 - Chromosome X is optional and should be coded as 23
 
-#### Fam file and Sample IDs
+##### Fam file and Sample IDs
 
 - The fam file should meet the standard plink structure and not contain a header.
 
@@ -39,7 +39,7 @@ Example fam file for related data (twins, families, mother-offspring etc.):
 2 2A  0  0  2 -9
 ```
 
-#### Bim file and allele coding
+##### Bim file and allele coding
 
 
 - The bim file should meet the standard plink structure and not contain a header.
@@ -56,12 +56,12 @@ Example fam file for related data (twins, families, mother-offspring etc.):
 
 - We include SNPs and INDELs. Please note that HRC and maybe other reference panels have SNPs only and no INDELs.
 
-#### Bed file
+##### Bed file
 
 **IMPORTANT:** We use best guess genotypes without a probability threshold in our pipeline. 
 Please make sure you don't filter on a probability threshold as some software packages can't handle missingness properly and will set missing genotypes to the genotypic mean. We use best guess genotypes in our analyses. Please see below how you can prepare best guess files.
 
-#### Imputation quality
+##### Imputation quality
 
 We also require imputation quality scores for each SNP. Instructions on how to convert imputed data into the desired format, including your imputation quality file, are provided below.
 
@@ -70,9 +70,11 @@ We also require imputation quality scores for each SNP. Instructions on how to c
     rs1 0.02 0.88
 ```
 
-#### Convert imputed data to bestguess data
+##### Convert imputed data to bestguess data
   - [Convert minimac3 imputed data to bestguess data (vcf files)](Convert-minimac3-imputed-data-to-bestguess-data-(vcf-files))
   - [Convert impute2 imputed data to bestguess data (.gen/bgen files)](Convert-impute2-imputed-data-to-bestguess-data)
   - [Convert mach/minimac imputed data to bestguess data (.info/.dose or .mlinfo/.mldose files)](Convert-mach-minimac-imputed-data-to-bestguess-data-(.info-.dose-or-.mlinfo-.mldose-files))
 
+### Phased VCF files (specific for module 1g)
+#### Data pre-processing
 
