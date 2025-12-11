@@ -10,7 +10,7 @@
 
 **Issue report to:** Haotian Tang <haotian.tang@bristol.ac.uk> 
 
-## Overview: Compute haplotype components (HCs) and conduct GWASs on ancestry-related CpGs (unadjusted, PC-adjusted, and HC-adjusted).
+# Overview: Compute haplotype components (HCs) and conduct GWASs on ancestry-related CpGs (unadjusted, PC-adjusted, and HC-adjusted).
 
 Genetic principal components analysis (PCA) transforms high-dimensional genetic data into a smaller set of uncorrelated PCs that capture most of the variance. PCs capture large-scale genetic ancestry, but cannot account for the local ancestry variation that differs across individual genomic loci ([Atkinson et al.](https://www.nature.com/articles/s41588-020-00766-y)).
 
