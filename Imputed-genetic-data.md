@@ -84,7 +84,7 @@ Alternatively, if you generate imputed genetic data on your local HPC server, th
 VCF files must meet the requirement that:
 - Variant positions in hg19/GRCh37 or hg38/GRCh38.
 - In a phased format.
-- Other filtering, such as variant/sample inclusion and imputation quality, is not required for VCF files, as we will perform data cleaning for VCF files by using the sample and variants info from Module 01b, where we performed basic cleaning for bfiles.
+- Other filtering, such as variant/sample inclusion and imputation quality, is **NOT** required for VCF files, as we will perform data cleaning for VCF files by using the sample and variants info from Module 01b, where we performed basic cleaning for bfiles.
 
 To check if your VCF files are phased 
 Phased genotypes are typically represented as:
