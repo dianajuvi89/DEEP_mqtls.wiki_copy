@@ -1,5 +1,5 @@
 ## Genetic data 
-### Unphased bfiles
+### BED/BIM/FAM files
 #### Data pre-processing
 Prior to running the DEEP pipeline, we require that the genetic data must be
 - Imputed to 1000G phase 3 or any other relevant reference panel. Several institutions offer a free imputation service which you can use. By far the easiest way to do imputation now is to use one of these services. See [here](Imputation) for more information.
