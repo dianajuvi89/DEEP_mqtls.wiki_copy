@@ -30,6 +30,8 @@
 <br>
 1f\.  [Cross-cohort normalisation of methylation data](https://github.com/MRCIEU/DEEP_mqtls/wiki/Cross%E2%80%90cohort-normalisation-of-methylation-data)
 <br>
+1f\.  [Compute haplotype components](Compute-haplotype-components)
+<br>
 1 upload\. [Upload to Bristol SFTP](Upload-to-Bristol-SFTP)
 <br>
 
