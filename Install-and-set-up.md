@@ -98,7 +98,7 @@ In module 01f, we use IDAT files to be able to normalise methylation data across
 idat_directory=""
 ```
 #### VCF files
-In module 01g, we use phased VCF files to compute haplotype components (HCs) through [PBWTpaint](https://github.com/richarddurbin/pbwt). We require one phased genotype file per chromosome. The input files must follow a consistent naming format: they should begin with chr${i}_ and end with either an uncompressed .vcf extension or a compressed VCF extension (e.g., .vcf.gz, .vcf.bgz, .vcf.bz2, etc.). ${i} is from 1 to 22.
+In module 01g, we use phased VCF files to compute haplotype components (HCs) through [PBWTpaint](https://github.com/richarddurbin/pbwt). We require one phased genotype file per chromosome. The input files must follow a consistent naming format: they should begin with `chr${i}_` and end with either an uncompressed `.vcf` extension or a compressed VCF extension (e.g., `.vcf.gz`, `.vcf.bgz`, `.vcf.bz2`, etc.). `${i}` is from 1 to 22.
 ```
 vcf_dir=""
 ```
