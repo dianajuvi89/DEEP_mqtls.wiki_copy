@@ -103,6 +103,6 @@ chr2.dose.vcf.gz
 chr22.dose.vcf.gz
 ```
 
-These files can be used directly as phased VCF input for DEEP module 1g, and should be placed in the vcf_dir specified in your config file [Install and set up](https://github.com/MRCIEU/DEEP_mqtls/wiki/Install-and-set-up).
+These files can be used directly as phased VCF input for DEEP module 1g, and should be placed in the vcf_dir specified in your config file (see [Install and set up](https://github.com/MRCIEU/DEEP_mqtls/wiki/Install-and-set-up)).
 
 
