@@ -4,7 +4,7 @@
 
 **Scripts status:** Ready
 
-**Prerequisite scripts:** _Script 0_, _01a_, _01b_, _01c_, _01d_, _01e_, and _01f_
+**Prerequisite scripts:** _Script 0_, _01a_, _01b_, _01c_, _01d_, _01e_, _01f_, and _01g_
 
 **Data upload method:** Upload to the Bristol SFTP server
 
