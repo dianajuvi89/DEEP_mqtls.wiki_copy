@@ -124,7 +124,27 @@ GWAS PC4 results present
 GWAS PC4 beta Manhattan plot present
 GWAS PC5 results present
 GWAS PC5 beta Manhattan plot present
- 
+WARNING: qc_objects_shrink R object is absent. We won't be able to perform cross-cohort normalisation for you. Please confirm if you perform normalization by meffil or not.
+Checking positive control: cg03676636
+hc_positive_control_untransformed cg03676636 results present
+hc_positive_control_untransformed cg03676636 Manhattan plot present
+hc_positive_control_untransformed cg03676636 no cis chromosome Manhattan plot present
+hc_positive_control_untransformed cg03676636 QQ plot present
+hc_positive_control_untransformed cg03676636 no cis chromosome QQ plot present
+no_correction_positive_control_untransformed cg03676636 results present
+no_correction_positive_control_untransformed cg03676636 Manhattan plot present
+no_correction_positive_control_untransformed cg03676636 no cis chromosome Manhattan plot present
+no_correction_positive_control_untransformed cg03676636 QQ plot present
+no_correction_positive_control_untransformed cg03676636 no cis chromosome QQ plot present
+pc_positive_control_untransformed cg03676636 results present
+pc_positive_control_untransformed cg03676636 Manhattan plot present
+pc_positive_control_untransformed cg03676636 no cis chromosome Manhattan plot present
+pc_positive_control_untransformed cg03676636 QQ plot present
+pc_positive_control_untransformed cg03676636 no cis chromosome QQ plot present
+scatter plot cg03676636 hc_no present
+scatter plot cg03676636 pc_hc present
+scatter plot cg03676636 pc_no present
+...
 Section 01 has been successfully completed!
 ```
 
