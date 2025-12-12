@@ -36,8 +36,6 @@
 <br>
 
 ### The pipeline modules (under development)
-[Pipeline Overview](Analyst-Quick-Start-Guide-to-Pipeline)
-<br>
 2\.  [Process SNP data](Process-SNP-data)
 <br> 
 3\.  [Process methylation data](Process-methylation-data)
