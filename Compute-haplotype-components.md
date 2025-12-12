@@ -20,9 +20,9 @@ In Module 1g, we use phased VCF files located in `vcf_dir` (specified in your co
 
 To run the script, use the following command:
 
-`
+```
 ./01g_HCs.sh -c /path/to/config/file
-`
+```
 
 >[!IMPORTANT]
 > **Please check**
