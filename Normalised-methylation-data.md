@@ -1,7 +1,8 @@
-## Within-cohort DNA methylation data preprocessing
-
 This page outlines the steps for formatting DNA methylation data, which need to be performed before running the DEEP pipeline.
+<img src="images/meth_data_flowchart.drawio.pdf" />
 
+
+## Within-cohort DNA methylation data preprocessing
 ### Option 1 (preferred)
 Ideally, we would prefer it if you normalise and QC your data using the R [meffil](https://github.com/perishky/meffil) package. **Please make sure you have installed version 1.5.0 or higher.** See [here](https://github.com/perishky/meffil/wiki/Installation) for installation instructions. You can check the version like this:
 
