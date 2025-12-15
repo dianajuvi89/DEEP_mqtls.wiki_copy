@@ -1,6 +1,6 @@
-This page outlines the steps for formatting DNA methylation data, which need to be performed before running the DEEP pipeline.
-<img src="images/meth_data_flowchart.drawio.pdf" />
+This page outlines the steps for formatting DNA methylation data, which need to be performed before running the DEEP pipeline. This flowchart demonstrates the options you can choose to do within-cohort normalisation, and whether you are able to perform cross-cohort normalisation.
 
+<img src="images/meth_data_flowchart.drawio.svg" />
 
 ## Within-cohort DNA methylation data preprocessing
 ### Option 1 (preferred)
