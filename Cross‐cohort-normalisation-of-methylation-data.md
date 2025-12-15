@@ -20,7 +20,8 @@ We will use the following approach in meffil: [Functional normalizing separate d
 ## **Step 1**: Obtain QC objects from each dataset and perform cross-cohort functional normalization.
 <img src="images/shrink.png" alt="shrink" width="500"/>
 
-To obtain shrunk QC objects from your dataset, please run the following command:
+To obtain shrunk QC objects from your dataset, you need to have access to your IDAT files and specify `idat_directory` path in your config file.
+Please run the following command:
 ```
 ./01f-normalization.sh -c /path/to/config/file shrink
 ```
