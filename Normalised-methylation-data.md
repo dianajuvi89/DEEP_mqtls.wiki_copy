@@ -39,6 +39,6 @@ save(norm.beta, file="/path/to/deep/input_data/methylation.RData")
 
 ## Cross-cohort DNA methylation data preprocessing
 
-For large-scale DNA methylation studies, it is essential that data from different cohorts are processed in a consistent and comparable way. The DEEP pipeline supports this by applying a unified cross-cohort functional normalization procedure (see [Module 01f Step 1](https://github.com/MRCIEU/DEEP_mqtls/wiki/Cross%E2%80%90cohort-normalisation-of-methylation-data)). To do this, please specify the path to your `idat` files in your configuration file.
+For large-scale DNA methylation studies, it is essential that data from different cohorts are processed in a consistent and comparable way. The DEEP pipeline supports this by applying a unified cross-cohort functional normalization procedure (see [Module 01f Step 1](https://github.com/MRCIEU/DEEP_mqtls/wiki/Cross%E2%80%90cohort-normalisation-of-methylation-data)). To do this, you need to have access to your idat files, and please specify the path to your `idat` files in your configuration file.
 
 For the QC stages, cohorts only need to complete the within-cohort preprocessing and upload the required shrunk QC objects via the Bristol SFTP system. The resulting harmonised methylation datasets will be used in future pooled EWAS analyses through  DataSHIELD in the Analysis stage.
