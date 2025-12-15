@@ -36,13 +36,13 @@
 <br>
 
 ### The pipeline modules (under development)
-2\.  [Process SNP data](Process-SNP-data)
+2a\.  [Relatedness assessment/removal](Relatedness-assessment-\/removal)
 <br> 
-3\.  [Process methylation data](Process-methylation-data)
+2b\.  [Regular and variance EWAS](Regular-and-variance-EWAS)
 <br> 
-4\.  [Run meQTL analysis](Run-meQTL-analysis)
+3a\.  [Run meQTL analysis](Run-meQTL-analysis)
 <br> 
-5\.  [Run variance meQTL analysis](Run-variance-meQTL-analysis)
+3b\.  [Run variance meQTL analysis](Run-variance-meQTL-analysis)
 <br>
 
 [Instructions for developers](Instructions-for-developers)
