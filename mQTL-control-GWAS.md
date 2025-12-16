@@ -36,7 +36,7 @@ Positive control:
 <img src="images/positive_control_untransformed_cg07959070_manhattan.jpg" />
 <img src="images/positive_control_untransformed_cg07959070_nocisChr_manhattan.jpg" />
 <img src="images/positive_control_untransformed_cg07959070_qqplot.jpeg" width="250" />
-<img src="images/positive_control_untransformed_cg07959070_nocisChr_qqplot.jpeg width="250" />
+<img src="images/positive_control_untransformed_cg07959070_nocisChr_qqplot.jpeg />
 
 Negative control:
 <img src="images/negative_control_untransformed_NEG_cg07959070_manhattan.jpg" />
