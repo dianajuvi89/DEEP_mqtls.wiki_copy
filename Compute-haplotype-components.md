@@ -26,4 +26,6 @@ To run the script, use the following command:
 
 >[!IMPORTANT]
 > **Please check**
-> Please check the signals from Manhattan plots, genomic inflation from QQ plots, and scatter plots.
+> Please check the signals from Manhattan plots, genomic inflation from QQ plots, and scatter plots in `results/01/1g`
+
+Example scatter plot:
