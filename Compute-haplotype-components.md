@@ -12,7 +12,7 @@
 
 # Overview: Compute haplotype components (HCs), perform and compare GWASs on CpGs (unadjusted, PC-adjusted, and HC-adjusted).
 
-Genetic principal components analysis (PCA) transforms high-dimensional genetic data into a smaller set of uncorrelated PCs that capture most of the variance. Top PCs typically reflects global ancestry, separating major ancestral groups and later PCs captures multiple local genomic features ([Atkinson _et al._](https://www.nature.com/articles/s41588-020-00766-y) and [Grinde _et al._](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1011242)).
+Genetic principal components analysis (PCA) transforms high-dimensional genetic data into a smaller set of uncorrelated PCs that capture most of the variance. Top PCs typically reflect global ancestry, separating major ancestral groups, and later PCs capture multiple local genomic features ([Atkinson _et al._ (2021)](https://www.nature.com/articles/s41588-020-00766-y) and [Grinde _et al._ (2024)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1011242)).
 
 Haplotype components (HCs) capture the local, phased structure of genetic variation across the genome by using phased genetic data. This allows them to model subtle ancestry differences that genetic PCs often miss, particularly in cohorts with complex or admixed backgrounds. Theoretically, HCs offer improved control for population stratification and can reduce confounding more effectively than standard genetic PCs in downstream association and epigenetic analyses. Recent work by [Yang and Lawson (2025)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1011883) showed that compared with PC-corrected GWAS, HC-corrected one identifies more genome-wide significant association signals for birthplace and lifestyle-related phenotypes. HCs capture more nuanced genetic variation than PCs
 
@@ -26,7 +26,7 @@ To run the script, use the following command:
 
 >[!IMPORTANT]
 > **Please check**
-> Please check the signals from Manhattan plots, genomic inflation from QQ plots, and scatter plots in `results/01/1g`
+> Please check the signals from Manhattan plots, genomic inflation from QQ plots, and scatter plots in `results/01/1g`.
 
 Example scatter plots (in order of hc-correction vs no-correction, pc vs no, and pc vs hs):
 <img src="images/cg03676636_hc_no_scatter.jpg" width="250" />
