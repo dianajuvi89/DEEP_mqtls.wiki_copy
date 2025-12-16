@@ -28,7 +28,7 @@ To run the entire script, use the following command:
 Please check the qqplots and lambdas in the results (`./results/01/01d`) section. 
 It is important to check the lambda here before going on, and any lambda above 1.08 is worrying. In general, for a standard GWAS, you would expect to see a lambda below 1.08.
 > - For each CpG site, there should be 4 plots for the positive control and 4 plots for the negative control. File names end with `manhattan.pdf`, `nocisChr_manhattan.pdf` (Manhattan plot excluding the chromosome on which the CpG is located), `qqplot.jpeg`, and `nocisChr_qqplot.jpeg`(QQ plot excluding the chromosome on which the CpG is located).
-> - `cg22495460` is a CpG site showing signals just below the genome-wide significance threshold, so don’t worry if you don’t see a very high peak.
+> - `cg22495460` is a CpG site showing signals just below the genome-wide significance threshold, so don’t worry if you don’t see a very strong peak.
 
 Example plots (in order of `manhattan.pdf`, `nocisChr_manhattan.pdf`, `qqplot.jpeg`, and `nocisChr_qqplot.jpeg`) for cg07959070:
 
