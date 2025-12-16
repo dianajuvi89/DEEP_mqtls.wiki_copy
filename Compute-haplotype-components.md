@@ -29,6 +29,6 @@ To run the script, use the following command:
 > Please check the signals from Manhattan plots, genomic inflation from QQ plots, and scatter plots in `results/01/1g`
 
 Example scatter plots (in order of hc-correction vs no-correction, pc vs no, and pc vs hs):
-<img src="images/cg03676636_hc_no_scatter.jpg" />
-<img src="images/cg03676636_pc_no_scatter.jpg" />
-<img src="images/cg03676636_pc_hc_scatter.jpg" />
+<img src="images/cg03676636_hc_no_scatter.jpg" width="250" />
+<img src="images/cg03676636_pc_no_scatter.jpg" width="250" />
+<img src="images/cg03676636_pc_hc_scatter.jpg" width="250" />
