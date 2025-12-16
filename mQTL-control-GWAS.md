@@ -35,8 +35,8 @@ Example plots (in order of `manhattan.pdf`, `nocisChr_manhattan.pdf`, `qqplot.jp
 Positive control:
 <img src="images/positive_control_untransformed_cg07959070_manhattan.jpg" />
 <img src="images/positive_control_untransformed_cg07959070_nocisChr_manhattan.jpg" />
-<img src="images/positive_control_untransformed_cg07959070_qqplot.jpeg" width="150" />
-<img src="images/positive_control_untransformed_cg07959070_nocisChr_qqplot.jpeg width="150"" />
+<img src="images/positive_control_untransformed_cg07959070_qqplot.jpeg" width="250" />
+<img src="images/positive_control_untransformed_cg07959070_nocisChr_qqplot.jpeg width="250" />
 
 
 Negative control:
