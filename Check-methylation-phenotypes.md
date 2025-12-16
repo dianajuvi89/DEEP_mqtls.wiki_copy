@@ -86,7 +86,7 @@ Generate four plots:
 
 * PC1 vs PC2 scatter plot, colored by study variables.
 * PC3 vs PC4 scatter plot, colored by study variables.
-* Forest plots visualizing the associations between each methylation PC (PC1–PC10) and relevant covariates (estimates with 95% confidence intervals), including demographic variables (e.g., age, sex), batch factors, estimated cell counts, genetic PCs, and study-specific variables. Please check for the factors that are driving DNAm, for example in the below plot cell counts seem to be driving PC1:
+* Forest plots visualizing the associations between each methylation PC (PC1–PC10) and relevant covariates (estimates with 95% confidence intervals), including demographic variables (e.g., age, sex), batch factors, estimated cell counts, genetic PCs, and study-specific variables. Please check for the factors that are driving DNAm, for example, in the below plot cell counts seem to be driving PC1:
 <img src="images/meth_pcs_associations.jpg" width="250" />
 
 
