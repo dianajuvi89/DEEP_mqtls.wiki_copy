@@ -41,14 +41,14 @@ The script can be run in chunks, so you can fix problems more easily. We recomme
 cd results/01
 ```
 
-- The number of SNPs per chromosome (`no_snps_by_chr.pdf`): Please check if the number of SNPs is decreasing among the 22 chromosomes.
+- The number of SNPs per chromosome (`no_snps_by_chr.pdf`): Please check whether the number of SNPs per chromosome is broadly proportional to chromosome length.
 - The SNP quality metrics (`snp_quality.pdf`): Please check you filtered correctly on MAF (>0.01) and info (>0.8).
 - Age distribution (`age_distribution.pdf`): Please check if you get a histogram for all your samples.
 - Sex check on the methylation data: Please check if a plot is generated (`XY_methylation_vs_sex.pdf`).
-- Summary statistics of the input data (`cohort_descriptives.RData`). Please check there are no unexpected NAs in there. These statistics will be used for the cohort characteristics Table in the paper.
-- The `log.txt` will be used to check you have used the right version of the pipeline
+- Summary statistics of the input data (`cohort_descriptives.RData`). Please check that there are no unexpected NAs in there. These statistics will be used for the cohort characteristics Table in the paper.
+- The `log.txt` will be used to check that you have used the right version of the pipeline
 
 >[!IMPORTANT]
 > **Please check**
-> Please check the error log to identify whether the phenotypes for EWAS file contains the expected phenotypes labelled in the expected way (please see the phenotypes tab for more details). It will produce error messages in section "phenotypes_for_ewas" if anything does not look as expected (which will cause issues later in section 01c). 
+> Please check the error log to identify whether the phenotypes for EWAS file contain the expected phenotypes labelled in the expected way (please see the phenotypes tab for more details). It will produce error messages in section "phenotypes_for_ewas" if anything does not look as expected (which will cause issues later in section 01c). 
 
