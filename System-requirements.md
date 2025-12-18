@@ -291,15 +291,21 @@ png should be TRUE
 
 ### Step 3: Please ensure you have encryption software installed
 
-We are encrypting and uploading the results with AES encryption using `gpg`, `pinentry`, and `sshpass`. If you are using mamba/conda, the environment should contain these three software. You can directly test whether the gpg, pinentry, and sshpass Linux packages have been installed in the environment with the following command:
+We encrypt and upload results using **AES encryption** with the following tools:
+
+- `gpg`
+- `pinentry`
+- `sshpass`
+
+Regardless of whether you are using **mamba/conda** or **not**, please **manually install all three tools** on your system. If you are using mamba/conda, please activate your environment first:
 
 ```
 mamba activate deep_env
-which sshpass
-which gpg
-which pinentry
 ```
-If you are **NOT** using mamba/conda, gpg, sshpass, and pinentry haven't been installed. Please install gpg from here: [https://gnupg.org/download/](https://gnupg.org/download/); pinentry from here: [https://www.gnupg.org/download/index.html#pinentry](https://www.gnupg.org/download/index.html#pinentry); sshpass from here: [https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/](https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/). After installation, please check:
+Please install gpg from here: [https://gnupg.org/download/](https://gnupg.org/download/); 
+pinentry from here: [https://www.gnupg.org/download/index.html#pinentry](https://www.gnupg.org/download/index.html#pinentry); 
+sshpass from here: [https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/](https://www.cyberciti.biz/faq/noninteractive-shell-script-ssh-password-provider/). 
+After installation, please check:
 ```
 which sshpass
 which gpg
