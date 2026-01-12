@@ -1,5 +1,5 @@
 ## mQTL covariates
-Your covariates file should be a text file (white space separated) with the sample ID labeled as `IID` in the first column followed by headed columns for each subsequent covariate. In the column name you need to specify whether the covariate is a categorical (`factor`) or continuous (`numeric`) variable. For example: `{Name}_factor` or `{Name}_numeric`.  
+Your covariates file will be used for mQTL analyses. Your covariates file should be a text file (white space separated) with the sample ID labeled as `IID` in the first column, followed by headed columns for each subsequent covariate. In the column name, you need to specify whether the covariate is a categorical (`factor`) or continuous (`numeric`) variable. For example: `{Name}_factor` or `{Name}_numeric`.  
 
 An example of what your file should look like is below:
 ```
@@ -49,7 +49,7 @@ id3 0.16438292 0.1637806 -1.042249e-19 0.11164848 0.3932823 0.25849168
 
 For blood: The pipeline will generate cell counts for 12 blood cell types from the normalized betas using [EpiDISH](https://github.com/sjczheng/EpiDISH) and the [Salas et al. 2022](https://doi.org/10.1038/s41467-021-27864-7) reference panel.
 
-For Saliva or buccal: The pipeline will generate cell counts for saliva or buccal derived methylation data using [Middleton reference dataset](https://pubmed.ncbi.nlm.nih.gov/33588693/) (child saliva) or [HEpiDISH](https://github.com/sjczheng/EpiDISH) (adult saliva or buccal)
+For Saliva or buccal: The pipeline will generate cell counts for saliva or buccal-derived methylation data using [Middleton reference dataset](https://pubmed.ncbi.nlm.nih.gov/33588693/) (child saliva) or [HEpiDISH](https://github.com/sjczheng/EpiDISH) (adult saliva or buccal)
 
 Estimated cell counts do not need to be provided in your covariate file, they will be derived within the DEEP pipeline.
 
