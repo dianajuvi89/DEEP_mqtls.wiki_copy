@@ -1,4 +1,4 @@
-## Covariates
+## mQTL covariates
 Your covariates file should be a text file (white space separated) with the sample ID labeled as `IID` in the first column followed by headed columns for each subsequent covariate. In the column name you need to specify whether the covariate is a categorical (`factor`) or continuous (`numeric`) variable. For example: `{Name}_factor` or `{Name}_numeric`.  
 
 An example of what your file should look like is below:
