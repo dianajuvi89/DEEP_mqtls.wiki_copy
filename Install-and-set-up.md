@@ -46,7 +46,7 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `tissue`: One of the following: blood, PBMC, PBL, cord, saliva, or buccal
 
-- `study_specific_vars`: Names of study-specific variables for EWAS. These need to be the column names for these variables, and so will need _factor or _numeric at the end. Please leave a space between each variable, e.g, "slide_factor plate_factor". **Please note** that because there are small numbers of participants on each slide, the large number of categories this creates can cause the EWAS to run very slowly (because small numbers of observations per category causes uncertainty in the linear model). So please only include slide if you think it strictly necessary for your study, because surrogate variables will largely control for batch effects.
+- `study_specific_vars`: Names of study-specific variables for EWAS. These need to be the column names for these variables, and so will need _factor or _numeric at the end. Please leave a space between each variable, e.g, "case_status_factor plate_factor". **Please note** that because there are small numbers of participants on each slide, the large number of categories this creates can cause the EWAS to run very slowly (because small numbers of observations per category causes uncertainty in the linear model). We would recommend using batch instead; especially because surrogate variables will largely control for batch effects.
 
 - `genome_build`: Please specify the genome build of the genetic data ("37" or "38").
 
