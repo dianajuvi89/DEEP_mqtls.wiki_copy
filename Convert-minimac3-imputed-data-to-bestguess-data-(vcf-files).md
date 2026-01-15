@@ -15,6 +15,7 @@ ${plink2} --pfile data_chr${i}_dose --remove $exclindiv --make-pgen --out data_c
 cp data_chr${i}_indiv_filtered.pvar data_chr${i}.info
 
 # Keep SNPs with MAF>0.01 or info>0.8
+# vcf INFO column could have different names. Please change if R2 is not the column name.
 ${plink2} --pfile data_chr${i}_indiv_filtered --extract-if-info "R2>0.8" --maf 0.01 --make-pgen --out data_chr${i}_var_filtered --keep-allele-order
 
 # Remove duplicate variants
@@ -23,7 +24,8 @@ ${plink2} --pfile data_chr${i}_var_filtered --rm-dup exclude-mismatch --make-pge
 # Convert `pvar/pgen/psam` to `bim/bed/fam` format
 ${plink2} --pfile data_chr${i}_filtered --make-bed --out data_chr${i}_filtered 
 
-#Reformat pvar file to id maf r2 
+# Reformat pvar file to id maf r2 
+# Here we assume that the 3rd column is MAF and the 4th column is INFO. Please change if different.
 awk -v x='#CHROM' '$0~x,EOF''{print $3,$7}' <data_chr${i}_filtered.pvar |perl -pe 's/;/ /g'|awk '{print $1,$3,$4}' |perl -pe 's/ID/ID MAF R2/g' |perl -pe 's/MAF=//g'| perl -pe 's/R2=//g' >data_chr${i}_filtered.info
 
 done
