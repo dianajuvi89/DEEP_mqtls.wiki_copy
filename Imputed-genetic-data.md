@@ -77,7 +77,7 @@ We also require imputation quality scores for each SNP. Instructions on how to c
 
 ### Phased VCF files (specific for Module 1g)
 #### Data pre-processing
-Phased VCF files required for [Module 1g Compute haplotype components](https://github.com/MRCIEU/DEEP_mqtls/wiki/Compute-haplotype-components). If you impute your genetic data by using imputation servers (e.g., Michigan, TOPMed, Sanger), which already provide phased VCF output, please download the phased VCF files directly. See [here](Imputation) for more available Imputation Servers.
+Phased VCF files are required for [Module 1g Compute haplotype components](https://github.com/MRCIEU/DEEP_mqtls/wiki/Compute-haplotype-components). If you impute your genetic data by using imputation servers (e.g., Michigan, TOPMed, Sanger), which already provide phased VCF output, please download the phased VCF files directly. See [here](Imputation) for more available Imputation Servers.
 Alternatively, if you generate imputed genetic data on your local HPC server, then please phase your genetic data by using [SHAPEIT5](https://odelaneau.github.io/shapeit5/) or other software.
 
 #### VCF format
