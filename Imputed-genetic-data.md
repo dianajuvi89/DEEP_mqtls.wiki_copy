@@ -87,7 +87,7 @@ VCF files must meet the requirement that:
 - Other filtering, such as variant/sample inclusion and imputation quality, is **NOT** required for VCF files, as data cleaning will be performed using the sample and variant information from Module 01b, where basic QC was conducted on the bfiles.
 - Please name the VCF files so that each filename begins with chr${i}_ and ends with either an uncompressed .vcf extension or a compressed VCF extension (e.g., .vcf.gz, .vcf.bgz, .vcf.bz2, etc.). The value of ${i} should range from 1 to 22 (do **NOT** use leading zeros such as 01, 02, etc.).
 
-To check if your VCF files are phased 
+To check if your VCF files are phased. \
 Phased genotypes are typically represented as:
 ```
 0|0, 0|1, 1|0, 1|1
