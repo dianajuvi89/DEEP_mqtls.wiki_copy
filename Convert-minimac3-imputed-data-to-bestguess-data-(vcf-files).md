@@ -42,7 +42,7 @@ done > mergefile.txt
 
 ${plink2} --bfile data_chr1_filtered --pmerge-list mergefile.txt --make-bed --out data_filtered
 
-# The FIDs in the fam file are set to 0.
+# The FIDs in the fam file may be set to 0. Then we need to change.
 
 head data_filtered.fam
 cp data_filtered.fam data_filtered.fam.orig
