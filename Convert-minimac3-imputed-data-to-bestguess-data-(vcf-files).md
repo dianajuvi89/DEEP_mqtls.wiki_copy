@@ -7,22 +7,22 @@ exclindiv="all_individuals_to_exclude.txt"
 for i in {1..23}
 do
 # If you need to convert your data, don't use any other flags besides `--out` the inclusion of `dosage=HDS` will introduce missingness and cause issues later on in the pipeline
-${plink2} --vcf data_chr${i}.dose.vcf.gz --make-pgen --out data_chr${i}_dose --keep-allele-order
+${plink2} --vcf data_chr${i}.dose.vcf.gz --new-id-max-allele-len 500 --make-pgen --out data_chr${i}_dose --keep-allele-order
 
 # You need to make sure the prefix of `pfile` is different from `--out`
 # Rename the SNP IDs if necessary to avoid possible duplicates. `set-all-var-ids` will recode your variants to chr:pos:allele1_allele2 where # allele 1 and 2 are ascii sorted
-${plink2} --pfile data_chr${i}_dose --remove $exclindiv --make-pgen --out data_chr${i}_indiv_filtered --set-all-var-ids @:#_\$1_\$2 --keep-allele-order
+${plink2} --pfile data_chr${i}_dose --remove $exclindiv --new-id-max-allele-len 500 --make-pgen --out data_chr${i}_indiv_filtered --set-all-var-ids @:#_\$1_\$2 --keep-allele-order
 cp data_chr${i}_indiv_filtered.pvar data_chr${i}.info
 
 # Keep SNPs with MAF>0.01 or info>0.8
 # vcf INFO column could have different names. Please change if R2 is not the column name.
-${plink2} --pfile data_chr${i}_indiv_filtered --extract-if-info "R2>0.8" --maf 0.01 --make-pgen --out data_chr${i}_var_filtered --keep-allele-order
+${plink2} --pfile data_chr${i}_indiv_filtered --extract-if-info "R2>0.8" --maf 0.01 --new-id-max-allele-len 500 --make-pgen --out data_chr${i}_var_filtered --keep-allele-order
 
 # Remove duplicate variants
-${plink2} --pfile data_chr${i}_var_filtered --rm-dup exclude-mismatch --make-pgen --out data_chr${i}_filtered --keep-allele-order
+${plink2} --pfile data_chr${i}_var_filtered --rm-dup exclude-mismatch --make-pgen --new-id-max-allele-len 500 --out data_chr${i}_filtered --keep-allele-order
 
 # Convert `pvar/pgen/psam` to `bim/bed/fam` format
-${plink2} --pfile data_chr${i}_filtered --make-bed --out data_chr${i}_filtered 
+${plink2} --pfile data_chr${i}_filtered --make-bed --new-id-max-allele-len 500 --out data_chr${i}_filtered 
 
 # Reformat pvar file to id maf r2 
 # Here we assume that the 3rd column is MAF and the 4th column is INFO. Please change if different.
@@ -40,7 +40,7 @@ do
     echo "data_chr${i}_filtered"
 done > mergefile.txt
 
-${plink2} --bfile data_chr1_filtered --pmerge-list mergefile.txt --make-bed --out data_filtered
+${plink2} --bfile data_chr1_filtered --pmerge-list mergefile.txt --new-id-max-allele-len 500 --make-bed --out data_filtered
 
 # The FIDs in the fam file may be set to 0. Then we need to change.
 
