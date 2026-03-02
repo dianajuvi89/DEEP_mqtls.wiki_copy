@@ -4,7 +4,7 @@ Your covariates file should be a text file (white space separated) with the samp
 
 An example of what your file should look like is below:
 ```
-    IID Sex_factor Age_numeric Slide_factor
+    IID Sex_factor Age_numeric Plate_factor
     id1 F 30 12345678
     id2 M 42 12345678
     id3 M 76 87654321
@@ -15,7 +15,7 @@ An example of what your file should look like is below:
 The following covariates are **required** - these covariates are the minimum criteria for contributing to DEEP:
 
 - `Sex_factor`: A column of `M`'s for males and `F`'s for females
-- `Age_numeric`: In years (can be integer or with decimals)
+- `Age_numeric`: In years (can be an integer or with decimals)
 
 Please ensure there are no missing values in the `Sex` and `Age` columns, even if your data is all the same age or all the same sex. Please also ensure that the capitalisation of column headers in the example above is followed.
 
@@ -23,7 +23,7 @@ Please ensure there are no missing values in the `Sex` and `Age` columns, even i
 
 The following covariates are strongly recommended (but not essential):
 
-- `Slide_factor`: The slide/chip/sentrix ID from the DNA methylation array
+- `Plate_factor`: The plate ID from the DNA methylation array
 - Any other important batch covariates
 
 ### Not needed
