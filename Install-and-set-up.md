@@ -12,17 +12,13 @@ Using the instructions in [System requirements](https://github.com/MRCIEU/DEEP_m
 
 ### Set up your config file
 
-The first thing to do is to create your `config` file. A template is provided in the repository in the `config.example` file. Your config file **should not** be created by editing this template directly. Instead you should make a copy of it for example as follows:
+The first thing to do is to create your `config` file. A template is provided in the repository in the `config.example` file. Your config file **should not** be created by editing this template directly. Instead, you should make a copy of it, for example, as follows:
 
 ```
 cp config.example config
 ```
 
 You can now modify the `config` file (**not** the `config.example` file!) to specify the location of your input data, software and the parameters that will be used for the analysis.
-
-# =============================================================================
-# SECTION A: ANALYST & STUDY DETAILS
-# =============================================================================
 
 Open the file in a text editor, and change the entries for the following variables:
 
@@ -35,7 +31,7 @@ Open the file in a text editor, and change the entries for the following variabl
 - `sftp_username`: This should be provided to you from the DEEP PIs (along with a password) after registration (see "Upload of results for meta-analysis section" below).
 
 - `key`: see "Upload of results for meta-analysis section" below on how to set up your key.
- 
+
 - `home_directory`: This directory contains a folder called `input_data` where the genetic, methylation, and covariate files are located.  Within this folder, the pipeline will create a `processed_data` and `results` folder for the intermediate and results files.  Please make sure you have enough space in this directory for all the output files and the correct permissions to create new files and folders.
 
 - `scripts_directory`: If you are in the `DEEP_mqtls` folder, then type `pwd` and set this variable to the path: eg, `scripts_directory="path/to/DEEP_mqtls"`. We recommend not setting `scripts_directory` and `home_directory` to the same location (see [What if I have multiple datasets to process?](#what-if-i-have-multiple-datasets-to-process)).
@@ -50,17 +46,15 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `tissue`: One of the following: blood, PBMC, PBL, cord, saliva, or buccal
 
-- `study_specific_vars`: Names of study-specific variables to adjust for in each EWAS - these are covariates that you know are important to adjust for in your study. These need to be the column names for these variables, and so will need _factor or _numeric at the end. Please leave a space between each variable, e.g, "Case_status_factor Sampletype_factor". **Please note** that as we are using SVA, batch effects are not necessary to include, but do include batch variable(s) if you know effects remain in your study even with SVA. Because there are small numbers of participants on each slide, if you are using a batch variable we would recommend using plate instead of slide.
+- `study_specific_vars`: Names of study-specific variables to adjust for in each EWAS - these are covariates that you know are important to adjust for in your study. These need to be the column names for these variables, and so will need _factor or _numeric at the end. Please leave a space between each variable, e.g, "Case_status_factor Sampletype_factor". **Please note** that as we are using SVA, batch effects are not necessary to include, but do include batch variable(s) if you know effects remain in your study even with SVA. Because there are small numbers of participants on each slide, if you are using a batch variable, we would recommend using plate instead of slide.
 
 - `genome_build`: Please specify the genome build of the genetic data ("37" or "38").
 
-- `sorted_methylation`: Please specify whether methylation has been obtained for sorted cell types or bulk tissue (yes if you have e.g DNA methylation from sorted cell types; no if you don't).
+- `sorted_methylation`: Please specify whether methylation has been obtained for sorted cell types or bulk tissue (yes if you have, e.g., DNA methylation from sorted cell types; no if you don't).
 
-- `age`: Age at methylation measurement. Please specify one of the following: "<18", ">18", "all".
+- `age`: Age range of the study participants at methylation measurement. Please specify one of the following: "<18", ">18", "all".
 
-- `smoking`: Method for smoking prediction. Please specify one of the following: "own", "maternal". Own smoking is smoking of the individual. Maternal is smoking history of mother or environmental smoke exposure (for childhood cohorts)
-
-- `reference`: Please specify reference panel ("1000g", "1000g+h3a", "hrc", "topmed", "1000g+caapa", "hrc"). This is case-sensitive.
+- `reference`: Please specify reference panel ("1000g", "1000g+h3a", "hrc", "topmed", "1000g+caapa", "hrc").
 
 - `ancestry`: Specify the most similar genetic ancestry of your samples with one of the following: "EUR", "AFR", "AMR", "EAS", "SAS", or "None" if you are not sure, or if any of these populations does not match the ancestry. This step is required by EasyQC to compare the allele frequencies of your samples against the reference panel of 1000G populations.
 
@@ -102,7 +96,7 @@ In module 01f, we use IDAT files to be able to normalise methylation data across
 idat_directory=""
 ```
 #### VCF files
-In module 01g, we use phased VCF files to compute haplotype components (HCs) through [PBWTpaint](https://github.com/richarddurbin/pbwt). We require one phased genotype file per chromosome. The input files must follow a consistent naming format: they should begin with `chr${i}_` and end with either an uncompressed `.vcf` extension or a compressed VCF extension (e.g., `.vcf.gz`, `.vcf.bgz`, `.vcf.bz2`, etc.). `${i}` is from 1 to 22.
+In module 01g, we use phased VCF files to compute haplotype components (HCs) through [PBWTpaint](https://github.com/richarddurbin/pbwt). We require one phased genotype file per chromosome. The input files must follow a consistent naming format: they should begin with `chr${i}_` and end with either an uncompressed `.vcf` extension or a compressed VCF extension (e.g., `.vcf.gz`, `.vcf.bgz`, `.vcf.bz2`, etc.). `${i}` is from 1 to 22. If you only have one combined VCF file, please email [Haotian Tang](mailto:haotian.tang@bristol.ac.uk).
 ```
 vcf_dir=""
 ```
@@ -128,7 +122,7 @@ quality_scores="${home_directory}/input_data/data.info"
 
 You do not need to provide cell counts proportions estimated from the DNA methylation data, as they will be predicted by the pipeline.
 
-We use the following predictions and these will be chosen based on `tissue`, `age`, and `methylation_array` variables in the config file. 
+We use the following predictions, and these will be chosen based on `tissue`, `age`, and `methylation_array` variables in the config file. 
 
 * Blood (12 cell types in adults):  [Salas reference dataset](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE167998) using the [EpiDISH](https://github.com/sjczheng/EpiDISH) package. 
 * Blood (19 cell types adults/children): [Unilife reference dataset](https://rdcu.be/eD9FD) using the [EpiDISH] (https://github.com/sjczheng/EpiDISH) package.
@@ -181,7 +175,7 @@ Otherwise, set the parameter:
 ```
 related="no"
 ```
-In this case the pipeline will attempt to find any cryptic related individuals and remove them.
+In this case, the pipeline will attempt to find any cryptic related individuals and remove them.
 
 ### Computation
 
@@ -247,7 +241,7 @@ For some of these servers you need to ensure you have the correct files on your 
 
 ### Setting up a key for the Bristol sFTP server
 
-You must [register](http://data.bris.ac.uk/collaborator/) as a collaborator before you can upload or download any files to the Bristol sftp server. Please email [Josine Min](mailto:josine.min@bristol.ac.uk) or [Hannah Elliott](mailto:Hannah.Elliott@bristol.ac.uk) for project id or if you have any issues with setting this up. Please note that **every analyst** will need their own account to access the server. If there are two analysts at the same institution or analysing the same cohort you will need your own log in. Sharing passwords and usernames will not work due to the need to have an ssh key pair (see below). 
+You must [register](http://data.bris.ac.uk/collaborator/) as a collaborator before you can upload or download any files to the Bristol sftp server. Please email [Josine Min](mailto:josine.min@bristol.ac.uk) or [Hannah Elliott](mailto:Hannah.Elliott@bristol.ac.uk) for project id or if you have any issues with setting this up. Please note that **every analyst** will need their own account to access the server. If there are two analysts at the same institution or analysing the same cohort, you will need your own log in. Sharing passwords and usernames will not work due to the need to have an ssh key pair (see below). 
 
 To upload or download files from the Bristol server to your server/HPC you need to have a key pair on your server.
 
