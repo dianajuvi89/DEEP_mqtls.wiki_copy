@@ -10,7 +10,7 @@ An example of what your file should look like is below:
     id3 M 76 87654321
 ```
 
-### Required
+### Required columns
 
 The following covariates are **required** - these covariates are the minimum criteria for contributing to DEEP:
 
@@ -19,12 +19,12 @@ The following covariates are **required** - these covariates are the minimum cri
 
 Please ensure there are no missing values in the `Sex` and `Age` columns, even if your data is all the same age or all the same sex. Please also ensure that the capitalisation of column headers in the example above is followed.
 
-### Optional
+### Optional columns
 
 The following covariates are strongly recommended (but not essential):
 
 - `Plate_factor`: The plate ID from the DNA methylation array
-- Any other important batch covariates
+- Any other important batch covariates, e.g., `Case_control_factor`
 
 ### Not needed
 
