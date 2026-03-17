@@ -4,10 +4,10 @@ Your covariates file should be a text file (white space separated) with the samp
 
 An example of what your file should look like is below:
 ```
-    IID Sex_factor Age_numeric Plate_factor
-    id1 F 30 12345678
-    id2 M 42 12345678
-    id3 M 76 87654321
+    IID Sex_factor Age_numeric Plate_factor Case_control_factor
+    id1 F 30 12345678 0
+    id2 M 42 12345678 1
+    id3 M 76 87654321 0
 ```
 
 ### Required columns
