@@ -107,6 +107,8 @@ install.packages("plyr")
 install.packages("Cairo")
 install.packages("plotrix")
 install.packages("viridis")
+# Download EasyQC
+# wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
 install.packages("EasyQC_9.2.tar.gz")
 install.packages("cluster")
 install.packages("RPMM")
