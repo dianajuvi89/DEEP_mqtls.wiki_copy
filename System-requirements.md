@@ -90,46 +90,42 @@ Please ensure you have AT LEAST:
 * `Python 2.7` for Hase
 
 #### If you don't use conda or mamba, please install these R packages in your R manually:
-```r
-install.packages("MASS")
-install.packages("lattice")
-install.packages("ggplot2")
-install.packages("ggExtra")
-install.packages("data.table")
-install.packages("MatrixEQTL")
-install.packages("parallel")
-install.packages("parallelly")
-install.packages("matrixStats")
-install.packages("Matrix")
-install.packages("sparsesvd")
-install.packages("remotes")
-install.packages("plyr")
-install.packages("Cairo")
-install.packages("plotrix")
-install.packages("viridis")
-# Download EasyQC
-# wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
-install.packages("EasyQC_9.2.tar.gz")
-install.packages("cluster")
-install.packages("RPMM")
-install.packages("tibble")
-install.packages("vioplot")
-install.packages("qqman")
-install.packages("ggtext")
-install.packages("diptest")
-install.packages("mixtools")
-install.packages("corrplot")
-install.packages("janitor")
-install.packages("tidyr")
-install.packages("dplyr")
-install.packages("readr")
-install.packages("ggpubr")
-install.packages("ggrepel")
-install.packages("magrittr")
-install.packages("R.utils")
-install.packages("BiocManager")
-install.packages("DescTools")
 ```
+# Navigate to the project directory
+cd DEEP_mqtls
+
+# Download EasyQC 
+wget http://homepages.uni-regensburg.de/~wit59712/easyqc/EasyQC_9.2.tar.gz
+```
+
+```
+# Enter into your R
+R
+# Define the list of required CRAN packages
+pkgs <- c(
+  "MASS", "lattice", "ggplot2", "ggExtra", "data.table", 
+  "MatrixEQTL", "parallel", "parallelly", "matrixStats", 
+  "Matrix", "sparsesvd", "remotes", "plyr", "Cairo", 
+  "plotrix", "viridis", "cluster", "RPMM", "tibble", 
+  "vioplot", "qqman", "ggtext", "diptest", "mixtools", 
+  "corrplot", "janitor", "tidyr", "dplyr", "readr", 
+  "ggpubr", "ggrepel", "magrittr", "R.utils", 
+  "BiocManager", "DescTools"
+)
+
+# Install missing packages only (skips those already installed)
+new_pkgs <- pkgs[!(pkgs %in% installed.packages()[,"Package"])]
+if(length(new_pkgs)) install.packages(new_pkgs)
+
+# Install the local EasyQC file
+# You MUST include repos=NULL and type="source" for local .tar.gz files
+if (file.exists("EasyQC_9.2.tar.gz")) {
+  install.packages("EasyQC_9.2.tar.gz", repos = NULL, type = "source")
+} else {
+  warning("EasyQC_9.2.tar.gz not found in current directory!")
+}
+```
+
 ### You need to test whether R can find the path to your R libraries
 
 You can test this in R:
