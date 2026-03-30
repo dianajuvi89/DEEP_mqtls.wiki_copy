@@ -14,7 +14,7 @@ ${plink2} --vcf data_chr${i}.dose.vcf.gz --new-id-max-allele-len 500 --make-pgen
 ${plink2} --pfile data_chr${i}_dose --remove $exclindiv --new-id-max-allele-len 500 --make-pgen --out data_chr${i}_indiv_filtered --set-all-var-ids @:#_\$1_\$2 --keep-allele-order
 cp data_chr${i}_indiv_filtered.pvar data_chr${i}.info
 
-# Keep SNPs with MAF>0.01 or info>0.8
+# Keep SNPs with MAF>0.01, and R2>0.8 or INFO>0.8
 # vcf INFO column could have different names. Please change if R2 is not the column name.
 ${plink2} --pfile data_chr${i}_indiv_filtered --extract-if-info "R2>0.8" --maf 0.01 --new-id-max-allele-len 500 --make-pgen --out data_chr${i}_var_filtered --keep-allele-order
 
