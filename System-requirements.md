@@ -44,12 +44,10 @@ The pipeline scripts require `R version 4.1` or higher, `Python 3 version 3.9 or
 [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) environments allow you to manage the environment while running this pipeline, eg, they ensure that the correct dependency versions are used for the DEEP pipeline scripts. 
 
 For DEEP, we generated two different environments: `deep_env` for most of the QC and analyses, and `hase_py2` for the mQTL analyses.
-The `deep_env` environment will require ~4 GB of storage, and the `hase_py2`environment will require ～600 MB. Before installation, please make sure that no environments with the same names (`deep_env` or `hase_py2`) already exist in your conda/mamba environment list.
-
-Please ensure that these environment names do not already exist in your conda/mamba environment list 
+The `deep_env` environment will require ~4 GB of storage, and the `hase_py2`environment will require ～600 MB. Before installation, please make sure that no environments with the same names (`deep_env` or `hase_py2`) already exist in your conda/mamba environment list 
 and that you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) **installed** and **initialised** before running these commands:
 ```
-# 1. Please ensure that no duplicate environment names are used before creating our environment.
+# 1. Check that no duplicate environment names are used before creating our environment.
 # If you see 'deep_env' or 'hase_py2' in the list, rename or remove them first.
 mamba env list
 
