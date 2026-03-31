@@ -49,10 +49,14 @@ The `deep_env` environment will require ~4 GB of storage, and the `hase_py2`envi
 Please ensure that these environment names do not already exist in your conda/mamba environment list 
 and that you have [conda/mamba](https://github.com/conda-forge/miniforge?tab=readme-ov-file) **installed** and **initialised** before running these commands:
 ```
-# Please ensure that no duplicate environment names are used before creating our environment.
-# To create the main environment for DEEP pipeline
+# 1. Please ensure that no duplicate environment names are used before creating our environment.
+# If you see 'deep_env' or 'hase_py2' in the list, rename or remove them first.
+mamba env list
+
+# 2. To create the main environment for DEEP pipeline
 mamba env create --file deep_env.yml
-# To create the python2 environment to run meQTL analysis
+
+# 3. To create the python2 environment to run meQTL analysis
 mamba env create --file ./resources/bin/hase/environment.yml
 ```
 If you use conda, please replace `mamba` with `conda` in all commands. 
