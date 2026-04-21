@@ -94,7 +94,7 @@ In module 01f, we use IDAT files to be able to normalise methylation data across
 
 - `idat_directory`: Full path to the directory containing raw IDAT files (the raw output from the Illumina methylation array scanner). Leave blank if not available.
 - `samplesheet_path`: [Optional]. Full path to an Illumina-format CSV sample sheet. If provided, meffil.read.samplesheet() will be used instead of meffil.create.samplesheet(). This is useful when your `idat_directory` contains a full sample (e.g., the same group of participants with methylation measurements at three time points), but you only want to use a subsample from it (e.g., one time point). Leave blank to auto-generate the samplesheet using `idat_directory`. \
-Note: the current pipeline only supports a single time point per run.
+- Note: the current pipeline only supports a single time point per run.
 
 #### VCF files
 In module 01g, we use phased VCF files to compute haplotype components (HCs) through [PBWTpaint](https://github.com/richarddurbin/pbwt). We require one phased genotype file per chromosome. The input files must follow a consistent naming format: they should begin with `chr${i}_` and end with either an uncompressed `.vcf` extension or a compressed VCF extension (e.g., `.vcf.gz`, `.vcf.bgz`, `.vcf.bz2`, etc.). `${i}` is from 1 to 22. If you only have one combined VCF file, please email [Haotian Tang](mailto:haotian.tang@bristol.ac.uk).
