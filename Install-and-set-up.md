@@ -93,7 +93,7 @@ phenotypes="${home_directory}/input_data/phenotypes.txt"
 In module 01f, we use IDAT files to be able to normalise methylation data across cohorts. We use quantiles from methylation probes and control probes to normalise across different datasets.
 
 - `idat_directory`: Full path to the directory containing raw IDAT files (the raw output from the Illumina methylation array scanner). Leave blank if not available.
-- `samplesheet_path`: [Optional]. Full path to an Illumina-format CSV sample sheet. If provided, meffil.read.samplesheet() will be used instead of meffil.create.samplesheet(). This is useful when your `idat_directory` contains a full sample (e.g., the same group of participants with methylation measurements at three time points), but you only want to use a subsample from it (e.g., one time point). Leave blank to auto-generate the samplesheet using `idat_directory`.
+- `samplesheet_path`: [Optional]. Full path to an Illumina-format CSV sample sheet. If provided, [meffil.read.samplesheet()](https://github.com/perishky/meffil/wiki/Sample-QC) will be used instead of meffil.create.samplesheet(). This is useful when your `idat_directory` contains a full sample (e.g., the same group of participants with methylation measurements at three time points), but you only want to use a subsample from it (e.g., one time point). Leave blank to auto-generate the samplesheet using `idat_directory`.
 - Note: the current pipeline only supports a single time point per run.
 
 #### VCF files
