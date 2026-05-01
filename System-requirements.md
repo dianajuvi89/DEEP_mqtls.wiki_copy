@@ -225,12 +225,13 @@ BiocManager::install("scoreInvHap")
 BiocManager::install("impute")
 ```
 
-### Please install these packages if you have related samples
+### Please install these packages if you have related or admixed samples
 ```r
 library(BiocManager)
 BiocManager::install("GWASTools")
 BiocManager::install("SNPRelate")
 BiocManager::install("GENESIS")
+BiocManager::install("BiocParallel")
 ```
 ### Please install meffonym
 ```r
