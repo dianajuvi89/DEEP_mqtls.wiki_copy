@@ -24,6 +24,20 @@ To run the script, use the following command:
 ./01g_HCs.sh -c /path/to/config/file
 ```
 
+Module 01g is designed to run in chunks, making troubleshooting easier. Processing VCF files can take a long time, and total runtime depends on your dataset size.
+To run the script by chunks:
+```
+# 1) VCF preprocessing and liftover
+./01g_HCs.sh -c /path/to/config vcf
+
+# 2) Haplotype component (HC) generation
+./01g_HCs.sh -c /path/to/config hc
+
+# 3) Positive-control GWAS and plots
+./01g_HCs.sh -c /path/to/config gwas
+
+```
+
 >[!IMPORTANT]
 > **Please check**
 > Please check the signals from Manhattan plots, genomic inflation from QQ plots, and scatter plots in `results/01/1g`.
