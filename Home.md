@@ -76,4 +76,4 @@ Each page describes the analysis performed in the module and provides the necess
 ## Reporting Bugs and Issues
 If you encounter any bugs, errors in the documentation, or technical problems while running the code, please use the **Issues** section of this repository. When reporting an issue, please include the module name and any error messages to help us resolve the problem more efficiently.
 
-**Thank you for reading this guide, and for your partnership in the DEEP study. You are ready to get started!**
+## **Thank you for reading this guide, and for your partnership in the DEEP study. You are ready to get started!**
