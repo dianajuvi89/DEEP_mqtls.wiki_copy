@@ -67,7 +67,13 @@ Please note, not all of these modules are ready to be run. Those that are have b
 
 ## How to use the wiki
 
-This wiki is structured to guide you through each stage of the analysis. There is one page per module. At the top of each page is a standard header that lets you know the status of each module (whether it is ready to be run or not), which scripts need to be completed before running this module, and instructions for uploading results at the end. 
-Then, the page will describe the analysis performed in the module, and it will give example commands to implement the script. 
+This wiki is structured to guide you through each stage of the analysis. There is one page per module. At the top of each page is a standard header that indicates:
+- Module Status: Whether the module is ready to be run.
+- Prerequisites: Which scripts must be completed before running this module.
+- Next Steps: Instructions for uploading results at the end of the process.
+Each page describes the analysis performed in the module and provides the necessary commands to implement the scripts.
+
+## Reporting Bugs and Issues
+If you encounter any bugs, errors in the documentation, or technical problems while running the code, please use the **Issues** section of this repository. When reporting an issue, please include the module name and any error messages to help us resolve the problem more efficiently.
 
 **Thank you for reading this guide, and for your partnership in the DEEP study. You are ready to get started!**
