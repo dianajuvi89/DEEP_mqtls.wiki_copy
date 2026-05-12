@@ -169,6 +169,7 @@ This may apply if your data includes:
 1) Diverse ancestry or admixed ancestry/backgrounds (e.g., Hispanic)
 2) Samples collected from multiple distinct geographical areas/sub-populations
 3) Known internal genetic heterogeneity
+
 Then please specify this by setting the parameter in the config file:
 ```
 structured="yes"
