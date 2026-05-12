@@ -160,12 +160,28 @@ IID mono tcell bcell eos neu baso
 2 0.23 0.81 0.21 0.02 0.41 0.02
 ```
 
-You don't need to have all cell counts from the example above in your file.
+You don't need to have all the cell counts from the example above in your file.
 Please note that we are not including data generated from cord blood samples at this time.
+
+### Structured
+If your genetic data exhibits systematic genetic structure or stratification.
+This may apply if your data includes:
+1) Diverse ancestry or admixed ancestry/backgrounds (e.g., Hispanic)
+2) Samples collected from multiple distinct geographical areas/sub-populations
+3) Known internal genetic heterogeneity
+Then please specify this by setting the parameter in the config file:
+```
+structured="yes"
+```
+Otherwise, set the parameter:
+
+```
+structured="no"
+```
 
 ### Relatedness
 
-If you have family relationships in your data (i.e. twin or family study design), then please specify this by setting the parameters in the config file:
+If you have family relationships in your data (i.e. twin or family study design), then please specify this by setting the parameter in the config file:
 
 ```
 related="yes"
