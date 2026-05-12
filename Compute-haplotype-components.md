@@ -24,7 +24,7 @@ To run the script, use the following command:
 ./01g_HCs.sh -c /path/to/config/file
 ```
 
-Module 01g is designed to run in chunks, making troubleshooting easier. Processing VCF files can take a long time (e.g., hc chunk crashes due to some error, you do not need to re-run any previously successful VCF chunk).
+Module 01g is designed to run in chunks, making troubleshooting easier. Processing VCF files can take a long time (e.g., hc chunk crashes due to some error, you do not have to re-run previously successful VCF chunk).
 
 To run the script by chunks:
 ```
