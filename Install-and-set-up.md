@@ -32,16 +32,6 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `key`: see "Upload of results for meta-analysis section" below on how to set up your key.
 
-- `home_directory`: This directory contains a folder called `input_data` where the genetic, methylation, and covariate files are located.  Within this folder, the pipeline will create a `processed_data` and `results` folder for the intermediate and results files.  Please make sure you have enough space in this directory for all the output files and the correct permissions to create new files and folders.
-
-- `scripts_directory`: If you are in the `DEEP_mqtls` folder, then type `pwd` and set this variable to the path: eg, `scripts_directory="path/to/DEEP_mqtls"`. We recommend not setting `scripts_directory` and `home_directory` to the same location (see [What if I have multiple datasets to process?](#what-if-i-have-multiple-datasets-to-process)).
-
-- `R_directory`: Full path to the R directory if you don't use conda/mamba. Otherwise, leave blank. 
-
-- `Python_directory`: Full path to the Python3 directory if you don't use conda/mamba. Otherwise, leave blank. You need Python 3.9 or later for Hail package.
-
-- `Python2_directory`: Full path to the Python2 directory if you don't use conda/mamba. Otherwise, leave blank. You need Python 2.7 for hase.
-
 - `methylation_array`: One of the following: 450k, epic, epic2 or epic:epic2. Please note that names are case-sensitive.
 
 - `tissue`: One of the following: blood, PBMC, PBL, cord, saliva, or buccal
@@ -59,6 +49,17 @@ Open the file in a text editor, and change the entries for the following variabl
 - `study_specific_vars`: Names of study-specific variables to adjust for in each EWAS - these are covariates that you know are important to adjust for in your study. These need to be the column names for these variables, and so will need _factor or _numeric at the end. Please leave a space between each variable, e.g, "Case_status_factor Sampletype_factor". **Please note** that as we are using SVA, batch effects are not necessary to include, but do include batch variable(s) if you know effects remain in your study even with SVA. Because there are small numbers of participants on each slide, if you are using a batch variable, we would recommend using plate instead of slide.
 
 - `age`: Age range of the study participants at methylation measurement. Please specify one of the following: "<18", ">18", "all".
+
+
+- `home_directory`: This directory contains a folder called `input_data` where the genetic, methylation, and covariate files are located.  Within this folder, the pipeline will create a `processed_data` and `results` folder for the intermediate and results files.  Please make sure you have enough space in this directory for all the output files and the correct permissions to create new files and folders.
+
+- `scripts_directory`: If you are in the `DEEP_mqtls` folder, then type `pwd` and set this variable to the path: eg, `scripts_directory="path/to/DEEP_mqtls"`. We recommend not setting `scripts_directory` and `home_directory` to the same location (see [What if I have multiple datasets to process?](#what-if-i-have-multiple-datasets-to-process)).
+
+- `R_directory`: Full path to the R directory if you don't use conda/mamba. Otherwise, leave blank. 
+
+- `Python_directory`: Full path to the Python3 directory if you don't use conda/mamba. Otherwise, leave blank. You need Python 3.9 or later for Hail package.
+
+- `Python2_directory`: Full path to the Python2 directory if you don't use conda/mamba. Otherwise, leave blank. You need Python 2.7 for hase.
 
 - `mem`: Specifies the amount of memory (in GB) to allocate. When running on an HPC system, ensure this value matches the memory requested in your job submission. The default is 20 GB.
 
