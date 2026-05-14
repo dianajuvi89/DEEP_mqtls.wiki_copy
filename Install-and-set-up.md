@@ -48,10 +48,6 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `sorted_methylation`: Please specify whether methylation has been obtained for sorted cell types or bulk tissue (yes if you have, e.g., DNA methylation from sorted cell types; no if you don't).
 
-- `study_specific_vars`: Names of study-specific variables to adjust for in each EWAS - these are covariates that you know are important to adjust for in your study. These need to be the column names for these variables, and so will need _factor or _numeric at the end. Please leave a space between each variable, e.g, "Case_status_factor Sampletype_factor". **Please note** that as we are using SVA, batch effects are not necessary to include, but do include batch variable(s) if you know effects remain in your study even with SVA. Because there are small numbers of participants on each slide, if you are using a batch variable, we would recommend using plate instead of slide.
-
-- `age`: Age range of the study participants at methylation measurement. Please specify one of the following: "<18", ">18", "all".
-
 - `genome_build`: Please specify the genome build of the genetic data ("37" or "38").
 
 - `ancestry`: Specify the most similar genetic ancestry of your samples with one of the following: "EUR", "AFR", "AMR", "EAS", "SAS", or "None" if you are not sure, or if any of these populations does not match the ancestry. This step is required by EasyQC to compare the allele frequencies of your samples against the reference panel of 1000G populations.
@@ -59,6 +55,10 @@ Open the file in a text editor, and change the entries for the following variabl
 - `reference`: Please specify reference panel ("1000g", "1000g+h3a", "hrc", "topmed", "1000g+caapa", "hrc").
 
 - `structure`: Define if the cohort exhibits systematic genetic structure or stratification. This setting triggers additional corrections (e.g., PCA-relate). Structure may arise from: 1) Diverse ancestry or admixed ancestry/backgrounds (e.g., Hispanic) 2) Samples collected from multiple distinct geographical areas/sub-populations 3) Known internal genetic heterogeneity. Default is "no".
+
+- `study_specific_vars`: Names of study-specific variables to adjust for in each EWAS - these are covariates that you know are important to adjust for in your study. These need to be the column names for these variables, and so will need _factor or _numeric at the end. Please leave a space between each variable, e.g, "Case_status_factor Sampletype_factor". **Please note** that as we are using SVA, batch effects are not necessary to include, but do include batch variable(s) if you know effects remain in your study even with SVA. Because there are small numbers of participants on each slide, if you are using a batch variable, we would recommend using plate instead of slide.
+
+- `age`: Age range of the study participants at methylation measurement. Please specify one of the following: "<18", ">18", "all".
 
 - `mem`: Specifies the amount of memory (in GB) to allocate. When running on an HPC system, ensure this value matches the memory requested in your job submission. The default is 20 GB.
 
