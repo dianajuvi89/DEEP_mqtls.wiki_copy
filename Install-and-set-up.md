@@ -58,6 +58,8 @@ Open the file in a text editor, and change the entries for the following variabl
 
 - `ancestry`: Specify the most similar genetic ancestry of your samples with one of the following: "EUR", "AFR", "AMR", "EAS", "SAS", or "None" if you are not sure, or if any of these populations does not match the ancestry. This step is required by EasyQC to compare the allele frequencies of your samples against the reference panel of 1000G populations.
 
+- `structure`: Define if the cohort exhibits systematic genetic structure or stratification. This setting triggers additional corrections (e.g., PCA-relate). Structure may arise from: 1) Diverse ancestry or admixed ancestry/backgrounds (e.g., Hispanic) 2) Samples collected from multiple distinct geographical areas/sub-populations 3) Known internal genetic heterogeneity. Default is "no".
+
 - `mem`: Specifies the amount of memory (in GB) to allocate. When running on an HPC system, ensure this value matches the memory requested in your job submission. The default is 20 GB.
 
 - `nthreads`: Specifies the number of CPU threads to use. The default is 16.
