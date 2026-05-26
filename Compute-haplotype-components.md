@@ -2,7 +2,7 @@
 
 **Developer:** Developer's team
 
-**Scripts status:** Ready
+**Scripts status:** Being developed; Please don't run this module for now
 
 **Prerequisite scripts:** _Script 0_, _01a_, _01b_, _01c_, _01d_, and _01e_
 
