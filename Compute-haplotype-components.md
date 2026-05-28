@@ -18,6 +18,8 @@ Haplotype components (HCs) capture the local, phased structure of genetic variat
 
 In Module 1g, we use phased VCF files located in `vcf_dir` (specified in your config file) to compute HCs through [PBWTpaint](https://github.com/richarddurbin/pbwt). We select several CpG sites from [EPISTRUCTURE](https://link.springer.com/article/10.1186/s13072-016-0108-y), a set of methylation markers informative for ancestry inference. For each CpG site, three GWAS models are run: no correction, PC-corrected, and HC-corrected. The pipeline then produces Manhattan and QQ plots for each model, as well as pairwise scatter plots of the effect sizes for variants in the cis-region of each CpG site, comparing PC-corrected vs. no correction, HC-corrected vs. no correction, and HC-corrected vs. PC-corrected results.
 
+Before you start, please ensure that `ggExtra` and `gridExtra` packages are both available in your R environment.
+
 To run the script, use the following command:
 
 ```
