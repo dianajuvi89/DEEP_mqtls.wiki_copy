@@ -112,7 +112,7 @@ pkgs <- c(
   "vioplot", "qqman", "ggtext", "diptest", "mixtools", 
   "corrplot", "janitor", "tidyr", "dplyr", "readr", 
   "ggpubr", "ggrepel", "magrittr", "R.utils", 
-  "BiocManager", "DescTools"
+  "BiocManager", "DescTools", "gridExtra"
 )
 
 # Install missing packages only (skips those already installed)
