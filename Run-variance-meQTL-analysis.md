@@ -1,6 +1,6 @@
-# MODULE STATUS: This is copied from GoDMC2 GitHub 
+# MODULE STATUS:  
 
-**Developer:** 
+**Developer:** This is copied from GoDMC2 GitHub
 
 **Scripts status:** In development
 
