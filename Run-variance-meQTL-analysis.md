@@ -1,4 +1,4 @@
-# MODULE STATUS
+# MODULE STATUS: This is copied from GoDMC2 GitHub 
 
 **Developer:** 
 
