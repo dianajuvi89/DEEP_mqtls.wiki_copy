@@ -16,6 +16,7 @@ The following covariates are **required** - these covariates are the minimum cri
 
 - `Sex_factor`: A column of `M`'s for males and `F`'s for females
 - `Age_numeric`: In years (can be an integer or with decimals)
+- `Plate_factor`: The plate ID from the DNA methylation array. This column is required whenever plate information is available.
 
 Please ensure there are no missing values in the `Sex` and `Age` columns, even if your data is all the same age or all the same sex. Please also ensure that the capitalisation of column headers in the example above is followed.
 
@@ -23,7 +24,6 @@ Please ensure there are no missing values in the `Sex` and `Age` columns, even i
 
 The following covariates are strongly recommended (but not essential):
 
-- `Plate_factor`: The plate ID from the DNA methylation array
 - Any other important batch covariates, e.g., `Case_control_factor`
 
 ### Not needed
