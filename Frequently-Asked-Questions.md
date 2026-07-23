@@ -22,6 +22,7 @@
 
 [I don't have rights to install any software myself can I still run the pipeline?](sudo-rights)
 
+[VCF and bfile sample IDs do not match](VCF-and-bfile-sample-IDs-mismatch)
 
 
 
