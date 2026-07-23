@@ -38,4 +38,4 @@ The line should contain the IIDs your bfiles have:
 ```
 PLINK 2 documentation:
 
-* [[Updating sample IDs](https://www.cog-genomics.org/plink/2.0/data#update_indiv)](https://www.cog-genomics.org/plink/2.0/data#update_indiv)
+* [[Updating sample IDs](https://www.cog-genomics.org/plink/2.0/data#update_indiv)]
