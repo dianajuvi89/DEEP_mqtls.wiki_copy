@@ -15,7 +15,7 @@ To check if you have successfully finished the whole Module 01, please run this 
 ```
 ./check_upload.sh -c /path/to/config/file 01 check
 ```
-To encrypt and upload the results to the Bristol SFTP server
+To encrypt the results and upload them to the Bristol SFTP server using the default SFTP mode, please run:
 ```
 ./check_upload.sh -c /path/to/config/file 01 upload
 ```
@@ -23,11 +23,11 @@ By default, the upload command uses SFTP. This is equivalent to:
 ```
 ./check_upload.sh -c /path/to/config/file 01 upload sftp
 ```
-If you cannot use SFTP, please run manual upload mode instead:
+If you **CANNOT** use SFTP, please run manual upload mode instead:
 ```
 ./check_upload.sh -c /path/to/config/file 01 upload manual
 ```
-Manual upload mode will still check, package, checksum, and encrypt the results, but it will not connect to the SFTP server. The script will print the encrypted files and checksum files that need to be uploaded manually.
+Manual upload mode will still check, package, checksum, and encrypt the results, but it will not connect to the SFTP server or upload files automatically. The script will print the encrypted files and checksum files that need to be transferred manually.
 
 >[!IMPORTANT]
 > **Please check**\
