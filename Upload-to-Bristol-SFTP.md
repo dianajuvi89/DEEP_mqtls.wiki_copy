@@ -11,7 +11,7 @@
 **Issue report to:** Haotian Tang <haotian.tang@bristol.ac.uk> 
 
 # Check and upload the encrypted summary data to the Bristol SFTP server
-To check if you have successfully finished the whole module 01, please run this command:
+To check if you have successfully finished the whole Module 01, please run this command:
 ```
 ./check_upload.sh -c /path/to/config/file 01 check
 ```
@@ -19,6 +19,16 @@ To encrypt and upload the results to the Bristol SFTP server
 ```
 ./check_upload.sh -c /path/to/config/file 01 upload
 ```
+By default, the upload command uses SFTP. This is equivalent to:
+```
+./check_upload.sh -c /path/to/config/file 01 upload sftp
+```
+If you cannot use SFTP, please run manual upload mode instead:
+```
+./check_upload.sh -c /path/to/config/file 01 upload manual
+```
+Manual upload mode will still check, package, checksum, and encrypt the results, but it will not connect to the SFTP server. The script will print the encrypted files and checksum files that need to be uploaded manually.
+
 >[!IMPORTANT]
 > **Please check**\
 The upload script packages all files in `results/01`. Although the check script may warn about certain file contents, users **MUST** ensure that no individual-level data remains in results/01 to avoid uploading sensitive information.
