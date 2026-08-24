@@ -26,6 +26,7 @@ Once the imputed genetic data is in the [correct format](Imputed-genetic-data) a
 - Create a pedigree matrix for 'related' samples
 - Remove any cryptic relatedness for 'unrelated' data
 - Calculate principal components
+- Detect outliers in SNP loadings
 - Check PC outliers and generate PCA plots
 - Create a global PCA plot using PCA loadings
 - Check allele frequencies between genetic data and ancestry-specific reference panel.
