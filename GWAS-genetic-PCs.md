@@ -1,12 +1,13 @@
 # MODULE STATUS
+> **Note:** Module 01e is deprecated and no longer needs to be run. Its previous purpose is now covered by the PCA LD-structure QC in Module 01b. Cohorts do not need to upload or check Module 01e outputs.
 
 **Developer:** Developer's team
 
-**Scripts status:** Ready
+**Scripts status:** Deprecated; no longer required
 
-**Prerequisite scripts:** _Script 0_, _01a_, _01b_, _01c_ and _01d_
+**Prerequisite scripts:** Not applicable
 
-**Data upload method:** automated upload to sftp bristol
+**Data upload method:** Not required
 
 **Issue report to:** Haotian Tang <haotian.tang@bristol.ac.uk> 
 
