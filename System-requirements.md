@@ -210,6 +210,7 @@ BiocManager::install("VariantAnnotation")
 BiocManager::install("GenomeInfoDb")
 remotes::install_github("mrcieu/gwasvcf")
 remotes::install_github("MRCIEU/GwasDataImport")
+remotes::install_github("privefl/bigutilsr")
 ```
 
 ### Please install EWAFF
