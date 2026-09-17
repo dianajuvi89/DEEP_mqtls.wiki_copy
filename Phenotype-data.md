@@ -43,7 +43,7 @@ The following variables are required to run EWAS. They are not essential variabl
 | Weight	| Numeric (kg)	| `Weight_numeric` |
 | BMI	| Numeric (kg/m2)	| `BMI_numeric` |
 | Systolic Blood Pressure	| Numeric (mmHg)	| `SBP_numeric` |
-| Diastolic Blood Pressure	| Numeric (mmHg)	| `DPB_numeric` |
+| Diastolic Blood Pressure	| Numeric (mmHg)	| `DBP_numeric` |
 | CRP	| Numeric (mg/L)	| `CRP_numeric` |
 | IL6	| Numeric (pg/L)	| `IL6_numeric` |
 | CMV (Cytomegalovirus)	| Categorical (0=no, 1=yes)	| `CMV_factor` |
