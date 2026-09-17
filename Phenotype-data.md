@@ -33,7 +33,7 @@ The following variables are required to run EWAS. They are not essential variabl
 | Phenotype | Variable coding | Variable name |
 | --- | --- | --- |
 | Study specific variables | Categorical (study variables you usually adjust for - sample type, array type, case/control status - please add these to `study_specific_vars` in your config file. | `Case_control_factor` / `Sampletype_factor` etc |
-| Measured batch variables | Measured technical batch variables such as slide, plate, date run, laboratory (if more than one). We will not include measured batch variables in the model, as we will use SVA to adjust for measured and unmeasured variation; but we will test association between SVs and measured batch variables to ensure we are sufficiently capturing these with SVA  | `Slide_factor` / `Plate_factor` / 'Date_factor' etc |
+| Measured batch variables | Measured technical batch variables such as slide, plate, date run, laboratory (if more than one). We will not include measured batch variables in the model, as we will use SVA to adjust for measured and unmeasured variation; but we will test association between SVs and measured batch variables to ensure we are sufficiently capturing these with SVA  | `Slide_factor` / `Plate_factor` / `Date_factor` etc |
 | Population group	| Categorical (unique to study) - the population group the participants in your study belong to. This will be study-specific and will represent a concept such as ethnicity, race, caste, tribe, village, or region	| `Population_group_factor` |
 | Address or Geographic location or geocode	| Categorical (unique to study)	| `Location_factor` |
 | Urban vs. Rural residence 	| Categorical (urban/rural) - one may need to classify towns; some are only one)	| `Urban_rural_factor` |
