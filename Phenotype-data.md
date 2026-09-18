@@ -79,7 +79,7 @@ The following variables are required to run EWAS. They are not essential variabl
 | Prevalent Hypertension	| Please categorise as 0=no, 1=yes	| `Hypertension_factor` |	
 | Diabetes type 2 medication	| Please categorise as 0=no, 1=yes	| `T2D_med_factor` |
 | Hypertension medication	| Please categorise as 0=no, 1=yes	| `Hypertension_med_factor` |
-| Cigarette smoking - Own - categorical	| Please categorise as 0=no, 1=yes	| `Smoking_factor` |
+| Cigarette smoking - Own - categorical	| Please categorise as 0 = never/former smoker, 1 = current smoker	| `Smoking_factor` |
 | Cigarette smoking - Own - numeric	| Numeric measure (pack years or frequency)	| `Smoking_numeric` |
 | Alcohol - Own	Categorical | Please categorise as 0=no, 1=yes	| `Alcohol_factor` |
 | Alcohol - Own	numeric | Numeric measure (frequency or quantity)	| `Alcohol_numeric` |
@@ -119,6 +119,6 @@ id3 0.16438292 0.1637806 -1.042249e-19 0.11164848 0.3932823 0.25849168
 
 For blood: The pipeline will generate cell counts for 12 blood cell types from the normalized betas using [EpiDISH](https://github.com/sjczheng/EpiDISH) and the [Salas et al. 2022](https://doi.org/10.1038/s41467-021-27864-7) reference panel.
 
-For Saliva or buccal: The pipeline will generate cell counts for saliva or buccal derived methylation data using [Middleton reference dataset](https://pubmed.ncbi.nlm.nih.gov/33588693/) (child saliva) or [HEpiDISH](https://github.com/sjczheng/EpiDISH) (adult saliva or buccal).
+For Saliva or buccal: The pipeline will generate cell counts for saliva- or buccal-derived methylation data using [Middleton reference dataset](https://pubmed.ncbi.nlm.nih.gov/33588693/) (child saliva) or [HEpiDISH](https://github.com/sjczheng/EpiDISH) (adult saliva or buccal).
 
 Estimated cell counts do not need to be provided in your phenotype file, they will be derived within the DEEP pipeline.
