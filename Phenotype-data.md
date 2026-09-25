@@ -67,7 +67,7 @@ The following variables are required to run EWAS. They are not essential variabl
 | Maternal age at birth	| Numeric (years)	| `Maternal_age_numeric` |
 | Paternal age at birth	| Numeric (years)	| `Paternal_age_numeric` |
 | Cigarette smoking - Maternal	| Please categorise as 0=no, 1=yes	| `Maternal_smoking_factor` |
-| Cigarette smoking - paternal	| Please categorise as 0=no, 1=yes	| `Paternal_smoking_factor` |
+| Cigarette smoking - Paternal	| Please categorise as 0=no, 1=yes	| `Paternal_smoking_factor` |
 | Alcohol - Maternal	| Please categorise as 0=no, 1=yes	| `Maternal_alcohol_factor` |
 | Season of conception	| Categorical (0=spring, 1=summer, 2=autumn, 3=winter)	| `SoC_factor` |
 
