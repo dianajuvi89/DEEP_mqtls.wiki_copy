@@ -15,7 +15,7 @@ To check if you have successfully finished the whole Module 01, please run this 
 ```
 ./check_upload.sh -c /path/to/config/file 01 check
 ```
-[!IMPORTANT]
+>[!IMPORTANT]
 If the config file specified with -c is outside scripts_directory, use a filename that does not already exist in scripts_directory (e.g. config_study_name). The next Upload step will temporarily copy this file into scripts_directory and then delete the copy. Any existing file with the same name in scripts_directory will be overwritten and deleted; your specified config file remains unchanged.
 
 Then, to encrypt the results and upload them to the Bristol SFTP server using the default SFTP mode, please run:
