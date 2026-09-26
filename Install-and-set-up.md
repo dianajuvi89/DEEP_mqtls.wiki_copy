@@ -15,10 +15,10 @@ Using the instructions in [System requirements](https://github.com/MRCIEU/DEEP_m
 The first thing to do is to create your `config` file. A template is provided in the repository in the `config.example` file. Your config file **should not** be created by editing this template directly. Instead, you should make a copy of it, for example, as follows:
 
 ```
-cp config.example config
+cp config.example config_study_name
 ```
 
-You can now modify the `config` file (**not** the `config.example` file!) to specify the location of your input data, software and the parameters that will be used for the analysis.
+You can now modify the `config_study_name` file (**not** the `config.example` file!) to specify the location of your input data, software, and the parameters that will be used for the analysis.
 
 Open the file in a text editor, and change the entries for the following variables:
 
